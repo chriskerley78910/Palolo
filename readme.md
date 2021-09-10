@@ -5,11 +5,19 @@
 2. KnockoutJS 3.4
 3. RequireJS
 4. Jasmine Unit Testing Framework
+5. Websockets (socket.io client)
+6. Lots of elbow grease.
 
-All features custom built by yours truly.
-About *16 months* of work.
+About *16 months* of work to build this all the microservices servers.
 
+## Setup:
+Serve the front-end using PHP. i.e. Expose to content of the
+public folder in the top directory. Note that the front-end
+relies on several micro-services that must be running.
 
+## Custom OAuth Implenmentation
+- Token based authentication.
+![](screens/custom_authentication.png)
 
 ## Class Forum - Websockets
 
@@ -35,3 +43,9 @@ About *16 months* of work.
 
 ## Facebook 1.0 Style Notifications
 ![](screens/news_feed_notifcations.png)
+
+## Class List
+![](screens/class_list.png)
+
+## Responsive Mobile Design
+![](screens/responsive_design_mobile_mode.png)
