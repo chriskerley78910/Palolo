@@ -10,6 +10,9 @@
 
 About *16 months* of work to build this and all the micro-services for it.
 
+Uses a custom implementation of the *Flux* pattern for front-end data.
+i.e: Data only flows in one direction between components.
+
 ## Setup:
 Serve the front-end using PHP. i.e. Expose to content of the
 public folder in the top directory. Note that the front-end
@@ -23,7 +26,7 @@ relies on several micro-services that must be running.
 ## Class Forum
 - Uses Websockets
 - Supports hundreds of simultaneous users.
-  
+
 ![](screens/forum.png)
 
 ## Real Time Two-Way Blackboard using Websockets.
@@ -53,10 +56,8 @@ relies on several micro-services that must be running.
 
 ![](screens/video_chat.png)
 
-# Teacher Payment Plans
-- Payments implmented using Stripe.
-
-![](screens/customer_payment.png)
+## Responsive Mobile Design
+![](screens/responsive_design_mobile_mode.png)
 
 ## Facebook 1.0 Style Notifications
 - Reddit style board for York University featuring post voting capability.
@@ -70,5 +71,8 @@ relies on several micro-services that must be running.
 
 ![](screens/class_list.png)
 
-## Responsive Mobile Design
-![](screens/responsive_design_mobile_mode.png)
+# Tutoring Payment Plans
+- Payments implemented using *Stripe*.
+- Keeps track of tutoring hours on the server for each tutor.
+- Automatically deducts hours for paid tutoring sessions.
+![](screens/customer_payment.png)
