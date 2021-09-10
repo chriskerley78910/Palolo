@@ -6,17 +6,25 @@
 3. RequireJS
 4. Jasmine Unit Testing Framework
 5. Websockets (socket.io client)
-6. Lots of elbow grease.
+6. MySQL Server - Approx 50 table custom designed database
+7. Lots of elbow grease.
 
 About *16 months* of work to build this and all the micro-services for it.
 
-Uses a custom implementation of the *Flux* pattern for front-end data.
-i.e: Data only flows in one direction between components.
+Uses a custom *Flux* implementation for front-end data flow.
+i.e: Data only flows in one direction between components, similar to Redux
+
 
 ## Setup:
 Serve the front-end using PHP. i.e. Expose to content of the
 public folder in the top directory. Note that the front-end
 relies on several micro-services that must be running.
+
+
+
+# Main Features
+
+[Youtube Video Link](https://www.youtube.com/watch?v=s8KZ4JKGkbc)
 
 ## Custom OAuth Implenmentation
 - Token based authentication.
@@ -37,6 +45,7 @@ relies on several micro-services that must be running.
 - Simple clean design.
 
 ![](screens/real_time_blackboard.png)
+
 
 ## One-on-One Chat
 - Real time chat using Websockets
@@ -75,4 +84,5 @@ relies on several micro-services that must be running.
 - Payments implemented using *Stripe*.
 - Keeps track of tutoring hours on the server for each tutor.
 - Automatically deducts hours for paid tutoring sessions.
+
 ![](screens/customer_payment.png)
