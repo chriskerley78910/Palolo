@@ -17,13 +17,13 @@ relies on several micro-services that must be running.
 
 ## Custom OAuth Implenmentation
 - Token based authentication.
-<space>
+\
 ![](screens/custom_authentication.png)
 
 ## Class Forum
 - Uses Websockets
 - Supports hundreds of simultaneous users.
-<space>
+\
 ![](screens/forum.png)
 
 ## Real Time Two-Way Blackboard using Websockets.
@@ -32,42 +32,42 @@ relies on several micro-services that must be running.
 - Offers the ability to email boards to other students or teachers.
 - Full-screen capability.
 - Simple clean design.
-<space>
+\
 ![](screens/real_time_blackboard.png)
 
 ## One-on-One Chat
 - Real time chat using Websockets
 - File sharing / file uploading to during one-on-one chat.
 - Friending of chat mates.
-<space>
+\
 ![](screens/one_on_one_chat.png)
 
 ## Note Sharing
-<space>
+\
 ![](screens/shared_notes.png)
 
 ## Real Time Two Way Video Chat
 - Video chat implemented using WebRTC.
 - Can be used with Twilio or my custom built signalling server.
 - P2P data reduces network traffic on the server, saving costs.
-<space>
+\
 ![](screens/video_chat.png)
 
 # Teacher Payment Plans
 - Payments implmented using Stripe.
-<space>
+\
 ![](screens/customer_payment.png)
 
 ## Facebook 1.0 Style Notifications
 - Reddit style board for York University featuring post voting capability.
 - Facebook style drop-down notifications.
-<space>
+\
 ![](screens/news_feed_notifcations.png)
 
 ## Class List
 - See everyone in your class list.
 - Adds friends from your class.
-<space>
+\
 ![](screens/class_list.png)
 
 ## Responsive Mobile Design
