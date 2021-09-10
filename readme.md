@@ -8,7 +8,7 @@
 5. Websockets (socket.io client)
 6. Lots of elbow grease.
 
-About *16 months* of work to build this all the micro-services for it.
+About *16 months* of work to build this and all the micro-services for it.
 
 ## Setup:
 Serve the front-end using PHP. i.e. Expose to content of the
@@ -19,32 +19,42 @@ relies on several micro-services that must be running.
 - Token based authentication.
 ![](screens/custom_authentication.png)
 
-## Class Forum - Websockets
-
+## Class Forum
+- Uses Websockets
+- Supports hundreds of users.
 ![](screens/forum.png)
 
 ## Real Time Two-Way Blackboard using Websockets.
-
+- Saves blackboards between sessions.
+- Offers multiple boards that can be flipped through.
+- Offers the ability to email boards to other students or teachers.
 ![](screens/real_time_blackboard.png)
 
 ## One-on-One Chat
-
+- Real time chat using Websockets
 ![](screens/one_on_one_chat.png)
 
 ## Note Sharing
-
 ![](screens/shared_notes.png)
 
 ## Real Time Two Way Video Chat
+- Video chat implemented using WebRTC.
+- Can be used with Twilio or my custom built signalling server.
+- P2P data reduces network traffic on the server, saving costs.
 ![](screens/video_chat.png)
 
 # Teacher Payment Plans
+- Payments implmented using Stripe.
 ![](screens/customer_payment.png)
 
 ## Facebook 1.0 Style Notifications
+- Reddit style board for York University featuring post voting capability.
+- Facebook style drop-down notifications.
 ![](screens/news_feed_notifcations.png)
 
 ## Class List
+- See everyone in your class list.
+- Adds friends from your class.
 ![](screens/class_list.png)
 
 ## Responsive Mobile Design
