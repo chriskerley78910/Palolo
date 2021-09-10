@@ -8,7 +8,7 @@
 5. Websockets (socket.io client)
 6. Lots of elbow grease.
 
-About *16 months* of work to build this all the microservices servers.
+About *16 months* of work to build this all the micro-services for it.
 
 ## Setup:
 Serve the front-end using PHP. i.e. Expose to content of the
