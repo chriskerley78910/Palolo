@@ -1,0 +1,22 @@
+#!/bin/bash
+TEST_RUNNERS=$(find ./../../test/components/ -name "*runner.html")
+
+for file in $TEST_RUNNERS
+do
+  file_array[$idx]="$file"
+  idx=$(( idx + 1 ))
+done
+
+file_count="${#file_array[@]}"
+# echo $file_count 'files in total'.
+end_index=$(($file_count - 1))
+# printf "last index is: ${end_index}"
+
+
+echo ${TEST_RUNNERS}
+
+for i in $( seq 0 $end_index )
+do
+  echo ${file_array[i]}
+  google-chrome --disable-web-security --user-agent='automated:test' --user-data-dir ${file_array[i]}
+done

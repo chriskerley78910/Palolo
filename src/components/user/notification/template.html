@@ -1,0 +1,52 @@
+
+<link rel="stylesheet"
+      href="./styles/components/notification/style.css?v=2.0"></link>
+
+  <div id="notification-holder" data-bind="visible:isVisible()">
+
+    <span class="glyphicon glyphicon-bell"
+          data-bind="click:openNotifications">
+
+      <span id="notification-bell-count"
+            class="notification-number-background"
+            data-bind="visible:computeUnseenCount() > 0">
+            <span  class="notification-number"
+                    data-bind="text:computeUnseenCount()">
+            </span>
+      </span>
+    </span>
+
+
+    <span data-bind="visible:isNotifcationsOpen()">
+      <span class="arrow-up notifications-arrow-up"></span>
+
+      <ul id="notification-list"
+          data-bind="foreach:notifications,
+                     complementClick: closeNotifications">
+
+            <li class="notification-row"
+                data-bind="css:{'notification-seen':getHasBeenSeen()}, click:$parent.onNotificationClicked">
+              <img  class="notification-profile-image"
+                    data-toggle="tooltip"
+                    data-bind="attr:{ src : getPhotoURL(), title : getFirstName() + ' ' + getLastName() }">
+              </img>
+              <span class="notification-content-holder">
+                <div class='notification-content'
+                      data-bind="text:messageSnippet()">
+                </div>
+                <div class="notification-date">
+                    <span>Sent </span>
+                    <span data-bind="text:getMessageTimestamp()"></span>
+                    <span data-bind="visible:getConstructorName() === 'ForumNotification'">
+                      <!-- <span data-bind="text:getForumName()"></span> -->
+                    </span>
+                </div>
+
+              </span>
+            </li>
+      </ul>
+
+
+    </span>
+
+  </div>

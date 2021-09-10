@@ -1,0 +1,34 @@
+#!/bin/bash
+
+
+#page object model path
+
+BASE_PATH='/var/www/palolo/test/'
+
+POM_PATH='ui/pom'
+
+SPEC_PATH='ui/test'
+
+UTIL_PATH='ui/mock'
+
+LIB_PATH='./../test/libs'
+
+JAVA_CLASS_PATH='ui/bin'
+
+
+
+POM_FILES=$(find ${BASE_PATH}${POM_PATH} -name "*.java");
+
+UTIL_FILES=$(find ${BASE_PATH}${UTIL_PATH} -name "*.java");
+
+SPEC_FILES=$(find ${BASE_PATH}${SPEC_PATH} -name "*.java")
+
+echo ${SPEC_FILES}
+
+
+
+printf "\ncompiling selenium ui tests...\n\n"
+
+javac -d ${BASE_PATH}${JAVA_CLASS_PATH} -classpath ${LIB_PATH}/*:. ${POM_FILES} ${UTIL_FILES} ${SPEC_FILES}
+
+printf "compilation complete.\n\n"

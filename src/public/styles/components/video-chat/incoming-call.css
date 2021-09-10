@@ -1,0 +1,43 @@
+#incoming-call-box{
+  position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    top: 11%;
+    background: linear-gradient(to top, #3F51B5, transparent);
+    color: black;
+    padding: 67pt;
+    border-radius: 50% 78%;
+}
+
+#caller-photo{
+  border-radius: 50%;
+  width: 215pt;
+  display: block;
+  display: inline-block;
+  box-shadow: 0pt 5pt 12pt #0000004d;
+
+}
+
+#inviters-name{
+  display: block;
+  font-family: sans-serif;
+  color: #eaeaea;
+  -webkit-font-smoothing: antialiased;
+  font-weight: 600;
+  font-size: 26pt;
+}
+
+#caller-message{
+  font-size: 20pt;
+  color: #b3b3b3;
+  margin: 5pt 8pt 26pt;
+}
+
+#call-answer-button{
+  background: #2196F3;
+      color: white;
+      padding: 10pt 20pt;
+      font-size: 15pt;
+      border-radius: 55pt;
+      margin-bottom: 20pt;
+}

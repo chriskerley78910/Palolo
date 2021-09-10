@@ -1,0 +1,16 @@
+#in-another-section-holder{
+  background: white;
+  position: absolute;
+  padding: 4vh;
+  top: 20%;
+      z-index: 1;
+  left: 50%;
+  transform: translate(-50%);
+  font-size: 3vh;
+  box-shadow: 0px 8px 22px #00000036;
+}
+
+#another-section-switch{
+      margin-top: 4vh;
+      margin-bottom:2vh;
+}

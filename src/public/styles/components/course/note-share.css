@@ -1,0 +1,532 @@
+#note-share-holder{
+  height: 86vh;
+  overflow-y: scroll;
+  text-align: left;
+    background: white;
+}
+
+
+
+.no-notes-yet-message{
+  padding: 6vh 0vh 6vh 0;
+  background: #f9f9f9;
+  margin-right: 5vh;
+  width: 95%;
+  display: inline-block;
+  text-align: center;
+      border-bottom: 1px solid #ababab;
+}
+
+.upload-request-button-tool-tip{
+  position: absolute;
+  top:7vh;
+  right: 0px;
+  z-index: 5;
+}
+
+
+.upload-request-arrow{
+  top: 0px;
+  right: 3vh;
+  position: absolute;
+}
+
+.upload-request-text{
+  background: #ffffff;
+  border: 0.2vh solid black;
+  border-radius: 1vh;
+  padding: 1vh;
+  width: 27vh;
+  right: -1vh;
+  position: absolute;
+  top: 5px;
+  font-size: 2.3vh;
+}
+
+
+#lecture-header{
+  padding-top: 8vh;
+  margin-inline-start: 40px;
+  width: 90.0%;
+      font-size: 2vh;
+  border-bottom: 1px solid black;
+}
+
+#lecture-note-rows{
+  list-style: none;
+  font-size: 3vh;
+  font-family: sans-serif;
+  padding-bottom: 20vh;
+
+
+}
+
+.lecture-day-title{
+  border-bottom: 0.1vh solid #00000070;
+      width: 95%;
+      margin-bottom: 0vh;
+      padding-top: 2vh;
+      padding-bottom: 2vh;
+      position: relative;
+      font-size: 2vh;
+}
+
+.lecture-day-title:hover{
+    background-color: #f8f7f7;
+    cursor: pointer;
+}
+
+.lecture-header-message{
+  left: 10%;
+color: #909090;
+position: relative;
+}
+
+.lecture-header-buttons{
+  display: none;
+  transition: 0.1s;
+}
+
+.lecture-day-title:hover .lecture-header-buttons{
+      display: unset;
+}
+
+
+.lecture-date-text{
+  bottom: 0px;
+  left: 3vh;
+  font-size: 2vh;
+  position: relative;
+
+}
+
+.lecture-day-title:hover .lecture-date-text{
+  font-weight: 600;
+}
+
+
+
+
+
+.button-cool{
+  vertical-align: middle;
+  float: right;
+  background: none;
+  border-radius: 5vh;
+  padding-left: 1.5vh;
+  padding-right: 1.5vh;
+  color: #a7aaac;
+  margin: 0vh 0.5vh;
+  border: 0.2vh solid #e5e5e5;
+  border-color: #a7aaac;
+}
+
+.button-cool:hover{
+  color: black;
+  border-color: black;
+}
+
+
+
+.blue-link-button{
+  background: none;
+  border: none;
+  color: blue;
+  font-size: 2vh;
+}
+
+.blue-link-button:hover{
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+#uploads-header{
+  float: right;
+position: relative;
+right: 11%;
+}
+
+.upload-count-text{
+  position: relative;
+      font-size: 2vh;
+      float: right;
+      right: 5%;
+}
+
+.lecture-notes-visibility-button{
+  left: 11.9vh;
+  bottom: 0;
+}
+
+.upload-date{
+  margin-left: 2%;
+}
+
+
+.lecture-day{
+  height: fit-content;
+  overflow-y: scroll;
+  padding: 6vh 0vh 20vh 12.5vh;
+  background: #f9f9f9;
+  margin-right: 5vh;
+}
+
+.request-notes-bell-button{
+  vertical-align: middle;
+      display: inline-block;
+      float: right;
+      background: none;
+      border: none;
+      position: relative;
+      bottom: 1vh;
+}
+
+.requesting-notes-spinner{
+  vertical-align: middle;
+  display: inline-block;
+  float: right;
+  top: 0.5vh;
+  margin-right: 1vh;
+  position: relative;
+}
+
+.request-notes-bell-button:hover .request-bell-dark-image{
+  display: inline-block;
+}
+
+.request-notes-bell-button:hover .request-bell-light-image{
+  display: none;
+}
+
+
+
+.request-bell-dark-image{
+  display: none;
+  width: 2.5vh;
+      height: 2.5vh;
+      cursor: pointer;
+      position: relative;
+          bottom: 0.3vh;
+}
+
+.request-bell-light-image{
+
+  width: 2.5vh;
+      height: 2.5vh;
+      cursor: pointer;
+      position: relative;
+          bottom: 0.3vh;
+}
+
+
+.button-cool:hover .request-bell-dark-image{
+  display: inline-block;
+}
+
+.button-cool:hover .request-bell-light-image{
+  display: none;
+}
+
+
+.lecture-day-open{
+  height: fit-content;
+  margin:7vh 0vh;
+  /* transition: 0.5s; */
+}
+
+
+.lecture-note{
+  position: relative;
+  height: 38vh;
+  width: 28vh;
+  margin-right: 3vh;
+  margin-bottom: 5vh;
+  display: inline-block;
+  border: 0.5vh solid #00000036;
+  border-radius: 0.5vh;
+  box-shadow: 0px 4px 7px #00000024;
+}
+
+.lecture-note:hover{
+  cursor: pointer;
+  border-radius: 0.5vh;
+  border: 0.5vh solid #008cff;
+}
+
+.lecture-note:hover .delete-uploaded-note-button{
+  opacity: 1;
+}
+
+.note-preview-image{
+  width: 100%;
+      height: 100%;
+}
+
+
+.note-label-holder{
+  background: white;
+  height: 7vh;
+  position: absolute;
+  bottom: 0vh;
+  left: 0%;
+  width: 100%;
+  font-size: 2vh;
+  color: grey;
+  border-top: 1px solid #c2c2c2;
+  padding-left: 1vh;
+}
+
+.uploader-img{
+  border-radius: 7vh;
+  width: 4vh;
+  margin: 0.6vh 0vh;
+  position: relative;
+  padding-top: -1vh;
+  top: 0.5vh;
+}
+
+.thank-you-row{
+  margin-left: 19%;
+  margin-top: -5%;
+}
+
+.thankers-list-holder{
+  position: absolute;
+  width: 100%;
+  height: 0%;
+  top: 5vh;
+  z-index: 1;
+}
+
+.thankers-list{
+  position: absolute;
+left: -11vh;
+  color: black;
+  padding-left: 0;
+  margin: 0vh;
+  width: 100%;
+  border-radius: 0.5vh;
+  border: 1px solid #c9c9c9;
+box-shadow: 0 1vh 2vh #00000017;
+}
+
+.thanker-name:hover{
+    border-bottom: 2px solid;
+}
+
+.thankers-arrow{
+  position: relative;
+      z-index: 2;
+      left: -8.8vh;
+      top: -0.4vh;
+      border-bottom: 0.8vh solid #ffffff;
+}
+
+.note-thanker-holder{
+  border-top: 1px solid #e9e8e8;
+  padding-bottom: 1vh;
+  padding-top: 1vh;
+  position: relative;
+  background: white;
+}
+
+.note-thanker-holder:hover{
+  background: #666666;
+  color: white;
+}
+
+
+
+
+.thanker-image{
+  width: 2.5vh;
+  border-radius: 50%;
+  vertical-align: middle;
+  margin-left: 0.8vh;
+  margin-right: 0.8vh;-
+}
+
+.thank-you-counter-highlighter:hover{
+
+  text-decoration: underline;
+  color:black;
+}
+
+.thank-you-button{
+  background: #ffffff;
+  border-radius: 1vh;
+  padding: 1.5vh 1vh 1.25vh 1.5vh;
+  color: #808195;
+  font-weight: 600;
+  position: absolute;
+  left: 0vh;
+  bottom: -8vh;
+  width: 100%;
+  border-style: outset;
+  transition: 0.1s;
+  text-align: center;
+}
+
+.thank-you-button:hover{
+  background: #067cf5;
+  border-radius: 1vh;
+  padding: 1.5vh 1vh 1.25vh 1.5vh;
+  color: white;
+  font-weight: 600;
+  position: absolute;
+  left: 0vh;
+  bottom: -8vh;
+  width: 100%;
+  border-style: outset;
+}
+
+.thank-you-button:hover{
+  cursor: pointer;
+  /* text-decoration: underline; */
+  /* color:black; */
+}
+
+
+.not-clickable:hover{
+  color:grey;
+  text-decoration: none;
+  cursor: default;
+}
+
+.thankyou-feedback-holder{
+  display: inline-block;
+  top: 0px;
+  position: relative;
+  top: 0vh;
+  left: 1.5vh;
+}
+
+.feedback-completion-holder{
+  position: relative;
+  bottom:1vh;
+}
+
+.thank-you-checkmark{
+  position: relative;
+  top: 1vh;
+  left: 0px;
+}
+
+.request-button-holder{
+  position: relative;
+  border-bottom: 1px solid #ababab;
+  padding-left: 3vh;
+}
+
+
+
+.request-notes-button{
+  background: #2196f373;
+  color: white;
+  border-radius: 1vh;
+  border: 2px solid #2473e800;
+  padding: 1.5vh;
+  font-size: 2vh;
+  font-weight: bold;
+  transform: translate(0%,-50%);
+  margin: 8vh 0vh 0vh 9vh;
+  transition: 0.1s;
+}
+
+
+
+.request-notes-button:hover{
+  cursor:pointer;
+  background: #2196f3;
+  color: white;
+  border-color: #2196f3;
+}
+
+.request-notes-button:disabled{
+  background: grey;
+  border:black;
+}
+
+.upload-notes-button{
+  background: #ffffff;
+  border-radius: 1vh;
+  border: 2px solid #2473e873;
+  color: white;
+  padding: 1.5vh;
+  color: #2473e8a1;
+  font-size: 2vh;
+  font-weight: bold;
+  transform: translate(0%,-50%);
+  margin: 8vh 0vh 0vh 9vh;
+  transition: 0.1s;
+}
+
+.upload-notes-button:hover{
+  cursor:pointer;
+  background: white;
+    color: #2473e8;
+    border-color: #2473e8;
+}
+
+.note-space-notifications{
+
+  margin: 0vh 0vh 0vh 7vh;
+  color: black;
+  border-radius: 2vh;
+  display: inline-block;
+  font-size: 2vh;
+}
+
+.close-lecture-notifs-button{
+
+      border: 0px;
+      margin-top: 2vh;
+      display: inline-block;
+      position: absolute;
+      color:black;
+}
+
+.asking-for-notes-notif{
+  background:#d5ffd5;
+}
+
+.no-classmates-notif{
+  background:#fff6a2;
+}
+
+.lecture-note-notify-reminder{
+  font-size: 2vh;
+}
+
+
+
+
+
+.big-request-button{
+  background: none;
+  border-radius: 5vh;
+  padding-left: 3.5vh;
+  font-size: 4vh;
+  margin-top: 5vh;
+  padding-right: 3.5vh;
+  color: #8c8c8c;
+  border-color: #e2e2e2;
+}
+
+.big-bell{
+  width: 4vh;
+  height: 4vh;
+}
+
+.big-request-button:hover{
+  color: #000000;
+  border-color: #000000;
+}
+
+.big-request-button:hover .request-bell-dark-image{
+  display: inline-block;
+}
+
+.big-request-button:hover .request-bell-light-image{
+  display: none;
+}

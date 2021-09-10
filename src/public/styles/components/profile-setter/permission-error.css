@@ -1,0 +1,20 @@
+
+
+#permission-error-holder{
+  position: absolute;
+  left: 50%;
+  top: 21%;
+  background: #f0f0f0;
+  border: 0.2vh solid #b7b3b3;
+  border-radius: 1vh;
+  box-shadow: 0vh 0.5vh 0.2vh #0000006b;
+  padding: 2vh;
+  transform: translate(-50%);
+  z-index: 1;
+  font-size: 3vh;
+}
+
+#permission-error-holder > button{
+  border-radius: 1vh;
+    margin: 1vh;
+}

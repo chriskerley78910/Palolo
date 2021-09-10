@@ -1,0 +1,56 @@
+#!/bin/bash
+clear
+if [[ $# -lt 1 ]]; then
+
+  echo
+  echo "You need to pass the test name as an argument!"
+  echo
+  exit 1
+fi
+
+TEST_RUNNERS=$(find ./../../test/components/ -name "*runner.html")
+
+for file in $TEST_RUNNERS
+do
+  file_array[$idx]="$file"
+  printf "$idx $file\n\n"
+  idx=$(( idx + 1 ))
+done
+
+file_count="${#file_array[@]}"
+# echo $file_count 'files in total'.
+end_index=$(($file_count - 1))
+# printf "last index is: ${end_index}"
+for i in $( seq 0 $end_index )
+do
+
+  result=$(echo ${file_array[i]} | grep $1)
+  # echo ${result}
+  str_len=${#result}
+
+  if [[ ${str_len} > 0 ]]; then
+
+    matched_array[$index]=${result}
+    index=$(( index + 1 ))
+  fi
+  # google-chrome --disable-web-security --user-agent='automated:test' --user-data-dir ${file_array[i]}
+done
+
+matched_count="${#matched_array[@]}"
+if [[ $matched_count > 1 ]]; then
+  echo
+  echo
+  printf "${matched_count} tests matched, try to be more specific!\n"
+  echo
+  echo
+elif [[ ${matched_count} == 0 ]]; then
+
+  echo "No tests match that text!"
+else
+
+  echo
+  echo
+  printf "Matched Test:"
+  printf "${matched_array[0]} \n\n"
+  google-chrome --disable-web-security --user-agent='automated:test' --user-data-dir ${matched_array[0]}
+fi

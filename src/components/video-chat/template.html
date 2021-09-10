@@ -1,0 +1,136 @@
+<link rel="stylesheet"
+      href="./styles/components/video-chat/style.css?v=1.4">
+</link>
+    <div id="video-chat-loader"
+         class="loader"
+         data-bind="visible:isSpinnerVisible()">
+    </div>
+
+<div id='caller-hungup-message'
+     data-bind='visible:isPalHungupVisible()'>
+     They hungup.
+</div>
+
+
+<div id='video-chat-holder'
+     data-bind="visible:isVisible()">
+
+  <div id='video-chat-control-center'>
+    <!-- <button style="position:absolute; z-index:10;" data-bind='click:download'>DOWNLOAD RECORDING</button> -->
+
+    <span id='control-center-resizer' class='resize-window-button'>
+    </span>
+    <span id='hangup-button'
+            data-bind="click:disconnect">
+            x
+    </span>
+    <div id='camera-video-holder'>
+      <span id='camera-preview'>
+      </span>
+    </div>
+    <div id='video-chat-buttons'>
+
+      <div class="video-chat-button"
+           data-bind='click:shareScreen'>
+          <div class="video-chat-screen-share-icon">
+            <span id='sharescreen-button-arrow'
+                  class='glyphicon glyphicon-arrow-up'>
+            </span>
+          </div>
+          <div class="video-chat-button-text">Share Screen</div>
+      </div>
+
+
+      <div id='mic-button' class="video-chat-button" data-bind='click:toggleMicrophone'>
+          <div class="video-chat-mute-icon">
+               <i id='mute-icon' data-bind='visible:!isSharingMicrophone()' class="video-chat-icon  fa fa-microphone-slash"></i>
+               <i id='mute-icon' data-bind='visible:isSharingMicrophone()' class="video-chat-icon fa fa-microphone"></i>
+          </div>
+          <div data-bind="visible:isSharingMicrophone()"class="video-chat-button-text">Mute</div>
+          <div data-bind="visible:!isSharingMicrophone()"class="video-chat-button-text">Unmute</div>
+      </div>
+
+
+      <div class="video-chat-button"
+           data-bind='click:shareVideo'>
+          <div class="video-chat-facetime-icon">
+            <span class='video-chat-icon glyphicon glyphicon-facetime-video'>
+            </span>
+          </div>
+          <div class="video-chat-button-text">Start Video</div>
+      </div>
+
+      <div id='session-timer-button'
+           class="video-chat-button"
+           data-bind='click:openSessionTracker'>
+          <div class="video-chat-time-icon">
+            <span
+                  class='video-chat-icon glyphicon glyphicon-time'>
+            </span>
+          </div>
+          <div class="video-chat-button-text">Session Timer</div>
+      </div>
+
+    </div>
+      <session-tracker></session-tracker>
+
+    <div class='video-chat-message'
+         data-bind='visible:showCallingRecipient()'>
+        Calling
+        <span data-bind='text:focusedPersonsName()'></span>...
+    </div>
+
+
+
+    <div class='video-chat-message'
+        data-bind='visible:participants() < 1 && !showWaitingForPalToJoin() && isPalOnline()'>
+      <div> No one in this room yet.</div>
+      <button id='invite-pal-button'
+              data-bind='click:invitePal'>
+        Invite <span data-bind="text:focusedPersonsName()"></span>
+      </button>
+    </div>
+
+    <div class='video-chat-message'
+        data-bind='visible:!isPalOnline() && participants() < 1'>
+         <span>
+            <span data-bind="text:focusedPersonsName()"></span> is offline.
+         </span>
+    </div>
+
+    <div class='video-chat-message'
+        data-bind='visible:showWaitingForPalToJoin()'>
+        Waiting for <span data-bind="text:focusedPersonsName()"></span> to join..
+    </div>
+
+    <div class='video-chat-message'
+        data-bind='visible:participants() > 0 && isParticipantsCameraOn() == false'>
+      <div>
+        <span data-bind="text:participantsName()"></span> is in this room.
+      </div>
+    </div>
+
+    <div  class='mic-state-message'
+          data-bind='visible:!isParticipantMicrophoneOn() && participants() > 0'>
+      Their microphone is off.
+    </div>
+
+    <div  class='mic-state-message'
+          data-bind='visible:isParticipantMicrophoneOn() && participants() > 0'>
+      Their microphone is on.
+    </div>
+
+
+
+  </div>
+
+  <div id="remote-media-holder">
+    <!-- all the media tracks get appended here. -->
+  </div>
+
+
+<!-- <span id='effect-credit' >Sound effects obtained from https://www.zapsplat.com</span> -->
+  </div>
+
+
+</div>

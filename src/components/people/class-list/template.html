@@ -1,0 +1,79 @@
+<link rel="stylesheet" href="./styles/components/person-panel/class-list.css?v=2.7">
+<div id="people-holder"
+    class="show-vert-scroll"
+    data-bind='visible: isVisible() == true'>
+
+  <div class="person-list-wrapper">
+      <div id="no-members-yet" data-bind="visible:classmateList().length < 1">
+        No one is in this classroom yet.
+      </div>
+      <ul class="person-list"
+          data-bind="foreach:classmateList">
+
+            <li class="person-row"
+                draggable="false"
+                data-bind="click:$parent.classmateClicked,
+                           css:{'person-row-selected':$parent.selectedClassmate().getId() == getId(),
+                                'professor-highlight':getRole() == 'Professor',
+                                'professor-selected':getRole() == 'Professor' && $parent.selectedClassmate().getId() == getId()}">
+
+              <div class="person-card">
+                <span class="person-card-info">
+                  <span>
+                      <i class="glyphicon glyphicon-education person-attr-icon"></i>
+                      <span data-bind="text:getEducationLevel()"></span>
+                  </span>
+                  <span>
+                    <i class="glyphicon glyphicon-home person-attr-icon"></i>
+                    <span data-bind="text:getRes()"></span>
+                  </span>
+                  <span>
+                    <i class="glyphicon glyphicon-music person-attr-icon"></i>
+                    <span data-bind="text:getFavouriteMusic()"></span>
+                  </span>
+                </span>
+              </div>
+              <span class="name person-name disable-select"
+                    data-bind="text:getFirst() + ' ' + getLast() + ', ' + getAge()">
+                    first, last, 24
+              </span>
+              <span class="shared-classes disable-select" data-bind="visible:getSharedClassCount() > 1">
+                In <span data-bind="text:getSharedClassCount()"></span> of your classes.
+              </span>
+
+              <div class="dot presence-dot person-panel-dot-position"
+                   data-bind="visible:isPresent()">
+              </div>
+
+              <div class="last-seen"
+                   data-bind="visible:isPresent() == false, text:getLastSeen()"></div>
+
+
+              <div class="person-banner">
+                <div class="person-pic-holder">
+                  <img class="person-pic disable-select"
+                       draggable="false"
+                       data-bind="attr:{src:getSmallPhotoURL()}"/>
+
+                </div>
+              </div>
+              <div class="bevel"
+                   data-bind="css:{'side-bevel':$parent.selectedClassmate().getId() == getId()}">
+              </div>
+              <div id="hover-show-bevel"
+                  class="bevel side-bevel">
+              </div>
+              <span class="add-pal-btn-holder" data-bind='visible:isAddable()'>
+                      <button class="add-pal add-pal-btn"
+                              data-bind="click:$parent.addPal">
+                              add friend
+                      </button>
+              </span>
+              <span class="already-friend" data-bind='visible:!isAddable()'>
+                Already your friend.
+              </span>
+            </li>
+        </ul>
+
+   </div>  <!-- person panel wrapper.   -->
+</div>

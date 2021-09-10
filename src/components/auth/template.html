@@ -1,0 +1,295 @@
+<link rel="stylesheet" href="./styles/components/auth/style.css?v=1.4"></link>
+
+
+<div id="auth-holder" data-bind="visible:isVisible()">
+
+  <img  id="logo"
+        src="./styles/components/auth/logo.png" >
+
+    <div class="landing-page-background-image">
+    </div>
+          <img id='student-graph'
+               src='./assets/graph.png'></img>
+
+    <div id="signup-holder" data-bind="visible:signupPageVisible()">
+      <div class="input-holder" data-bind="visible: !activationEmailSent()">
+      <div style="position:relative">
+        <input class="auth-input" placeholder="First name" id="firstName" type="text"
+               data-bind="textInput:firstName, enterKey: signUp, hasFocus:invokeSignupFormEndowment"/>
+        <span data-bind="visible: isFirstNameValid()"  class="auth-check-mark glyphicon glyphicon-ok"></span>
+      </div>
+
+      <div id="last-name-holder" style="position:relative;">
+        <input class="auth-input" placeholder="Last name" id="lastName" type="text" data-bind="textInput:lastName, enterKey: signUp"/>
+        <span data-bind="visible: isLastNameValid()"  class="auth-check-mark glyphicon glyphicon-ok"></span>
+      </div>
+
+
+
+      <div style="position:relative;">
+
+        <input class="auth-input"
+               autocorrect="off"
+               autocapitalize="none"
+               autofocus placeholder="Email"
+               id="signup-email"
+               type="text"
+               data-bind="textInput:email, enterKey: signUp"/>
+
+
+        <span data-bind="visible: isEmailValid()"
+              class="auth-check-mark glyphicon glyphicon-ok">
+        </span>
+
+      </div>
+
+      <div style="position:relative;">
+        <input class="auth-input"
+               placeholder="Password"
+               id="password-signup"
+               type="password"
+               data-bind="textInput:password ,enterKey: signUp" />
+
+        <!-- Quick Feedback -->
+        <span data-bind="visible: isPasswordValid()"
+              class="auth-check-mark glyphicon glyphicon-ok">
+
+        </span>
+        <span id="signup-password-caution-mark"
+              data-bind="visible: !isPasswordValid() && password().length > 0">
+
+                  <div id="signup-password-callout"
+                       class="callout">
+
+                      <b id="signup-password-error-msg"
+                         class="callout-msg"
+                         data-bind="text:invalidPasswordMessage">
+
+                      </b>
+                      <b class="notch">
+                      </b>
+                  </div>
+        </span>
+      </div>
+
+      <button id="signup-btn"
+              class="auth-btn"
+              data-bind="click:signUp">
+              Signup</button>
+
+
+
+      <button
+            class="glyphicon glyphicon-menu-left back-to-login-page-button"
+            data-bind="click: goToLoginPage">
+      </button>
+
+
+      <div id="terms-and-conditions">By signing up you are agreeing to the
+          <a href="https://www.legal.palolo.ca/terms_and_conditions">
+            terms and conditions
+          </a>
+
+      </div>
+
+
+
+      </div>
+    </div>
+
+
+
+
+<!-- Login Page  -->
+
+        <div id="login-holder"
+             style="color:white"
+             data-bind="visible: loginPageVisible()">
+          <div class="input-holder">
+
+          <div style="position:relative;">
+
+
+
+
+
+
+            <input class="auth-input"
+                   autocorrect="off"
+                   autocapitalize="none"
+                   autofocus placeholder="Email"
+                   id="email"
+                   type="text"
+                   data-bind="textInput:email, enterKey: login"/>
+
+            <span data-bind="visible:  isEmailValid()"
+                  class="auth-check-mark glyphicon glyphicon-ok">
+            </span>
+
+
+
+
+          </div>
+
+          <div style="position:relative;">
+            <input class="auth-input"
+                   placeholder="Password"
+                   id="password-login"
+                   type="password"
+                   data-bind="textInput:password ,enterKey: login" />
+            <span data-bind="visible: isPasswordValid()"  class="auth-check-mark glyphicon glyphicon-ok"></span>
+
+            <!--Quick feedback  -->
+
+            <span id="login-password-caution-mark"
+                  data-bind="visible: !isPasswordValid() && password().length > 0"
+                  class="caution-mark glyphicon glyphicon-exclamation-sign">
+
+                      <div id="login-password-callout"
+                           class="callout">
+
+                          <b id="login-password-error-msg"
+                             class="callout-msg"
+                             data-bind="text:invalidPasswordMessage">
+
+                          </b>
+                          <b class="notch">
+                          </b>
+                      </div>
+            </span>
+
+          </div>
+
+          <button id="login-btn"
+                  class="auth-btn"
+                  data-bind="click:login"
+                  >Login</button>
+
+
+          <div id="or-signup">or</div>
+          <button
+                id="signup-button"
+                data-bind="click:goToSignupPage">
+          Signup
+          </button>
+          </div>
+
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <div id="signup-spinner"
+             class="middelize"
+             data-bind=visible:spinner()>
+            <div class="big-loader"></div>
+        </div>
+
+
+ <!-- Activation Email Sent!  -->
+        <div id="email-sent-page"
+             data-bind="visible: activationEmailSentPageVisible()"
+             class="middelize">
+
+          <div id="activation-email-sent-msg">
+            Activation email sent.
+          </div>
+          <div id="activation-email-sent-instructions">
+            Please check your email to complete
+            your account activation.
+          </div>
+        </div>
+
+
+
+
+        <!-- Password reset stuff. -->
+        <div data-bind="visible:errorMessage().length > 0">
+              <div class="error-msg"
+                   data-bind="text:errorMessage">
+              </div>
+              <div class="auth-clickable"
+                   data-bind="click:goToPasswordResetState">
+                   reset password
+                </div>
+        </div>
+
+
+
+
+        <!-- Password Reset Page -->
+
+            <div id="password-reset-holder"
+                  style="color:white"
+                  data-bind="visible:resetPasswordVisible()">
+
+              <div class="input-holder">
+              <div style="position:relative;">
+                <input class="auth-input"
+                       autocorrect="off"
+                       autocapitalize="none"
+                       autofocus placeholder="Email"
+                       id="reset-email"
+                       type="text"
+                       data-bind="textInput:email"/>
+
+                <span data-bind="visible:  isEmailValid()"
+                      class="auth-check-mark glyphicon glyphicon-ok">
+                </span>
+              </div>
+
+
+
+              <button id="send-reset-email-btn"
+                      class="auth-btn"
+                      data-bind="click:submitResetEmail"
+                      >Submit</button>
+
+              <button
+                    id="password-reset-page-back-button"
+                    class="glyphicon glyphicon-menu-left back-to-login-page-button"
+                    data-bind="click:goToLoginPage"
+                    data-toggle="tooltip"
+                    title="Back">
+              </button>
+              </div>
+              <div class="error-msg"
+                   data-bind="text:malformedEmailError">
+              </div>
+            </div>
+
+
+            <!--  Email Sent! -->
+            <div
+                 data-bind="visible: resetPasswordEmailSentPageVisible()"
+                 class="middelize">
+
+              <div id="activation-email-sent-msg">
+                Reset email sent.
+              </div>
+              <div id="activation-email-sent-instructions">
+                Check your email to complete
+                resetting your password.
+              </div>
+            </div>
+
+
+
+
+            <!-- <div id="conformity-banner"> Over 250 registered York Students.</div> -->
+            <div id='affilation'>Not affiliated with York University</div>
+    </div>
+
+</div>

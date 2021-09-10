@@ -1,0 +1,17 @@
+#tutor-info-headshot {
+  width: 400px;
+      height: 400px;
+  margin-bottom: 27px;
+  vertical-align: top;
+}
+
+#tutor-info-text{
+  display: inline-block;
+      margin: 24px;
+}
+
+#tutor-info-text > div{
+  font-size: 14pt;
+  font-weight: 600;
+  margin-bottom: 10px;
+}

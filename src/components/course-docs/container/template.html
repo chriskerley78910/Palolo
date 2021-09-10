@@ -1,0 +1,23 @@
+<link rel="stylesheet"
+      href="./styles/components/course-docs/course-docs.css?v=1.0">
+
+  <div id='join-to-access-prompt'
+       data-bind="visible:isJoinPromptVisible()">
+       Join to access shared notes  <span class='glyphicon glyphicon-arrow-right'></span>
+    
+   </div>
+  <div id="course-docs-container"
+       data-bind="visible:isVisible()">
+
+      <div id="no-practise-test-message"
+           data-bind="visible:isEmpty()">
+        There are no documents </br>
+        for this class yet.
+      </div>
+
+      <doc-list-current></doc-list-current>
+      <button id="doc-upload-button"
+              class='glyphicon glyphicon-plus'
+              data-bind="visible:uploadingAllowed(), click:openUploader">
+      </button>
+  </div>

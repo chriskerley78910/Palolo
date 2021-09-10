@@ -1,0 +1,80 @@
+
+<link rel="stylesheet" href="./styles/components/profile-setter/profile-setter.css?v=4.1"></link>
+<link rel="stylesheet" href="./styles/components/profile-setter/croppie.css?v=1.1"></link>
+
+  <div data-bind="visible:isVisible()"
+      class="background-dimmer">
+  </div>
+
+
+
+  <div class="window-holder"
+       data-bind="visible:isVisible(), complementClick: hideProfileSetter">
+
+       <div id="invalid-photo-error"
+             data-bind="visible:isFaceErrorVisible()">
+               <div>That photo kinda sucks..</div>
+               <div> How about a <i> good one </i> of you? </div>
+             <div>
+                   <button class="grey-flat-button"
+                           data-bind="click:closeErrorMessage">
+                           Okay
+                   </button>
+
+             </div>
+                  <small> (Preferably no nudes though.) </small>
+       </div>
+  <permission-error></permission-error>
+
+  <form id="profile-setter"
+        runat="server">
+
+    <!-- LEFT SIDE -->
+    <div id="profile-setter-left-side">
+
+      <div  class="profile-setter-spinner"
+            data-bind="visible:isSpinnerVisible()">
+        <div  class="screen-center-outer">
+         <div class="screen-center-inner">
+            <div class="loader"></div>
+         </div>
+       </div>
+      </div>
+
+      <div id="profile-img-holder"
+           data-bind="visible:isPhotoCropperVisible()">
+          <div id="img-uploader-preview-img">
+            <div id="no-photo-img"
+                  class="glyphicon glyphicon-camera"
+                  data-bind="visible:isLargeCameraButtonVisible(),click:webcamCapture">
+            </div>
+            <div id="missing-photo-message"
+                  data-bind="visible:isMissingPhoto()">
+                  <div>
+                      <div>upload your photo</div>
+                      <i id="missing-photo-arrow"
+                         class="glyphicon glyphicon-arrow-down">
+                       </i>
+                  </div>
+            </div>
+          </div>
+
+
+      </div>
+
+      <profile-webcam></profile-webcam>
+      <link rel="stylesheet" href="./styles/components/profile-setter/profile-videos.css?v=1.0"></link>
+      <!-- <iframe class="profile-video"
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/x0-UFKFHjU0"
+              frameborder="0"
+              allow="autoplay"
+              ></iframe> -->
+      <photo-controls></photo-controls>
+    </div>
+
+
+    <user-info></user-info>
+  </form>
+</div>

@@ -1,0 +1,101 @@
+<link rel="stylesheet" href="./styles/components/payment/credit-card-info.css?v=1.3">
+
+<div id='credit-card-info' class='background-dimmer' data-bind='visible:isVisible()'>
+
+  <div class="middelize"
+       data-bind=visible:isSpinnerVisible()>
+      <div class="big-loader"></div>
+  </div>
+
+
+
+  <form action="/charge" method="post" id="payment-form">
+    <span id='payment-title'>
+      Palolo checkout
+      <i id='checkout-lock' class='glyphicon glyphicon-lock'></i>
+    </span>
+    <span class='x-close-button' data-bind='click:close'>x</span>
+
+    <div class="form-row">
+      <div id='payment-method' class='payment-col'>
+
+              <label id='card-label' class='payment-col-title' for="card-element">
+                CREDIT CARD OR DEBIT CARD
+              </label>
+              <div id="cardholder-name">
+                <input id='cardholder-name-input'
+                       type='text'
+                       placeholder="Cardholder name"
+                       data-bind='textInput:cardholderName, css:{"invalid-name":!isNameValid()}'>
+                </input>
+              </div>
+              <div id="card-element">
+                <!-- A Stripe Element will be inserted here. -->
+              </div>
+              <!-- Used to display form errors. -->
+              <div id="card-errors" role="alert"></div>
+
+              <button class='payment-button' data-bind="attr:{disabled:isPaymentComplete() || isProcessingPayment()}">
+                <div class="small-spinner hidden-element" id="spinner"
+                      data-bind='visible:isProcessingPayment()'></div>
+                <span id="button-text" class=""
+                      data-bind="visible:!isProcessingPayment() && !isPaymentComplete()">Pay Now</span>
+                <span id="button-text" class=""
+                      data-bind="visible:isPaymentComplete()">
+                      <span>Payment Successful</span>
+                      <span class='glyphicon glyphicon-ok credit-card-payment-success'>
+                      </span>
+                </span>
+              </button>
+
+              <div id='payment-success-info'
+                   data-bind='css:{"slide-down":isPaymentComplete()}'>
+                <div> Purchase Successful </div>
+                <div css='grey'>A confirmation email will be sent.</div>
+              </div>
+      </div>
+
+      <div id='order-summary' class='payment-col'>
+        <div class='order-part'>
+          <div class='order-summary-title'>ORDER SUMMARY</div>
+          <div class='order-summary-row'>
+              <span data-bind='text:productQuantity()'></span> unit(s)
+              <span class='order-cost' data-bind='text:productPrice()'> </span>
+          </div>
+          <div id='order-tax-title'>
+            Taxes
+          </div>
+          <div class='order-summary-row'>
+            HST(13%) <span class='order-cost' data-bind='text:salesTax()'> $0.00 </span>
+          </div>
+          <div class='order-summary-row'>
+            Order Total <span class='order-cost' data-bind='text:orderTotal()'>  </span>
+          </div>
+        </div>
+
+        <div id='bottom-order-part'>
+          <div class='order-summary-title'>SERVICES IN YOUR ORDER</div>
+          <div class='product-name-row'>
+            <span data-bind='text:productDescription()'></span>
+          </div>
+          <div class='order-summary-row'>
+            <span data-bind='text:productQuantity()'></span> X
+            <span data-bind='text:productPrice()'></span>
+          </div>
+        </div>
+
+
+
+      </div>
+      <div style="text-align:left; margin:5pt;">
+        <img src='./assets/powered_by_stripe.svg'></img>
+        <span>256-bit secure encryption</span>
+      </div>
+    </div>
+
+
+
+  </form>
+
+
+</div>

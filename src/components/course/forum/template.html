@@ -1,0 +1,92 @@
+<link rel="stylesheet" href="./styles/components/course/forum.css?v=1.4">
+
+<div id="classroom-holder"
+     data-bind="visible:isVisible()">
+
+     <!-- spinner -->
+     <div  class="screen-center-outer">
+      <div class="screen-center-inner">
+         <div class="loader"
+              data-bind="visible:isSpinnerVisible()">
+         </div>
+      </div>
+    </div>
+
+    <!-- question prompt -->
+
+  <div id="empty-forum-prompt"
+       data-bind="visible:messages().length <= 0 && isSpinnerVisible() == false">
+    <div id='forum-group-name' data-bind='text:groupName()'>Not sure who to ask for help?</div>
+      <div id='forum-group-prompt'>Why not join the conversation?</div>
+  </div>
+
+  <ul data-bind="foreach:messages"
+      id="classroom-messages"
+      class="show-vert-scroll">
+
+    <li class="forum-message"
+        data-bind="css:{ 'self-message': isSelfMessage(), 'youtube-embed' : /iframe/.test(getHTML()) }">
+
+      <!-- ko if: typeof getImgUrl() == 'string' -->
+        <img data-bind="attr:{src:getImgUrl()}"
+             class="classroom-chat-img disable-select">
+        </img>
+      <!-- /ko -->
+
+      <!-- ko if: typeof getImgUrl() != 'string' && isSelf == false -->
+        <img src="./assets/no-photo.jpg"
+             class="classroom-chat-img disable-select">
+        </img>
+      <!-- /ko -->
+
+
+
+      <span class="plain-text-post">
+        <span data-bind="html:getHTML()"
+              class="chat-text">
+        </span>
+        <span data-bind="text:timestamp"
+              class="classroom-timestamp disable-select">
+        </span>
+        <span data-bind="visible:isSelf == false, text:first + ' ' + last"
+              class="users-name">
+        </span>
+      </span>
+    </li>
+  </ul>
+
+
+
+
+  <div class="message-sender">
+
+      <div id="forum-message-sent"
+           data-bind="visible:showSent()">
+           sent!
+      </div>
+      <div id="forum-message-sent"
+           data-bind="visible:isSendingMessageVisible()">
+           sending.
+      </div>
+      <textarea
+                id="forum-chat-textarea"
+                rows="1"
+                class="show-vert-scroll message-input-holder"
+                placeholder="Type your message here."
+                type="text"
+                data-bind="textInput:newMessage,
+                        event:{'keydown':onKeyPress} ,
+                        hasFocus: inputHasFocus(),
+                        click: inputClicked">
+      </textarea>
+
+
+      <button
+              class="disable-select send-message-btn"
+              data-bind="enable:isValidInput(), click:sendForumMessage, css:{}">
+              SEND
+      </button>
+    </div>
+
+</div>
+<!--  end of course holder-->

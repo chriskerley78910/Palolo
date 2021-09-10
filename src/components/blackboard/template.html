@@ -1,0 +1,149 @@
+<link rel="stylesheet" href="./styles/components/blackboard/style.css?v=2.1"></link>
+<div id="blackboard-holder"
+     draggable="false">
+
+  <div id="blackboard-background"
+       class='background-dimmer'
+       data-bind="visible:blackboardOpen(), click:toggleVisibility">
+  </div>
+
+
+  <div id="hideable-area"
+       data-bind="visible:blackboardOpen()">
+
+     <div id="board-trashed-message"
+           data-bind="visible:isTrashedMessageVisible()">
+       Your classmate deleted the board.
+     </div>
+
+
+     <div id="left-tool-bar" class="tool-bar">
+       <button
+               class="top-board-buttons tool-button glyphicon glyphicon glyphicon-trash"
+               data-bind="click:trashCurrentBoard"
+               data-toggle="tooltip"
+               title="Delete board.">
+       </button>
+       <button id="board-undo-button"
+               class="fa fa-undo tool-button top-board-buttons"
+               data-toggle="tooltip"
+               title="Undo delete."
+               data-bind="visible:recentlyTrashedBoards().length > 0, click:undoTrashBoard">
+       </button>
+     </div>
+
+
+    <div id="center-tool-bar"
+         class="tool-bar">
+    <div id='blackboard-colors'>
+      <button id='blackboard-blue'
+              class='blackboard-color-picker'
+              data-bind='click:selectBlue'>
+      </button>
+      <button id='blackboard-pink'
+              class='blackboard-color-picker'
+              data-bind='click:selectPink'>
+      </button>
+      <button id='blackboard-yellow'
+              class='blackboard-color-picker'
+              data-bind='click:selectYellow'>
+      </button>
+      <button id='blackboard-green'
+              class='blackboard-color-picker'
+              data-bind='click:selectGreen'>
+      </button>
+    </div>
+    <button
+            data-bind="click: setPencilTool"
+            class="tool-button glyphicon glyphicon-pencil"
+            data-toggle="tooltip"
+            data-placement="top"
+            title="Pencil" >
+    </button>
+    <button class="tool-button glyphicon glyphicon-erase"
+            data-bind="click:setEraserTool"
+            data-toggle="tooltip"
+            data-placement="top"
+            title="Eraser">
+    </button>
+    </div>
+
+    <div id="right-tool-bar" class="tool-bar">
+      <div id='blackboard-sharing-options'
+           data-bind='visible:isEmailOptionsOpen()'>
+        <input type='text' placeholder='Subject' data-bind='textInput:emailBoardTitle'></input>
+        <textarea id='shared-blackboard-message'
+                  data-bind='textInput:emailBoardMessage'>
+        </textarea>
+        <button id='send-blackboards'
+                class='purple-button'
+                data-bind='click:emailBoard'>
+                <span data-bind='!isWaitingForEmail()'>SEND</span>
+                <span class='nano-spinner' data-bind='visible:isWaitingForEmail()'></span>
+                <span data-bind='visible:showEmailCheckmark()' id='okay-message' class='glyphicon glyphicon-ok'></span>
+        </button>
+      </div>
+      <button
+              id='blackboard-email-button'
+              class="top-board-buttons tool-button glyphicon glyphicon-envelope"
+              data-toggle="tooltip"
+              data-bind='click:openEmailWindow'
+              title="Email board">
+      </button>
+      <button
+              id='blackboard-fullscreen-button'
+              class="top-board-buttons tool-button glyphicon glyphicon-fullscreen"
+              data-toggle="tooltip"
+              title="Toggle fullscreen">
+      </button>
+
+    </div>
+
+
+
+    <!-- spinner -->
+    <div  class="screen-center-outer">
+     <div class="screen-center-inner">
+        <div id="blackboard-loader"
+             class="loader"
+             data-bind="visible:spinnerVisible()"></div>
+     </div>
+   </div>
+
+    <span class="blackboard-btn blackboard-prev-btn glyphicon glyphicon-menu-left"
+          data-toggle="tooltip"
+          title="Previous board"
+          data-bind="visible:prevArrowVisible(), click:prevArrowClicked">
+    </span>
+      <canvas id="tool-area"
+               width="1864"
+               height="980">
+      </canvas>
+      <canvas id='drawing-area'
+              width=1864
+              height=980>
+      </canvas>
+      <span class="blackboard-btn blackboard-next-btn glyphicon glyphicon-menu-right"
+            data-toggle="tooltip"
+            title="Next board"
+            data-bind="click:nextArrowClicked">
+      </span>
+  </div>
+<!-- END hideable area -->
+
+
+    <!-- toggle open / close blackboard  -->
+    <div id="blackboard-toggle-button-holder" data-bind="visible:isToggleVisible()">
+      <button id="blackboard-toggle-button"
+              data-toggle="tooltip"
+              title="Chalkboard"
+              data-bind="click:toggleVisibility, visible:!blackboardOpen()"
+              class="blackboardButton glyphicon">
+      </button>
+      <span data-bind="visible:blackboardOpen()"
+            class="blackboard-toggle-button-arrow glyphicon glyphicon-menu-up"></span>
+      <span data-bind="visible:!blackboardOpen()"
+            class="blackboard-toggle-button-arrow glyphicon glyphicon-menu-down"></span>
+    </div>
+
+</div>

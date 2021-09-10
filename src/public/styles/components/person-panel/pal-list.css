@@ -1,0 +1,141 @@
+
+pal-list{
+  display: inline-block;
+  width: 100%;
+  height: 315pt;
+}
+
+
+#pal-list-header{
+  font-size: 13pt;
+  padding: 2pt;
+  font-weight: bold;
+  text-align: left;
+  color: #959698;
+  padding-left: 3vh;
+}
+
+
+
+#no-pals-message{
+  height: 3vh;
+  font-size: 2vh;
+  color: grey;
+  margin: 5vh 0vh;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+#great-job{
+  margin-top: 3vh;
+}
+
+#pal-list{
+  padding: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+
+
+  height: 315pt;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  border-bottom: 1pt solid #c5c5c5;
+}
+
+#pal-list::-webkit-scrollbar {
+  display: none;
+}
+
+#pal-list-spinner{
+  top: 21vh;
+  position: absolute;
+}
+
+.pal-row{
+  list-style: none;
+  padding: 1vh 0vh;
+  height: 31pt;
+display: flex;
+justify-content: left;
+}
+
+.pal-row:hover{
+  cursor: pointer;
+  background-color: #0000000a;
+}
+
+.pal-row-selected{
+  box-shadow: -3px 0.1vh 0.5vh #0000001a;
+  background: linear-gradient(to top, #ffffff, #ffffff) !important;
+  z-index: 2;
+  color: black;
+}
+
+.pal-list-notification{
+  position: absolute;
+  background: #3F51B5;
+  color: white;
+  left: 100%;
+  top: 50%;
+  transform: translate(0,-50%);
+  width: fit-content;
+  font-size: 2vh;
+  z-index: 2;
+  border-radius: 0.5vh;
+  padding: 1vh;
+  font-style: unset;
+}
+
+.pal-list-notification > i{
+  position: absolute;
+  left: -5px;
+  top: 50%;
+  transform: translate(0,-50%);
+}
+
+.pal-presence{
+  vertical-align: top;
+  display: inline-block;
+width: 3vh;
+  height: 100%;
+      padding: 5pt;
+}
+
+.pal-last-seen{
+  display: inline-block;
+  font-style: inherit;
+  font-size: 8pt;
+}
+
+.pal-img{
+  vertical-align: top;
+  border-radius: 50%;
+  height: 100%;
+}
+
+.pal-img:hover{
+  cursor: pointer;
+}
+
+.pal-name-holder{
+  padding-left: 0.5vh;
+  position: relative;
+  vertical-align: top;
+  height: 100%;
+  display: inline-block;
+}
+
+.pal-name{
+  position: relative;
+  top: 50%;
+  transform: translate(0px, -50%);
+  display: grid;
+  font-size: 12pt;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

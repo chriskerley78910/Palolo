@@ -1,0 +1,30 @@
+<link rel="stylesheet"
+      href="./styles/components/york-forum/jquery.cleditor.css?v=2.0">
+</link>
+
+<div class='background-dimmer' data-bind='visible:isVisible()'>
+
+  <div data-bind='visible:isPostSuccessful()'> Success </div>
+  <div id='york-forum-poster' data-bind='complementClick:hide' >
+    <textarea id='forum-poster-title-holder'
+              placeholder="What's new at YU?"
+              maxlength="300"
+              data-bind='textInput:title, hasFocus:titleHasFocus'>
+    </textarea>
+    <textarea id='forum-input'
+              name="input"
+              placeholder="Text (Optional)">
+
+    </textarea>
+    <button id='york-forum-post-button'
+            data-bind='click:post, enable:isPostable() && isValidBodyLength()'>
+      <span data-bind='visible:!isSpinnerOn()'>POST</span>
+      <span id='post-spinner'
+           class='nano-spinner'
+           data-bind='visible:isSpinnerOn()'>
+      </span>
+    </button>
+    <div data-bind='text:bodyErrorMessage()'></div>
+  </div>
+
+</div>

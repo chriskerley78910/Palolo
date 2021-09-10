@@ -1,0 +1,41 @@
+<link rel="stylesheet" href="./styles/components/person-panel/pal-request-list.css?v=1.0">
+<div id="pal-request-list-holder">
+    <ul data-bind="foreach:requests" id="pal-request-list">
+      <li class="pal-request-row">
+
+        <span>
+          <div class="pal-img-request-holder">
+            <img class="pal-img"
+                 data-bind="attr:{src: getSmallPhotoURL()}, click:$parent.faceClicked">
+            </img>
+          </div>
+
+          <span class="pal-request-name-holder">
+            <span class="pal-request-name"
+                  data-bind="text:getFirst() + ' ' + getLast()">
+            </span>
+          </span>
+
+          <div class="pal-request-title">
+              wants to be your friend.
+          </div>
+
+        </span>
+
+        <span class="pal-request-button-holder">
+            <div>
+              <button data-bind="click:$parent.acceptRequest">
+                  accept
+              </button>
+              <button data-bind="click:$parent.denyRequest">
+                  deny
+              </button>
+            </div>
+        </span>
+
+
+
+
+      </li>
+    </ul>
+</div>

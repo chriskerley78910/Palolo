@@ -1,0 +1,94 @@
+<link rel="stylesheet"
+      href="./styles/components/course-docs/doc-uploader.css?v=1.0">
+
+<div class='dark-background' data-bind='visible:isVisible()'>
+
+  <span id="upload-success-message"
+        data-bind="visible:showUploadSuccess()">
+        <div>Upload successful!</div>
+           <div>Great Job!</div>
+  </span>
+
+    <div id='doc-uploader' >
+          <span id='uploader-course-reminder' data-bind='text:courseDescription()'></span>
+          <span class='x-close-button' data-bind='click:close'>x</span>
+          <div id='doc-input'
+              data-bind="visible:unsavedDocLoaded()">
+            <span id='uploader-title'>
+              <label id="doc-reupload-btn"
+                     class="glyphicon glyphicon-upload doc-upload-btn"
+                     for="doc-uploader-input">
+              </label>
+              <span>Upload another document</span>
+            </span>
+
+            <input contenteditable="true"
+                   class='unsaved-doc-attr'
+                   data-bind="textInput:unsavedDocName">
+            </input>
+            <span id='matching-profs-holder'>
+              <input contenteditable="true"
+                     class='unsaved-doc-attr'
+                     placeholder="Professor"
+                     data-bind="textInput:profName">
+
+              </input>
+              <ul id='matching-profs'
+                      data-bind="foreach:matchingProfs, visible:matchingProfs().length > 0">
+                <div class='matching-prof'
+                      data-bind="text:getFirst() + ' ' + getLast(), click:$parent.selectProf">
+                </div>
+              </ul>
+            </span>
+
+            <select contenteditable="true"
+                   class='unsaved-doc-attr'
+                   data-bind="options:years,
+                              value:selectedYear,
+                              valueAllowUnset: true">
+                   <option > </option>
+
+            </select>
+
+          </div>
+          <div>
+            <label id="doc-reupload-btn"
+                   data-bind="visible:!unsavedDocLoaded()"
+                   class="glyphicon glyphicon-upload doc-upload-btn"
+                   for="doc-uploader-input">
+            </label>
+            <input id='doc-uploader-input'
+                   type='file'
+                   accept="application/pdf"
+                   data-bind="event:{change:uploadDoc}">
+            </input>
+          </div>
+
+          <button id='doc-submit'
+                  data-bind="enable:submittable(), click:submitDoc"
+                  disabled>
+                  Submit
+                  <span class='spinner'></span>
+          </button>
+
+          <div id='doc-course-adder' data-bind='visible:courseAdderVisible()'>
+            <div>No record of that prof teaching that course</div>
+                <div>Would you like to add the record?</div>
+                <div>
+                   <button data-bind='click:addCourse'
+                           class='doc-course-adder-button'>Yes</button>
+                   <button data-bind="click:closeAdder"
+                           class='doc-course-adder-button'>No</button>
+                </div>
+          </div>
+
+          <div id='doc-uploader-terms'>
+            By uploading you are agreeing that the content does not violate copyright
+            and you agree to the
+            <a target="_blank"  href="https://www.legal.palolo.ca/terms_and_conditions">
+              Terms and Conditions
+            </a>
+          </div>
+
+    </div>
+</div>

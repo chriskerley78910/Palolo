@@ -1,0 +1,86 @@
+#admin-holder{
+
+}
+
+#admin-content-holder{
+  width: 93vh;
+  height: 100%;
+  display: inline-block;
+  border: 1px solid #0000002e;
+  vertical-align: top;
+  padding-top: 20px;
+  background-color: white;
+}
+
+
+
+#tutor-list{
+  height: 100%;
+  width: 30%;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.list-title{
+  color: #222;
+      font-weight: 600;
+      text-align: center;
+      margin: 16px 0px;
+}
+
+
+
+
+.highlighted-tutor{
+  background: #80808030;
+}
+
+
+.no-bullet-list{
+  border: 1px solid #0000002e;
+  height: 76%;
+  list-style: none;
+  padding: 10px;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+
+.no-border{
+  border: none;
+}
+
+.admin-list-element{
+  position: relative;
+  padding: 5px;
+}
+
+.admin-list-element:hover{
+  text-decoration: underline;
+  cursor:pointer;
+}
+
+.admin-list-element-text{
+  white-space: nowrap;
+  width: 95%;
+  display: inline-block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+}
+
+
+.admin-list-button{
+  position: absolute;
+  right: 0px;
+  background: white;
+  border: 10px solid white;
+  border-radius: 50%;
+}
+
+
+.admin-list-button:hover{
+  cursor:pointer;
+  background: #00000026;
+  border: 10px solid #e7e7e7;
+  border-radius: 50%;
+}

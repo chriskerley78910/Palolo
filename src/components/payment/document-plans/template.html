@@ -1,0 +1,52 @@
+<link rel="stylesheet" href="./styles/components/payment/document-plans.css?v=1.1">
+
+<div id="document-plans"
+     data-bind="visible:isVisible()">
+
+  <div id='document-plans-holder'>
+       <div class='x-close-holder'>
+         <span class='x-close-button' data-bind='click:closePaymentOptions'>x</span>
+       </div>
+    <div id="plan-title">Choose your plan:</div>
+    <span class='payment-option'>
+      <div class='plan-duration'>12 Months</div>
+      <span class='ok-plan glyphicon glyphicon-ok'></span>
+      <span id='best-value'>BEST VALUE</span>
+      <div class='plan-price'>$9.95 <sup>/mo</sup></div>
+      <div class='plan-details'>12 months of <b class='bold'>unlimited downloads</b></div>
+      <div class='plan-details'>Billed $119.40 for a year.</div>
+
+      <button class='plan-button best-value-color'
+              data-bind='click:selectValuePlan'>Choose 12 Months</button>
+      <div class='plan-details'>Save $360 over the monthly plan</div>
+    </span>
+
+    <span class='payment-option'>
+      <div class='plan-duration'>3 Months</div>
+      <span class='ok-plan glyphicon glyphicon-ok'></span>
+      <div class='plan-price'>$24.95 <sup>/mo</sup></div>
+      <div class='plan-details'>3 months of <b class='bold'>unlimited downloads</b></div>
+      <div class='plan-details'>Billed $74.85 for 3 months</div>
+
+      <button class='plan-button'
+              data-bind="click:selectMediumPlan">
+              Choose 3 Months
+      </button>
+      <div class='plan-details'>Save $40 over the monthly plan</div>
+    </span>
+
+    <span class='payment-option'>
+      <div class='plan-duration'>1 Month</div>
+      <span class='ok-plan glyphicon glyphicon-ok'></span>
+      <div class='plan-price'>$39.95 <sup>/mo</sup></div>
+      <div class='plan-details'>1 month of <b class='bold'>unlimited downloads</b></div>
+      <div class='plan-details'>Billed $39.95 for a month</div>
+      <button class='plan-button'
+              data-bind='click:selectExpensivePlan'>
+              Choose 1 Month
+      </button>
+    </span>
+
+  </div>
+
+</div>

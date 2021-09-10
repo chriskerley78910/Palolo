@@ -1,0 +1,33 @@
+<link rel="stylesheet"  href="./styles/components/admin/course-delegator.css"></link>
+
+<!-- Course Delegator --------------------------------->
+  <div data-bind="visible:isVisible" id="tutor-courses">
+    <div id="tutor-opted-courses-holder">
+      <div class="list-title">Current Courses</div>
+      <ul class="no-bullet-list"
+          data-bind="foreach:tutorOptedCourses">
+        <li class="admin-list-element">
+          <span data-bind="text:name"
+                class="admin-list-element-text"></span>
+          <i class="glyphicon glyphicon-minus admin-list-button"
+             data-bind="click:$parent.removeCourse"></i>
+        </li>
+      </ul>
+    </div>
+
+    <div id="tutorable-courses-holder">
+      <div class="list-title">Available Courses</div>
+      <ul class="no-bullet-list"
+          data-bind="foreach:tutorableCourses">
+        <li class="admin-list-element">
+          <span data-bind="text:name"
+                class="admin-list-element-text"></span>
+          <i class="glyphicon glyphicon-plus admin-list-button"
+             data-bind="click:$parent.addCourse"></i>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+
+ <!-- Course Delegator End --------------------------------->

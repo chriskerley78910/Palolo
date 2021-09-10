@@ -1,0 +1,70 @@
+
+
+
+#course-text-info-holder{
+  position: relative;
+  border-bottom: 1px solid #e5e5e5;
+  background: white;
+}
+
+
+
+#left-course-message{
+  position: fixed;
+  left: 50%;
+  top: 30%;
+  font-size: 3vh;
+  transform: translate(-50%);
+  box-shadow: 0vh 1vh 3vh #00000026;
+  padding: 4vh;
+  background: white;
+  z-index: 5;
+}
+
+
+#course-info-text{
+  width: fit-content;
+  text-align: left;
+    padding-top: 17pt;
+  padding-left: 1vh;
+   padding-bottom: 4vh;
+}
+
+#course-description{
+  text-align: left;
+  font-size: 13pt;
+  color: #a8a8a8;
+  display: block;
+}
+
+#course-description #desc-name {
+  font-weight: bold;
+}
+
+
+#course-group-location{
+  text-align: left;
+  font-size: 17pt;
+  font-weight: bold;
+  color: #3f3f3f;
+  display: block;
+  }
+
+#leave-group-button{
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+  padding-right: 1vh;
+  background: none;
+  border: none;
+  color: #8f8f8f;
+  white-space: nowrap;
+  float: right;
+  font-size: 10pt;
+}
+
+#leave-group-button:hover{
+  cursor: pointer;
+  text-decoration: underline;
+  color:black;
+}

@@ -1,0 +1,12 @@
+<link rel="stylesheet" href="./styles/components/course/prompts/in-another-section.css">
+
+<div data-bind="visible:isVisible()" id='in-another-section-holder'>
+     <div>
+              You are already in another section for
+          <span data-bind="text:dept() + courseCode()"></span>
+     </div>
+     <div id="another-section-switch">Switch to this section?</div>
+     <div>
+       <button data-bind="click:switchCourse">Yes</button>
+     </div>
+</div>

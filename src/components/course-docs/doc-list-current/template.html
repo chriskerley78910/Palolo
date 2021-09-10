@@ -1,0 +1,63 @@
+<link rel="stylesheet"
+      href="./styles/components/course-docs/better-doc-list.css">
+
+
+<div id='doc-list-holder'>
+
+  <span id='ask-prof-popup'
+        data-bind='visible:askProfMessageVisible(),complementClick:closeAskProf'>
+    We are asking the professor for permission to share this content.
+  </span>
+  <div class='profs'
+      data-bind="foreach:profs">
+
+    <div class='prof-title'>
+      <img data-bind='attr:{src:getSmallPhotoURL()}'></img>
+      <span class='prof-name' data-bind="text:first + ' ' + last">First Last</span>
+
+    </div>
+
+    <span data-bind="foreach:getYears()">
+
+      <span class='profs-doc-list' data-bind="foreach:docs">
+
+
+        <span class="doc-container" data-bind='click:$parents[2].openDoc'>
+
+          <span class='term-title-text' data-bind="text:year"></span>
+          <div class="locked-prof"
+               data-bind='visible:isLocked()'>
+            <div class='locked-icon-holder'>
+              <i class="glyphicon glyphicon-lock doc-unlock-icon"></i>
+              <!-- <span class='unlock-text'>unlock</span> -->
+            </div>
+          </div>
+
+          <span class='doc-preview'>
+
+            <span class='doc-shade'>
+            </span>
+            <img class='doc-img'
+                 src='./assets/practice_test.jpg'>
+            </img>
+          </span>
+          <span class='doc-footer'>
+
+            <div class='title ellipsis' data-bind='text:title'>No Title</div>
+            <div class='last-opened'>
+              <i class='glyphicon glyphicon-align-left doc-icon'></i>
+              Opened
+              <span data-bind='text:" " + getLastOpened()'>Never opened</span>
+            </div>
+
+          </span>
+          <span class='author-approval-status'
+                data-toggle="tooltip" title="Pending professor's permission">
+                pending
+          </span>
+        </span>
+      </span>
+    </span>
+
+  </div>
+</div>

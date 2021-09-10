@@ -1,0 +1,15 @@
+<link rel="stylesheet" href="./styles/components/session-tracker/style.css?v=1.1">
+
+  <div id='session-tracker'
+       data-bind='visible:isVisible()'>
+
+      <account-info></account-info>
+      <div class='session-tracker-spacer'></div>
+      <punch-clock></punch-clock>
+
+   <span id='close-session-tracker-button'
+         class='glyphicon glyphicon-chevron-left'
+         data-bind='click:close'>
+    </span>
+
+</div>

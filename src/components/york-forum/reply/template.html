@@ -1,0 +1,46 @@
+<link rel="stylesheet"
+      href="./styles/components/york-forum/reply.css?v=2.3">
+</link>
+
+
+<!-- ko if: !isRoot() -->
+    <div class='reply-box'>
+      <i class='reply-seperator'></i>
+      <div class='replier-info-row'>
+        <img class='reply-author-img' data-bind='attr:{ src : userPhotoURL()}'></img>
+        <span  class='reply-author' data-bind='text: author'></span>
+        <span class='reply-timestamp'>
+          - <span  data-bind='text: timestamp'></span> ago
+        </span>
+
+      </div>
+      <div  class='reply-message' data-bind='html: message'></div>
+      <div class='reply-response-row'>
+
+        <span data-toggle="tooltip" title="Reply" data-bind='click:openCommentBox'>
+          <i class="glyphicon glyphicon-comment post-comment-icon">
+         </i>
+        </span>
+
+        <span data-toggle="tooltip" title="Delete" data-bind='visible:isOwner, click:deleteComment'>
+          <i class="glyphicon glyphicon-trash post-comment-icon"></i>
+        </span>
+
+        <div class='post-comment' data-bind='visible:isCommentBoxOpen()'>
+          <textarea class='post-comment-message'
+                    data-bind='textInput:replyToReplyMessage, hasFocus:commentCommentHasFocus'
+                    placeholder="What do you think?">
+          </textarea>
+          <button class='blue-square-button' data-bind='click:replyToReply'>COMMENT</button>
+        </div>
+
+
+      </div>
+    </div>
+<!-- /ko -->
+
+
+ <!-- ko foreach: replies -->
+ <!-- note that what is available here is a reference to the reply object -->
+   <forum-reply params='replies: {isRoot:false, replies:replies, self:getSelf}'></forum-reply>
+ <!-- /ko -->

@@ -1,0 +1,54 @@
+
+
+#checked-in-classmate-holder{
+  padding: 2.5vh;
+}
+
+#checked-in-classmate-holder > ul{
+  list-style: none;
+  padding: 0;
+}
+
+#checked-in-button-holder{
+  border-bottom: 1px solid #0000004f;
+  margin-bottom: 0vh;
+  padding-bottom: 2vh;
+}
+
+#checked-in-classmate-holder  button{
+  background: linear-gradient(to top, #1ecf00, #04ea00);
+  color: white;
+  border-radius: 3vh;
+  padding: 0.5vh 1.4vh;
+  font-size: 2vh;
+}
+
+#checked-in-room-name{
+  padding: 2vh;
+  font-size: 2vh;
+  font-weight: bold;
+  color: #4b4b4b;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+#checked-in-lecture-title{
+  font-size: 2vh;
+  margin: 2vh 0 2vh 0vh;
+}
+
+.checked-in-person-holder{
+  margin: 2vh 0;
+  position: relative;
+}
+
+.checked-in-dot{
+  display: inline-block;
+  margin: 0.5vh 0.7vh 0 0;
+}
+
+.checked-in-person-img{
+  width: 3vh;
+  border-radius: 50%;
+}

@@ -1,0 +1,50 @@
+<link rel="stylesheet"
+      href="./styles/components/course/prompts/non-member.css">
+
+  <div
+      id="course-joined-message"
+      data-bind="visible:showCourseJoinedMessage()">
+    <span>You have joined!</span>
+    <span id="ok-sign">
+      &#10003;
+    </span>
+  </div>
+
+
+<div id="membership-prompt-holder"
+      data-bind="visible:isVisible()">
+
+  <!-- spinner -->
+  <div  class="screen-center-outer">
+   <div class="screen-center-inner">
+      <div class="loader"
+           data-bind="visible:isSpinnerVisible()">
+      </div>
+   </div>
+ </div>
+
+  <div data-bind="text:joinPromptMessage(),
+                  visible:userHasPhoto() == false">
+  </div>
+
+  <div data-bind="visible:userHasPhoto() == false">
+       <img id='empty-photo-button'
+            data-bind="click:showProfileSetter, attr:{src:profilePhotoURL}"
+            src="#">
+        </img>
+  </div>
+
+
+  <button class="large-blue-button"
+           data-bind="disable: userHasPhoto() == false, click:joinCourse">
+    Join
+  </button>
+
+  <div id="thank-you-message"
+       data-bind="visible: isThankYouMessageVisible()">
+    <div>Thank you!</div>
+    <div>Now you are free</div>
+    <div>to join. &#128513;</div>
+  </div>
+
+</div>

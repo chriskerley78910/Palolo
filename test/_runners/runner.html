@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="./../libs/jasmine-2.8.0/jasmine.css">
+  <script>
+  window.alert = function() {
+      debugger;
+  }
+  </script>
+  <script
+     type="text/Javascript"
+     src="../libs/require.js"
+     data-main="./moduleloader.js"></script>
+  <script
+    type="text/Javascript"
+    src="./../libs/require-testjs-plugin.js">
+  </script>
+</head>
+<body>
+
+  <!--  just so i can run tests -->
+  <form action="/charge" method="post" id="payment-form">
+      <label for="card-element">
+      </label>
+      <div id="card-element">
+      </div>
+      <div id="card-errors" role="alert"></div>
+    </div>
+    <button class='payment-button'>
+      <span id="button-text" class="">Pay Now</span>
+    </button>
+  </form>
+
+<span id='video-chat-control-center'></span>
+<span id='control-center-resizer'></span>
+</body>
+</html>

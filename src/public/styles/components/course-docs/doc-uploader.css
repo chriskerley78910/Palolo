@@ -1,0 +1,144 @@
+#doc-uploader{
+  position: absolute;
+  top: 30%;
+  height: fit-content;
+  left: 50%;
+  transform: translate(-50%);
+  width: 447pt;
+  background: white;
+  border-radius: 3pt;
+}
+
+#uploader-course-reminder{
+  position: absolute;
+  top: -23pt;
+  left: 0;
+  color: white;
+  font-size: 15pt;
+}
+
+#doc-course-adder{
+  font-size: 12pt;
+}
+
+
+.doc-course-adder-button{
+  margin:11pt;
+}
+
+#uploader-title{
+  text-align: left;
+  width: 100%;
+  font-size: 12pt;
+  display: inline-block;
+  padding: 6pt;
+  color: #7a7a7a;
+}
+
+#uploader-title > span{
+  vertical-align: super;
+}
+
+
+.unsaved-doc-attr{
+  text-align: center;
+  color: black;
+  background: #e9edff;
+  font-size: 12pt;
+  height: 27pt;
+  border-radius: 4pt;
+  text-align: left;
+}
+
+#upload-success-message{
+  position: fixed;
+  left: 50%;
+  transform: translate(-50%);
+  top: 11%;
+  width: 100%;
+  z-index: 2;
+  font-size: 22pt;
+  color: #ffffff;
+  text-align: center;
+}
+
+
+.doc-upload-btn{
+  font-size: 20pt;
+  vertical-align: bottom;
+}
+
+.doc-upload-btn:hover{
+color: #0f28b0;
+  cursor: pointer;
+}
+
+.doc-upload-message{
+  color: white;
+  position: absolute;
+  font-family: sans-serif;
+  font-size: 22pt;
+  width: 188pt;
+  bottom: -27pt;
+  left: -0%;
+  transition: 0.1s;
+}
+
+#doc-upload-btn:hover .doc-upload-message{
+  color: #e8ff00;
+}
+
+
+#doc-uploader-input{
+  display: none;
+}
+
+#doc-submit{
+  background: #344ac3;
+  color: white;
+    width: 98%;
+  margin: 5pt;
+  border-radius: 5pt;
+  padding: 6pt;
+  font-size: 12pt;
+  transition: 0.15s
+}
+#doc-submit:enabled{
+  background: #263dbd;
+}
+
+
+#matching-profs-holder{
+  position: relative;
+  display: inline-block;
+}
+
+#matching-profs{
+  position: absolute;
+  top: 30pt;
+  left: 0pt;
+  width: 100%;
+  background: white;
+  font-size: 12pt;
+  text-align: left;
+  border-radius: 2pt;
+  padding: 1pt;
+}
+
+.matching-prof{
+  padding:4pt;
+}
+
+.matching-prof:hover{
+  cursor: pointer;
+  background: grey;
+  color:white;
+}
+
+#doc-uploader-terms{
+  padding: 15pt;
+    font-size: 11pt;
+    width: 400pt;
+    text-align: center;
+    display: inline-block;
+}

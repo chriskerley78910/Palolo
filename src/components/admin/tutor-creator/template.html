@@ -1,0 +1,37 @@
+<link rel="stylesheet"  href="./styles/components/admin/tutor-creator.css"></link>
+
+       <div id="tutor-creator-holder"
+            data-bind="visible:isVisible">
+
+         <div id="success-message"
+              class="create-tutor-message"
+              data-bind="visible:isSuccessMessageVisible">
+              Tutor Saved!
+              <span class="glyphicon glyidphicon-check"></span>
+        </div>
+
+        <div  id="error-message"
+              class="create-tutor-message"
+              data-bind="visible:isErrorMessageVisible">
+              <span data-bind="text:errorMessage"></span>
+        </div>
+
+           <div id="tutor-creator-left-side">
+             <img id="tutor-creator-headshot"
+                  alt="tutors photo"
+                  src="#"
+                  data-bind="attr:{src:photoURL}"
+                  >
+            </img>
+            <input type="file" id="headshot-file"></input>
+
+           </div>
+           <div id="tutor-creator-right-side">
+             <input data-bind="textInput:firstName" placeholder="First Name"></input>
+             <input data-bind="textInput:lastName" placeholder="Last Name"></input>
+             <input data-bind="textInput:email" placeholder="Email"></input>
+             <input data-bind="textInput:password" placeholder="Password"></input>
+             <button id="save-tutor-button" data-bind="click:saveTutor">Save</button>
+           </div>
+
+       </div>

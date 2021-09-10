@@ -1,0 +1,56 @@
+#tab-selector{
+  border: 1px solid #eeeff1;
+  background: white;
+  box-shadow: 0px 0px 1vh #00000017;
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  top: 3pt;
+  padding-top: 5pt;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+
+
+.course-tab-selector{
+  font-size: 14pt;
+  font-weight: bold;
+  position: relative;
+  text-align: center;
+  cursor: pointer;
+  top: 0vh;
+  padding: 1vh 0vh;
+  color: #888888;
+  flex: 1;
+}
+
+.course-tab-selector:hover   .course-tab-underline{
+  opacity: 1;
+  cursor: pointer;
+  color:black;
+}
+
+.course-tab-underline{
+  display: inline-block;
+  opacity: 0;
+  width: 80%;
+  height: 0.3vh;
+  background: #858585;
+  position: absolute;
+  bottom: -1px;
+  left: 10%;
+  cursor: pointer;
+}
+/*  a bit of duplicate code, fix this soon. */
+.visible-tab-underline {
+  display: inline-block;
+  opacity:1;
+  width: 80%;
+  height: 0.3vh;
+  background: #858585;
+  position: absolute;
+  bottom: -1px;
+  left: 10%;
+  cursor: pointer;
+}

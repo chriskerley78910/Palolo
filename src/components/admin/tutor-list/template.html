@@ -1,0 +1,45 @@
+<link rel="stylesheet"  href="./styles/components/admin/tutor-list.css"></link>
+
+
+<div id="tutor-list">
+  <div class="list-title">Tutors</div>
+  <div class="admin-list-element"><span class="glyphicon glyphicon-plus create-new"></span>
+    <button class="tutor-control-button"
+            data-bind="click:openTutorCreator, style: { 'text-decoration': currentChildComponent() == 'tutor-creator' ? 'underline' : 'none' }">Create New</button>
+  </div>
+
+
+  <ul class="no-bullet-list no-border"
+      data-bind="foreach:tutors">
+    <li class="admin-list-element"
+        data-bind="click:$parent.selectTutor,text:name, css: { 'highlighted-tutor': $parent.currentTutorId() == id}">
+    </li>
+  </ul>
+</div>
+
+<div id="tutor-controls-holder">
+  <div id="tutor-menu">
+    <button class="tutor-control-button"
+            data-bind="click:openTutorInfo, style: { 'text-decoration': currentChildComponent() == 'tutor-info' ? 'underline' : 'none' }">info</button>
+    <button class="tutor-control-button"
+            data-bind="click:openCourseDelegator, style: { 'text-decoration': currentChildComponent() == 'course-delegator' ? 'underline' : 'none' }">courses</button>
+
+  </div>
+
+  <div id=tutor-control>
+
+    <tutor-info params="visiblePanel:currentChildComponent,
+                        currentTutors: tutors,
+                        currentTutorId: currentTutorId">
+    </tutor-info>
+
+    <course-delegator params="visiblePanel:currentChildComponent,
+                              currentTutorId:currentTutorId">
+    </course-delegator>
+
+    <tutor-creator params="visiblePanel:currentChildComponent,
+                           currentTutors:tutors,
+                           currentTutorId:currentTutorId">
+    </tutor-creator>
+  </div>
+</div>

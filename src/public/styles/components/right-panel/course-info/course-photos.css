@@ -1,0 +1,56 @@
+
+#location-image-holder{
+  position: relative;
+}
+
+
+#forum-img{
+  display: inline-block;
+  width: 100%;
+  position: relative;
+  z-index: 0;
+  min-height: 274px;
+}
+
+#location-image-upload-button{
+  position: absolute;
+  top: 0px;
+  z-index: 0;
+  color: white;
+}
+.course-prof-holder{
+  font-size: 26pt;
+  background: #000000;
+  color: white;
+  width: 100%;
+  position: absolute;
+  bottom: 0pt;
+  left: 0pt;
+  display: block;
+  height: 26pt;
+}
+
+.prof-img{
+  border-radius: 50%;
+  position: absolute;
+  left: 10pt;
+  top: -22pt;
+  width: 61pt;
+  z-index: 2;
+  color: white;
+  border: 2pt solid #4d4d4d;
+}
+
+.groups-prof-name{
+  font-weight: bold;
+  position: relative;
+  left: 76pt;
+  top: 5pt;
+  width: 169pt;
+  float: left;
+  text-align: left;
+  white-space: nowrap;
+  overflow: hidden;
+  font-size: 12pt;
+  text-overflow: ellipsis;
+}

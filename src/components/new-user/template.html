@@ -1,0 +1,19 @@
+<link rel="stylesheet" href="./styles/components/new-user/style.css?v=1.0"></link>
+<div id='new-user' class='background-dimmer'>
+
+  <div class='new-user-box' data-bind="visible:isFirstStep()">
+    <div class='new-user-box-spacing'>Are you a York student?</div>
+    <button class="new-user-box-spacing" data-bind='click:chooseYork'>Yes</button>
+    <button class='new-user-box-spacing' data-bind='click:chooseNonYork'>No</button>
+  </div>
+
+
+    <div class='new-user-box' data-bind="visible:isSecondStep()">
+      Whats your major?
+      <input id='major-search-input' placeholder="Type your major"></input>
+      <ul data-bind='foreach:majors'>
+      </li data-bind='text:name, click:$parent.selectMajor'></li>
+      </ul>
+    </div>
+
+</div>

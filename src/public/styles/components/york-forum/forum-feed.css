@@ -1,0 +1,281 @@
+#post-message-holder{
+  background-color: white;
+  border-radius: 4px;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 16px;
+  padding: 8px;
+  border: 1pt solid #d0d0d0;
+  position: relative;
+}
+
+#poster-icon-holder{
+  margin-top: 4pt;
+
+  border-radius: 50%;
+  -ms-flex-preferred-size: 38px;
+  flex-basis: 38px;
+  height: 38px;
+  margin-right: 9px;
+  overflow: hidden;
+  width: 43px;
+  height: 43px;
+  top: 6pt;
+  position: absolute;
+  left: 4pt;
+}
+
+#poster-photo{
+  width: 100%;
+height: 100%;
+}
+
+#poster-replacement-photo{
+  font-size: 35pt;
+      position: relative;
+      top: -2pt;
+      color: darkgrey;
+      background: white;
+}
+
+#poster-input{
+  font-size: 14pt;
+  font-weight: 400;
+  line-height: 21px;
+  font-family: inherit;
+  background-color: #f1f1f1;
+  border-radius: 50pt;
+  border: black;
+  box-shadow: none;
+  box-sizing: border-box;
+  color: black;
+  display: block;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  height: 38px;
+  margin-right: 8px;
+  margin-top: 6pt;
+  outline: none;
+  padding: 0pt 0pt 0pt 34pt;
+  border: 1pt solid lightgrey;
+}
+
+#poster-input:hover{
+  border:1pt solid blue;
+  background: white;
+}
+
+
+
+#forum-feed{
+  background: #f5f5f5;
+  height: 95vh;
+  padding:15pt;
+  overflow-y: scroll;
+}
+
+.upvote-holder{
+  position: absolute;
+  left: 8pt;
+  top: 4pt;
+}
+
+.feedback-arrow{
+  color: lime;
+  background: white;
+  border-radius: 10pt;
+  padding: 4pt 4.5pt 4pt 3.5pt;
+  font-size: 12pt;
+  transition: 0.1s;
+}
+
+
+
+.feedback-arrow:hover{
+  cursor: pointer;
+  color: black;
+  background: rgb(229, 229, 229);
+  text-decoration: none;
+}
+
+.feedback-arrow:active{
+    background: rgb(191 191 191);
+}
+
+.upvote-count{
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translate(-50%);
+  font-weight: bold;
+}
+
+
+.voted{
+  color:black;
+}
+
+
+.forum-post-card {
+  position: relative;
+  margin-bottom: 7pt;
+  padding: 8pt 10pt 0pt 10pt;
+  text-align: left;
+  border:1pt solid white;
+  background: white;
+  border-radius: 4px;
+  padding-left: 40px;
+  border: 1pt solid #d0d0d0;
+}
+
+.forum-post-card:hover{
+  border: 1pt solid #888888;
+  cursor: pointer;
+}
+
+.post-title-container{
+    margin: 0 8px;
+}
+
+.post-title{
+  display: inline;
+  position: relative;
+  text-decoration: none;
+  word-break: break-word;
+}
+
+.post-title-text{
+  color: black;
+      font-weight: 500;
+      line-height: 130%;
+      margin: 0;
+      padding: 0;
+      border: 0;
+      vertical-align: baseline;
+      font-weight: 600;
+      font-size: 14pt;
+      font-family: sans-serif;
+}
+
+.post-title-text:visited{
+  color:#9b9b9b;
+}
+
+.post-author-container{
+  font-size: 8pt;
+  font-weight: 400;
+  line-height: 16px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  margin: 0 8px 6px;
+  position: relative;
+  color: rgb(120, 124, 126);
+}
+
+.post-author{
+  font-weight: 400;
+  line-height: 16px;
+  -ms-flex-align: center;
+  align-items: center;
+  color: inherit;
+  position: relative;
+}
+
+.post-author:hover .auth-info{
+  display: inline-block;
+}
+
+.post-author:hover{
+  text-decoration: underline;
+  color:black;
+}
+
+.auth-info{
+  display: none;
+  position: absolute;
+  background: #ffffff;
+  color: black;
+  font-weight: bold;
+  padding: 10pt;
+  box-shadow: 0pt 3pt 5pt grey;
+  top: 0%;
+  right: 0px;
+  transform: translate(100%,-100%);
+  font-size: 12pt;
+  width: 116pt;
+  border-radius: 10pt 10pt 10pt 0pt;
+  text-align: center;
+}
+
+.post-message-container{
+  -webkit-mask-image: linear-gradient(180deg,#000 60%,transparent);
+      mask-image: linear-gradient(180deg,#000 60%,transparent);
+      overflow: hidden;
+      padding: 0px 8px 10px;
+      margin-top: 0px;
+      max-height: 190pt;
+}
+
+.expanded-post-message-container{
+  -webkit-mask-image: none;
+  mask-image: none;
+  max-height: none;
+}
+
+.
+
+.post-message{
+  font-family: Noto Sans,Arial,sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  word-break: break-word;
+  overflow: auto;
+  padding-bottom: 1px;
+  margin-bottom: -1px;
+  max-height: 250px;
+}
+
+.expanded-post-message{
+  max-height: none;
+}
+
+.post-card-buttons-container{
+  -ms-flex-align: center;
+    align-items: center;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    padding-right: 10px;
+    overflow-y: visible;
+}
+
+.post-card-buttons{
+  font-size: 12px;
+    font-weight: 700;
+    line-height: 16px;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    height: 32px;
+    flex-grow: 1;
+    overflow: hidden;
+    padding: 0px 8px 0px 4px;
+}
+
+.post-comment-anchor{
+  padding: 3pt;
+  color: grey;
+  background: white;
+
+}
+
+.post-comment-anchor:hover{
+  background: #e2e2e2;
+  color: grey;
+  text-decoration: none;
+  cursor: pointer;
+}

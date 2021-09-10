@@ -1,0 +1,36 @@
+<link rel="stylesheet" href="./styles/components/course-reviews/style.css">
+
+<div  id='course-reviews-holder' data-bind='visible:isVisible()'>
+<div class='post-comment'>
+  <div class="comment-as-header">Review as <span data-bind="text:'First Last'"></span></div>
+  <textarea class='post-comment-message'
+            placeholder="What did you think of this course?">
+
+  </textarea>
+  <button class='blue-square-button'>Submit</button>
+</div>
+
+
+<ul id='review-list' data-bind='foreach:reviews'>
+  <li class='course-review'>
+
+    <span class='review-helpfulness-vote'>
+      <!-- <span class='review-votes-holder'>
+        <span data-bind='text:votes'></span>
+        <span class='glyphicon glyphicon-arrow-up'></span>
+      </span> -->
+    </span>
+    <span class='reviewer'>
+      <span class='reviewer-image-holder'>
+        <img class='reviewer-image' src='./assets/no-photo.jpg'></img>
+        <div class='reviewer-name' data-bind='text:name'></div>
+      </span>
+    </span>
+    <span class='review-text'>
+      <div class='review-text-title' data-bind='text:title'></div>
+      <div class='review-text-body' data-bind='text:body'></div>
+    </span>
+  </li>
+</ul>
+
+</div>

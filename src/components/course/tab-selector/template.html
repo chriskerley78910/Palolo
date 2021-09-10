@@ -1,0 +1,45 @@
+<link rel="stylesheet" href="./styles/components/course/tab-selector.css?v=1.4">
+<div id="tab-selector" data-bind='visible:isVisible()'>
+
+  <span class="course-tab-selector disable-select"
+        data-bind="click:selectCourseForum">
+       Forum
+    <span class="course-tab-underline">
+    </span>
+    <span class="visible-tab-underline"
+          data-bind="visible: forumSelected()">
+   </span>
+  </span>
+
+
+
+  <span class="course-tab-selector disable-select"
+        data-bind="click:selectClassList">
+       Classmates
+      <span class="course-tab-underline"
+         data-bind="visible: classListSelected()">
+      </span>
+  </span>
+
+
+  <!-- <span class="course-tab-selector disable-select"
+         data-bind="click:selectCourseReviews">
+         Reviews
+    <span class="course-tab-underline"></span>
+    <span class="visible-tab-underline"
+          data-bind="visible: courseReviewsSelected()">
+   </span>
+  </span> -->
+
+  <span class="course-tab-selector disable-select"
+         data-bind="click:selectNoteShare">
+         Shared Notes
+    <span class="course-tab-underline"></span>
+    <span class="visible-tab-underline"
+          data-bind="visible: noteShareSelected()">
+   </span>
+  </span>
+
+
+
+</div>

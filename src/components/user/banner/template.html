@@ -1,0 +1,90 @@
+
+<link rel="stylesheet" href="./styles/components/banner/style.css?v=2.1"></link>
+
+
+  <div id="banner-holder"
+       data-bind='visible:isBannerVisible()'
+       class="row .no-gutters">
+
+   <span id='hamberger-button'
+         class='mobile-banner-button hidden-md hidden-lg glyphicon glyphicon-menu-hamburger'
+         data-bind='click:openHambergerMenu'>
+    </span>
+
+    <span id='mobile-search-button'
+          class='mobile-banner-button hidden-md hidden-lg glyphicon glyphicon-search'
+          data-bind='click:openSearch'>
+    </span>
+
+    <span id='mobile-search-input-holder'
+          data-bind='visible:isSearchVisible()'
+          class='hidden-md hidden-lg background-dimmer'>
+      <search id='mobile-search-bar' data-bind='complementClick:closeSearch'></search>
+    </span>
+
+    <span id='mobile-menu' data-bind='visible:mobileMenuVisible(), complementClick:closeHambergerMenu'>
+      <course-groups></course-groups>
+      <pal-list></pal-list>
+    </span>
+
+   <span id="you-button"
+         class='hidden-xs hidden-sm'
+         data-bind="click:openProfileSetter">
+    <img id="profile-photo"
+         data-bind="style:{opacity: smallPhotoUrl().length > 0 ? '1' : '0'}, attr:{src:smallPhotoUrl()}"
+         src="./assets/no-photo.jpg">
+    </img>
+     <span id="users-name"
+           data-toggle="tooltip"
+           title="Your Reputation"
+           class="disable-select"
+           data-bind="text:usersName">
+     </span>
+   </span>
+
+   <notification></notification>
+
+
+    <img id="banner-logo"
+         class="disable-select"
+         src="./assets/banner_logo_grey.png">
+    </img>
+
+    <div id="banner_menu"
+         data-bind="complementClick: closeMenu">
+         <button id="banner-menu-btn"
+                 class="dropbtn"
+                 data-bind="click:toggleDropDown">
+
+                <i class="caret"></i>
+         </button>
+
+         <ul id="banner_menu_dropdown_content"
+             data-bind="visible:isMenuVisible">
+
+           <li class="banner_list_item"
+               data-bind="click:openCourseAdder, visible:isAdminButtonVisible()">
+               <button class="banner_menu_button">
+                       create group
+               </button>
+           </li>
+
+
+
+           <li class="banner_list_item"
+               data-bind="click:logOut">
+
+             <button id="logout-btn"
+                     class="banner_menu_button">
+                     Logout
+             </button>
+           </li>
+
+         </ul>
+    </div>
+
+
+
+
+
+  </div>

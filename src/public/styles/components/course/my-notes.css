@@ -1,0 +1,42 @@
+
+#my-notes-holder{
+  height: 88%;
+  background: white;
+  overflow: scroll;
+}
+
+#my-notes-table{
+  width: 100%;
+}
+.my-notes-title{
+  padding: 3vh;
+  border-bottom: 0.1vh solid #a2a2a2;
+  transition: 0.2s;
+}
+
+.my-notes-title:hover{
+  background: #dbdbdb;
+    color: black;
+    cursor: pointer;
+}
+
+
+.my-notes-note{
+  width: 100%;
+  resize: none;
+  height: 20vh;
+  color: black;
+  padding: 2vh;
+  border: 2px solid;
+}
+
+#create-new-note{
+  text-align: left;
+padding: 3vh;
+border-bottom: 0.1vh solid #a2a2a2;
+transition: 0.2s;
+}
+
+#create-new-note:hover{
+  cursor: pointer;
+}

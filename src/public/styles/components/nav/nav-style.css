@@ -1,0 +1,185 @@
+
+#you-face{
+  display: inline-block;
+      width: 25px;
+      height: 25px;
+      background: #e8e8e8;
+      border-radius: 50%;
+      position: absolute;
+      left: 24px;
+    top: 23px;
+}
+
+#title-content-holder{
+  display: inline-block;
+  float: left;
+  font-size: 14pt;
+  width: 100%;
+  height:70px;
+  background-color: #0d80dd;
+  position: relative;
+  z-index: 5;
+  color: black;
+  display: none;
+
+}
+
+#title-content{
+  margin-top: 14px;
+}
+
+#title-text{
+  color: #ffffff;
+  text-decoration: none;
+  cursor: pointer;
+  padding: 9px;
+  padding-left: 58px;
+  display: inline-block;
+}
+
+#title-text:hover{
+
+}
+
+a{
+      font-family: sans-serif;
+}
+
+#dropdown-nav{
+  display: none;
+  height: 2cm;
+  width: 96%;
+  position: absolute;
+  z-index: 7;
+  top: 70px;
+  left: 9px;
+  background-color: #fff;
+  overflow-x: hidden;
+  border: 1px solid #c7c7c7;
+}
+
+.nav-menu-row{
+
+}
+
+.nav-btn{
+  padding: 0px 15px 0px 60px;
+  text-decoration: none;
+  font-size: 12pt;
+  color: #b3b3b3;
+  display: block;
+  font-size: 15pt;
+
+}
+
+.nav-btn:hover{
+    cursor: pointer;
+    background: #eaeaea;
+}
+
+#side-nav-toggle{
+  padding: 17px 9px;
+  color: #848282;
+}
+
+#side-nav-toggle:hover{
+  text-decoration: none;
+  color:white;
+}
+
+.title-drop-down-glyph{
+  float: left;
+padding: 6px 12px 0px 0px;
+color: #b7b7b7;
+}
+
+#nav-dropdown {
+  height: 2cm;
+  width: 3.84cm;
+  padding-left: 37px;
+  position: absolute;
+  z-index: 5;
+  top: 44px;
+  left: 9px;
+  background-color: #fff;
+  overflow-x: hidden;
+  border: 1px solid #c7c7c7;
+  /* display: none; */
+}
+
+#nav-dropdown a:hover{
+      background: beige;
+}
+
+#nav-dropdown a {
+  padding: 6px 15px;
+  text-decoration: none;
+  font-size: 12pt;
+  color: #3e3d3d;
+  display: block;
+
+}
+
+#nav-dropdown a:hover {
+  text-decoration: underline;
+}
+
+#nav-dropdown .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+#nav-dropdown #logout-btn:hover{
+  cursor: pointer;
+}
+
+.nav-arrow-btn{
+  font-size: 27px;
+  background: none;
+  border: none;
+  margin: 21px 11px;
+  color: white;
+  top: 0px;
+  position: absolute;
+}
+
+#right-arrow-btn{
+  right:0px;
+}
+
+#left-arrow-btn{
+  left:0px;
+}
+
+
+@media screen and (max-height: 450px) {
+  #nav-dropdown {padding-top: 15px;}
+  #nav-dropdown a {font-size: 18px;}
+}
+
+@media screen and (max-width: 767px){
+  #title-text{
+
+    text-align:center;
+
+  }
+
+  #title-content-holder{
+    text-align: center;
+    width:100vw;
+  }
+
+  #nav-dropdown a{
+    border-bottom: 1px solid #d8d8d8;
+  }
+
+  #mySidenav{
+    width:100%;
+    z-index: 7;
+  }
+
+
+}

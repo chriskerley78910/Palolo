@@ -1,0 +1,63 @@
+<li id="session-scheduler">
+  <div id="booking-inputs">
+
+    <div class="booking-input-holder">
+      <span id="course-picker-label" class="glyphicon glyphicon-book picker-label"></span>
+      <input id="chore-input" class="form-control booking-input" autocapitalize="none" type="text" placeholder="Course code" data-bind="textInput:choreText, enterKey:addChore">
+    </div>
+
+    <div class="booking-input-holder">
+      <span id="date-picker-label" class="glyphicon glyphicon-calendar picker-label"></span>
+      <input placeholder="Date" class="booking-input" id="date-picker" type="text">
+    </div>
+
+    <div class="booking-input-holder" id = "time-picker-holder">
+      <span id="time-picker-label" class="glyphicon glyphicon-time picker-label"></span>
+
+      <input placeholder="Start time" class=" booking-input" id="time-picker"  type="text">
+
+      <div class="dropdown">
+       <div class="dropdown-content">
+         <p class="time-choice">8am</p>
+         <p class="time-choice">9am</p>
+         <p class="time-choice">10am</p>
+         <p class="time-choice">11am</p>
+         <p class="time-choice">Noon</p>
+         <p class="time-choice">1pm</p>
+         <p class="time-choice">2pm</p>
+         <p class="time-choice">3pm</p>
+         <p class="time-choice">4pm</p>
+         <p class="time-choice">5pm</p>
+         <p class="time-choice">6pm</p>
+         <p class="time-choice">7pm</p>
+         <p class="time-choice">8pm</p>
+         <p class="time-choice">9pm</p>
+       </div>
+     </div>
+
+    </div>
+
+
+    <div id="duration-picker-holder" class="booking-input-holder">
+
+      <span id="for-hours-text"> for </span>
+
+      <label for="duration-picker-1hr" class="booking-radio-input-label">1</label>
+      <input name="duration" placeholder="1" class="booking-radio-input" id="duration-picker-1hr"  type="radio">
+
+      <label for="duration-picker-2hr" class="booking-radio-input-label">2</label>
+      <input name="duration" placeholder="2" class="booking-radio-input" id="duration-picker-2hr"  type="radio">
+
+      <label for="duration-picker-3hr" class="booking-radio-input-label">3</label>
+      <input name="duration" placeholder="3" class="booking-radio-input" id="duration-picker-3hr"  type="radio">
+
+    </div>
+    <span id="hours-text">hours</span>
+
+    <div id="chore-input-btn-holder">
+      <span class="glyphicon glyphicon-plus"></span>
+      <button id="chore-input-btn" data-bind="click:addChore">Book session</button>
+    </div>
+
+  </div>
+</li>

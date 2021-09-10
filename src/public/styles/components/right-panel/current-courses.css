@@ -1,0 +1,15 @@
+#current-courses-holder{
+  text-align: left;
+padding-left: 12px;
+}
+
+.current-course{
+  color: blue;
+  padding-right: 4px;
+  font-size: 11pt;
+}
+
+.current-course:hover{
+  text-decoration: underline;
+  cursor: pointer;
+}

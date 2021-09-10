@@ -1,0 +1,188 @@
+#doc-list-holder{
+  margin: 20pt;
+}
+
+#ask-prof-popup{
+  position: absolute;
+  top: 30%;
+  color: black;
+  width: fit-content;
+  background: #fff7ad;
+  z-index: 5;
+  font-weight: 600;
+  left: 50%;
+  transform: translate(-50%);
+  padding: 10pt;
+  border-radius: 5pt;
+  box-shadow: 0pt 5pt 10pt #00000059;
+}
+
+.profs{
+  position: relative;
+  top: 50pt;
+}
+
+.prof-title{
+  font-size: 12pt;
+  color: black;
+  margin: 2pt 10pt 25pt;
+  padding-bottom: 3pt;
+  border-bottom: 1pt solid #b9b9b9;
+}
+
+.prof-title > img{
+  width: 20pt;
+  height: 20pt;
+  border-radius: 50%;
+}
+
+
+.prof-title .prof-name{
+  vertical-align: text-top;
+}
+
+.term-title{
+  font-size: 14pt;
+  margin-left: 10pt;
+}
+
+
+.profs-doc-list{
+  position: relative;
+}
+
+.term-title-text{
+  background: #e4e4e4;
+  position: absolute;
+  z-index: 6;
+  padding: 0 5pt;
+  font-size: 12pt;
+  color: grey;
+  left: 0pt;
+  top: 0pt;
+}
+
+
+
+.term-title-line{
+  border-bottom: 1pt solid #c1c1c1;
+  position: relative;
+  bottom: 9pt;
+  z-index: -0;
+}
+
+.doc-container{
+  position: relative;
+  display: inline-block;
+  border: 1pt solid #c1c1c1;
+  margin: 15pt 10pt 25pt 10pt;
+  width: 137pt;
+  height: 193pt;
+  vertical-align: top;
+  overflow: hidden;
+  border-radius: 2pt;
+}
+
+.author-approval-status{
+
+  position: absolute;
+  z-index: 10;
+  right: 0;
+  bottom: 0;
+  transform: translate(0%,0%);
+  background: yellow;
+  color: grey;
+  padding: 2pt;
+  font-size: 9pt;
+  border-radius: 3pt 0pt 0pt 0pt;
+}
+
+.doc-unlock-icon{
+  color: white;
+  font-size: 39pt;
+  transform: translate(-50%);
+  transition: 0.1s;
+  opacity: 0.4;
+}
+
+.unlock-text{
+  color: white;
+  bottom: 0px;
+  left: 0;
+  position: absolute;
+  transform: translate(-50%);
+  bottom: -19pt;
+  font-size: 12pt;
+  opacity: 0.4;
+}
+
+.locked-icon-holder{
+  position: absolute;
+  left: 50%;
+  top: 39%;
+}
+
+.locked-prof:hover .doc-unlock-icon{
+  opacity: 1;
+}
+
+.locked-prof:hover .unlock-text{
+  opacity: 1;
+}
+
+.doc-container:hover{
+  cursor: pointer;
+  border:1pt solid blue;
+}
+
+.doc-icon{
+  background: #3F51B5;
+  color: white;
+  padding: 3pt;
+  border-radius: 2.5pt;
+  font-size: 8pt;
+}
+
+.doc-img{
+  width: 100%;
+}
+
+.doc-shade{
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+  position: absolute;
+  background: linear-gradient(-5deg, #0000000d, transparent);
+}
+
+.doc-footer{
+  width: 100%;
+  background: white;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: fit-content;
+  padding: 10pt 10pt;
+  border-top: 1pt solid #d9d9d9;
+}
+.doc-footer .title{
+  font-size: 9pt;
+  margin-bottom: 2pt;
+  display: inline-block;
+  width: 100%;
+}
+
+
+
+.doc-footer .last-opened{
+  color: #8d8d8d;
+      font-size: 9pt;
+}
+
+.locked-prof{
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background: #0000005e;
+  z-index: 4;
+}

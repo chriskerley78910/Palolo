@@ -1,0 +1,11 @@
+#!/usr/bin/env xdg-open
+
+[Desktop Entry]
+Version=1.0
+Type=Application
+Terminal=false
+Icon[en_CA]=gnome-panel-launcher
+Name[en_CA]=chrome_unit_tests
+Exec=google-chrome --disable-web-security --user-data-dir
+Name=Chrome-DEV
+Icon=gnome-panel-launcher

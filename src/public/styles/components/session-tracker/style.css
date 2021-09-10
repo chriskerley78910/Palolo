@@ -1,0 +1,126 @@
+#session-tracker-holder{
+  position: absolute;
+
+}
+
+#session-record-saved {
+  color: lime;
+}
+
+.session-tracker-spacer{
+  border-bottom: 1pt solid #535252;
+  margin: 23pt 9pt;
+}
+
+#punch-clock-table{
+  min-height: 240pt;
+}
+
+#session-tracker{
+  display: inline-block;
+  position: relative;
+  border-collapse: collapse;
+  bottom: 0;
+  left: 100%;
+  margin-left: 4pt;
+  position: absolute;
+  border-radius: 0pt 5pt 5pt 0pt;
+  width: fit-content;
+  min-height: 465pt;
+  max-height: 100%;
+  background: #242424;
+  color: white;
+  padding-top: 12pt;
+  box-shadow: 1px 1px 4px #00000038;
+}
+
+#session-tracker-refresh-btn{
+  background: none;
+  border: none;
+  color: #a0aeff;
+}
+
+#session-tracker-refresh-btn:hover{
+  text-decoration: underline;
+}
+
+#close-session-tracker-button{
+  right: 5px;
+  font-size: 12pt;
+  display: block;
+  padding: 7pt;
+  color: #cfcfcf;
+  display: inline-block;
+  border-radius: 50%;
+  margin: 2pt;
+  clear: both;
+}
+
+#close-session-tracker-button:hover{
+  cursor: pointer;
+  background: #4e4d4d;
+  color:white;
+}
+
+#close-session-tracker-button:active{
+    background: grey;
+    color:white;
+}
+
+#session-tracker  td, th {
+  color: #ffffff;
+  padding: 5pt 16pt;
+  text-align: left;
+  font-size: 15pt;
+  -webkit-font-smoothing: antialiased;
+  text-align: center;
+}
+
+#session-tracker input{
+  text-align: center;
+  border: 1pt solid #c1bfbf;
+  color: black;
+}
+
+
+#session-tracker .customer-name{
+  font-size: 16pt;
+  color: #43458b;
+  font-weight: 700;
+  width: 100%;
+  text-align: left;
+  margin-bottom: 11pt;
+}
+
+#session-table-top{
+
+    width: 100%;
+}
+
+
+#session-tracker th{
+    color: #ffffff;
+}
+
+
+
+#session-tracker > table {
+  display: inline-block;
+  vertical-align: top;
+  width: fit-content;
+}
+
+#record-session-button{
+  background: #2196F3;
+  width: 112pt;
+}
+
+#record-session-button:disabled{
+  background: grey;
+    color: lightgrey;
+}
+
+.month-seperator {
+  text-align: left !important;
+  background: #f3f3f3;
+}

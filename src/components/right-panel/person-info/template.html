@@ -1,0 +1,64 @@
+
+<link rel="stylesheet"
+      href="./styles/components/right-panel/person-info.css?v=1.2">
+
+
+<div id="person-info-holder" data-bind="visible:isVisible()">
+        <!-- ko if: selectedClassmate() != null -->
+      <div id="large-user-photo-holder">
+
+          <button class='book-tutor-button'
+                  data-bind='click:buyHours, visible:isTutor()'>
+            Pro Tutor
+          </button>
+
+
+            <img id="person-info-photo"
+                 class="disable-select"
+                 src="#"
+                 data-bind="visible:isPhotoVisible(),
+                            attr:{src:selectedClassmate().getLargePhotoURL()}">
+            </img>
+
+            <!-- Video room button -->
+            <div id='video-button-panel'>
+              <span id='call-button'
+                    class='glyphicon glyphicon-facetime-video'
+                    data-bind='click:connectToRoom, visible:isCallButtonVisible()'
+                    title="Live video call"
+                    data-toggle="tooltip">
+              </span>
+              <span data-bind="visible:isCallButtonLoaderVisible()"
+                    class='nano-spinner'>
+              </span>
+            </div>
+      </div>
+
+
+      <div id="person-info-name"
+           class="disable-select"
+           data-bind="text:selectedClassmate().getFirst()">
+      </div>
+
+      <div class="person-info-row-holder">
+
+        <i class="glyphicon glyphicon-education person-info-row-icon"></i>
+        <span class="person-info-row"
+              data-bind="text:selectedClassmate().getEducationLevel()">
+        </span>
+
+
+      </div>
+  <!-- /ko -->
+
+
+      <current-courses></current-courses>
+      <div  data-bind="visible:isAddPalVisible()"
+            class="right-panel-add-pal-holder">
+        <button class="add-pal add-pal-btn right-panel-add-pal"
+                data-bind="click:addPal">
+                add friend
+        </button>
+      </div>
+
+</div>

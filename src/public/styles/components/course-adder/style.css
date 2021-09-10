@@ -1,0 +1,26 @@
+#course-adder-holder{
+  position: fixed;
+      left: 50%;
+      z-index: 1;
+      border: 1px solid black;
+      padding: 2vh;
+      text-align: left;
+      transform: translate(-50%);
+      top: 20%;
+      background: white;
+}
+
+
+#course-adder-holder > div{
+  font-size: 14pt;
+  margin: 2vh 1vh;
+}
+.course-adder-title{
+  font-weight: 600;
+  margin: 3vh 0vh !important;
+}
+
+
+.indented-course-adder-row{
+      padding-left: 3vh;
+}

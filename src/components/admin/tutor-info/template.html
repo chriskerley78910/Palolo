@@ -1,0 +1,19 @@
+<link rel="stylesheet"  href="./styles/components/admin/tutor-info.css"></link>
+
+       <div id="tutor-info-holder"
+            data-bind="visible:isVisible">
+
+             <img id="tutor-info-headshot"
+                  alt="tutors photo"
+                  src="#"
+                  data-bind="attr:{src:photoURL}"
+                  >
+            </img>
+          <div id="tutor-info-text">
+             <div>First:<span data-bind="text:firstName"></span></div>
+             <div>Last:<span data-bind="text:lastName"></span></div>
+             <div>Email:<span data-bind="text:email"></span></div>
+             <button data-bind="click:deleteTutor" >delete</button>
+          </div>
+
+       </div>

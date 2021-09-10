@@ -1,0 +1,28 @@
+#web-capture-holder{
+    height: 100%;
+}
+
+#profile-photo-player{
+  z-index: 1;
+  height: 76%;
+  border-radius: 1vh 0vh 0vh 0vh;
+}
+
+#profile-photo-canvas{
+      left: 0;
+      z-index: 0;
+      max-width: 100%;
+      display: none;
+}
+
+#take-photo-button{
+
+  width: 73pt;
+  height: 73pt;
+}
+
+#take-photo-button:hover{
+  color: hsl(210, 100%, 40%);
+  text-shadow: hsla(210,100%,20%,.3) 0 -1px 0, hsl(210,100%,85%) 0 2px 1px, hsla(200,100%,80%,1) 0 0 5px, hsla(210,100%,50%,.6) 0 0 20px;
+  box-shadow: inset hsla(210,100%,30%, 1) 0 0px 0px 4px, /* border */ inset hsla(210,100%,15%, .4) 0 -1px 5px 4px, /* soft SD */ inset hsla(210,100%,20%,.25) 0 -1px 0px 7px, /* bottom SD */ inset hsla(210,100%,100%,.7) 0 2px 1px 7px, /* top HL */ hsla(210,100%,75%, .8) 0 0px 3px 2px, /* outer SD */ hsla(210,50%,40%, .25) 0 -5px 6px 4px, /* outer SD */ hsla(210,80%,95%, 1) 0 5px 6px 4px;
+}

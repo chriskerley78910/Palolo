@@ -1,0 +1,50 @@
+<link rel="stylesheet" href="./styles/components/person-panel/pal-list.css?v=3.1">
+<div id="pal-holder">
+  <span data-bind="visible:isSpinnerVisible()">
+    <div  class="screen-center-outer">
+     <div class="screen-center-inner">
+        <div class="small-spinner">
+        </div>
+     </div>
+   </div>
+  </span>
+  <div id="no-pals-message"
+        data-bind="visible:palCount() < 1">
+    No friends yet.
+    <div id="great-job">Great job! <span class="glyphicon glyphicon-thumbs-up"></span></div>
+  </div>
+      <!-- ko if: selectedPal() != null -->
+  <div id='pal-list-header'>
+    <div>Friends</div>
+
+  </div>
+
+  <new-pal-list></new-pal-list>
+
+  <ul id="pal-list"
+      data-bind="foreach:pals">
+
+    <li class="pal-row"
+        data-bind="css:{'pal-row-selected':$parent.selectedPal().getId() == getId() && $parent.selectedPal().getId() >=0}, click:$parent.palClicked">
+
+      <span class="pal-presence">
+        <i class="pal-last-seen centerize"
+           data-bind="visible:isPresent() == false, text:getLastSeen()">
+        </i>
+        <i class="dot presence-dot centerize"
+           data-bind="visible:isPresent()">
+         </i>
+      </span>
+      <img class="pal-img"
+           data-bind="attr:{src: getSmallPhotoURL()}">
+      </img>
+      <span class="pal-name-holder">
+        <span class="pal-name"
+              data-bind="text:getFirst() + ' ' + getLast()">
+        </span>
+      </span>
+    </li>
+
+  </ul>
+        <!-- /ko -->
+</div>

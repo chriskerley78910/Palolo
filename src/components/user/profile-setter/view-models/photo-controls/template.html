@@ -1,0 +1,31 @@
+
+<link rel="stylesheet"
+      href="./styles/components/profile-setter/profile-control-buttons.css?v=3.0">
+</link>
+
+<div id='profile-photo-buttons'  data-bind="visible:isVisible()">
+
+  <label data-bind="click:webcamCapture"
+         class="profile-photo-button glyphicon glyphicon-camera">
+    <span class="profile-photo-upload-button">camera</span>
+  </label>
+
+
+
+  <label id='upload-profile-photo'
+         class='profile-photo-button glyphicon glyphicon-open'
+         for='img-upload-btn'>
+          <span class="profile-photo-upload-button">upload</span>
+  </label>
+  <input type='file'
+         id="img-upload-btn"
+         data-bind="event:{change:uploadPhoto}"
+         accept="image/*"/>
+
+
+  <label data-bind="click:saveProfilePhoto, visible:isSaveButtonVisible()"
+          class='profile-photo-button'
+          id='save-profile-photo'>
+          save
+  </label>
+</div>

@@ -1,0 +1,143 @@
+file-dropper{
+  width: 100%;
+  max-height: 30vh;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+
+#file-dropper-form{
+  padding: 12px;
+  background: white;
+  margin:0px;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+#no-files-shared-message{
+  text-align: center;
+padding: 6vh;
+    font-size: 14pt;
+    color: #ababab;
+}
+
+
+
+#upload-button-holder > input {
+  display: none;
+}
+
+#upload-button-image{
+  color: #b8b8b8;
+  font-size: 16pt;
+  cursor: pointer;
+}
+
+#upload-button-image:hover{
+  color: #747474;
+}
+
+#file-upload-progress-holder{
+  position: relative;
+}
+
+#file-upload-progress-percentage{
+  width: 100%;
+  text-align: center;
+  position: absolute;
+}
+
+#file-upload-progress-bar{
+  background: #95ff19;
+  height: 20px;
+}
+
+#shared-files-holder{
+  background: white;
+  overflow-y: scroll;
+  height: 100%;
+  padding-bottom: 100px;
+}
+
+
+.shared-files-holder{
+  padding: 6px 0px;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.shared-files-holder:hover{
+    cursor: pointer;
+    background: white;
+    box-shadow: 0px 3px 6px #0000002d;
+    position: relative;
+    z-index: 4;
+}
+
+.trashbin {
+  display: none;
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translate(0%,-50%);
+  color: grey;
+  padding: 13px;
+}
+
+.trashbin:hover{
+  background: #00000014;
+  border-radius: 50%;
+  color: black;
+}
+
+.trashbin:active{
+  background: #00000025;
+}
+
+.shared-files-holder:hover .trashbin{
+  display: inline-block;
+}
+
+.opened-file{
+  background: #f3f3f2;
+  color:black;
+}
+
+.unopened-file{
+  font-weight:600;
+  color:black;
+}
+
+
+
+
+#file-upload{
+  background: none;
+  border: none;
+
+}
+
+#file-upload:hover{
+  text-decoration: underline;
+}
+
+
+#file-list{
+  padding: 0px;
+    padding-bottom: 60px;
+  list-style: none;
+  overflow-y: scroll;
+  flex-direction: column-reverse;
+}
+
+
+.shared-files-text{
+  padding-left: 1.4vh;
+  font-size: 11pt;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  width: fit-content;
+}
+
+.file-name-holder{
+  margin: 0.5vh 0px;
+}

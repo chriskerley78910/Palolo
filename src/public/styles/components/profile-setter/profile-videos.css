@@ -1,0 +1,8 @@
+
+.profile-video{
+  position: absolute;
+  left: 0px;
+  z-index: 1;
+  width: 100%;
+  height: inherit;
+}

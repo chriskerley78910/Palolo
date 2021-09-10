@@ -1,0 +1,96 @@
+<link rel="stylesheet"
+      href="./styles/components/york-forum/forum-feed.css?v=2.7">
+</link>
+
+<div id='forum-feed' class='hide-scroll' data-bind='visible:isVisible()'>
+  <div id='post-message-holder'>
+    <span id='poster-icon-holder'>
+
+      <!-- ko if: userPhotoURL() != null -->
+          <img alt="User Photo" id="poster-photo" data-bind='attr:{src:userPhotoURL()}'>
+       <!-- /ko -->
+    <!-- ko if: userPhotoURL() == null -->
+      <i id='poster-replacement-photo'
+         class="fa fa-smile-o"
+         ></i>
+     <!-- /ko -->
+
+    </span>
+      <input id='poster-input'
+              placeholder="What's new at YorkU?"
+              data-bind='click:openPoster'>
+      </input>
+  </div>
+
+  <div data-bind='foreach:posts'>
+    <div class='forum-post-card' data-bind='click:$parent.showPost, css:{"normal-cursor" : expanded()}'>
+
+        <span class='upvote-holder disable-select'
+              data-bind='click:$parent.toggleVote'
+              data-toggle="tooltip"
+              title="Upvote">
+          <a class='glyphicon glyphicon-arrow-up feedback-arrow' data-bind='css:{ voted : alreadyVoted()}'></a>
+          <span class='upvote-count' data-bind='text:getVoteCount()'>0</span>
+        </span>
+
+
+
+        <div class='post-author-container'>
+            <span> Posted by </span>
+            &nbsp;
+            <span class='post-author' data-bind='click:$parent.gotoPerson'>
+              <span data-bind='text:getAuthor()'></span>
+
+              <span class='auth-info' data-bind='text:getRep()'>102</span>
+            </span>
+
+            &nbsp;
+            <span data-bind='text:getTimestamp()'></span>
+            &nbsp;
+            <span> ago </span>
+        </div>
+        <div class='post-title-container'>
+          <div class='post-title'>
+            <h3 class='post-title-text' data-bind='text:getTitle()'><h3>
+          </div>
+        </div>
+        <div class='post-message-container' data-bind='css:{ "expanded-post-message-container" : expanded()}'>
+          <div class='post-message' data-bind="html:getBody(), css:{ 'expanded-post-message' : expanded()}"></div>
+        </div>
+        <div class='post-card-buttons-container'>
+          <div class='post-card-buttons'>
+            <a rel="nofollow"
+               class='post-comment-anchor'>
+             <i class="glyphicon glyphicon-comment post-comment-icon">
+            </i>
+            <span class="post-comments-text" data-bind='text:replyCount()'>0</span> Comments
+          </a>
+          <a rel="nofollow"
+             class='post-comment-anchor'
+             data-bind='visible:isPoster(), click:$parent.deletePost'>
+           <i class="glyphicon glyphicon-trash post-comment-icon">
+          </i>
+          <span class="post-comments-text">delete</span>
+        </a>
+          </div>
+        </div>
+
+        <div class="post-comment" data-bind='visible:expanded()'>
+            <div class='comment-as-header'>Comment as <span data-bind='text:$parent.userFullName()'> First Last </span></div>
+            <textarea class='post-comment-message'
+                      data-bind='textInput:comment'
+                      placeholder="What are your thoughts?">
+
+            </textarea>
+            <button class='blue-square-button' data-bind='click:$parent.commentPost'>COMMENT</button>
+        </div>
+
+        <!-- recursive component -->
+        <forum-reply class='root-reply'
+                     data-bind='visible:expanded()'
+                     params="replies: {isRoot:true, replies:replies, self:null}">
+        </forum-reply>
+
+    </div>
+  </div>
+</div>

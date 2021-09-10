@@ -1,0 +1,40 @@
+
+<link rel="stylesheet"
+      href="./styles/components/course-adder/style.css">
+
+<div id="course-adder-holder"
+     data-bind="visible:isVisible(), complementClick:hide">
+
+<div class="course-adder-row course-adder-title"> Create Course</div>
+  <div class="course-adder-row indented-course-adder-row">
+    <span class="input-label">Course </span>
+    <input class="rounded-input"
+           type="text"
+           placeholder="Enter the course code"
+           data-bind="textInput:courseCodeQueryValue">
+    </input>
+    <ul class="search-result-list"
+        data-bind="value:courseCodeSearchResults">
+    </ul>
+  </div>
+  <div class="course-adder-row indented-course-adder-row"> <span class="input-label">Section</span> <input class="rounded-input" type="text" placeholder="Enter the section"></input></div>
+<div class="course-adder-row course-adder-title"> Lecture Location</div>
+    <div class="indented-course-adder-row"> <span class="input-label">Building </span><input class="rounded-input" type="text" placeholder="Enter the building name"></input></div>
+    <div class="indented-course-adder-row"><span class="input-label">Room </span>  <input class="rounded-input" type="text" placeholder="Enter the room"></input></div>
+    <div class="course-adder-row">
+      <span> Start </span>
+      <select id="course-start-term">
+        <option value="F">Fall</option>
+        <option value="W">Winter</option>
+        <option value="S">Summer</option>
+      </select>
+      <select id="course-start-year">
+        <option value="2020">2020</option>
+        <option value="2021">2021</option>
+      </select>
+    </div>
+
+    <div>
+      <button class="blue-button">Create</button>
+    </div>
+</div>

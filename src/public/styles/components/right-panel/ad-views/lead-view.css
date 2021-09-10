@@ -1,0 +1,162 @@
+
+
+#ad-waiting{
+  top: 20%;
+  position: absolute;
+}
+
+#ad-header-holder{
+  margin: 0% 10%;
+}
+
+#ad-text{
+  text-align: left;
+  padding: 5% 10%;
+}
+
+#message-sent{
+
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    top: 30%;
+    background: white:;
+    background: white;
+    height: 30vh;
+    z-index: 5;
+    color: black;
+    font-size: 5vh;
+    height: fit-content;
+    padding: 3vh;
+    border: 1vh solid #4CAF50;
+}
+
+
+#lead-submitter{
+top: 6%;
+}
+
+#hourly-rate{
+  font-size: 2.5vh;
+}
+
+#tutor-image{
+  width: 32%;
+  margin: 3%;
+  border-radius: 50%;
+}
+
+.qual-data{
+  background: #f1f1f1;
+border-radius: 5vh;
+padding: 0.5vh 1vh;
+}
+
+#advertiser-checklist{
+  background: white;
+    margin-top: 2vh;
+    text-align: left;
+    padding: 2vh;
+    line-height: 2;
+}
+
+.advertiser-check-element{
+  color: #00bb00;
+    margin-right: 1vh;
+
+}
+
+#submitter-window{
+
+  color: black;
+  width: 100%;
+  height: fit-content;
+  position: absolute;
+  display: inline-block;
+  transform: translate(-50%);
+  white-space: nowrap;
+  padding: 2vh 0vh;
+}
+
+#ad-space{
+  display: inline-block;
+  width: fit-content;
+  background: white;
+  overflow: scroll;
+  text-align: center;
+  height: 91vh;
+  overflow: scroll;
+}
+
+#ad-headline{
+  font-size: 22px;
+      font-weight: 700;
+      line-height: 26px;
+      color: #3e4153;
+      font-family: inherit;
+      margin-bottom: 0;
+      margin-top: 0;
+      padding: 19px;
+}
+
+#qualifications-list{
+  text-align: left;
+  margin: 3vh;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+#qualifications-list > li{
+      margin: 1vh 0vh;
+      font-size: 2.5vh;
+      text-decoration: none;
+}
+
+
+
+
+#ad-right-side{
+  display: inline-block;
+      width: fit-content;
+      vertical-align: top;
+      margin-left: 1vh;
+      text-align: center;
+          white-space: normal;
+}
+
+#submitter-text-area{
+  margin: 0px;
+  width: 100%;
+  min-height: 82px;
+  margin-bottom: 3vh;
+    border: 1px solid #cecece;
+  font-family: Larsseit,Arial,sans-serif;
+  resize: none;
+  padding: 1vh;
+  vertical-align: top;
+}
+
+#lead-submition-space{
+  background: white;
+  padding: 3vh 2vh;
+}
+
+#advertiser-name{
+  font-size: 3vh;
+      margin: 3vh 0vh;
+}
+
+#submitter-message-button{
+  font-size: 15px;
+line-height: 22px;
+padding: 14px 30px;
+background-color: #373373;
+width: 100%;
+border: 1px solid hsla(0,0%,100%,0);
+box-sizing: border-box;
+cursor: pointer;
+display: inline-block;
+flex: auto;
+font-family: Larsseit,Arial,sans-serif;
+color:white;
+}

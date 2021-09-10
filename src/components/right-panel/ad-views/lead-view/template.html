@@ -1,0 +1,76 @@
+
+<link rel="stylesheet"
+      href="./styles/components/right-panel/ad-views/lead-view.css?v=1.0">
+
+<div id="lead-submitter"
+     class='background-dimmer'
+     data-bind="visible: isVisible()">
+  <div id="ad-waiting"
+       class="loader"
+       data-bind="visible:isWaiting()">
+  </div>
+
+  <div id="message-sent" data-bind="visible:showMessageSent()">
+      Message Sent!
+  </div>
+
+  <!-- ko if: currentAd() != null -->
+  <div id="submitter-window" data-bind="click : closeLead">
+
+    <div>
+
+      <div id="ad-space" data-bind="click: dontPropagate">
+         <div id="ad-headline" data-bind="text:currentAd().getHeadline()"></div>
+         <!-- top row -->
+            <div id="ad-header-holder">
+
+              <img id="tutor-image"
+                   data-bind="attr:{src : currentAd().getImgURL()}">
+              </img>
+
+              <ul id='qualifications-list'>
+                <li>
+                   <span> School</span> <span class="qual-data" data-bind="text:currentAd().getSchool()"></span>
+                </li>
+                <li>
+                   <span> Degree </span> <span class="qual-data"  data-bind="text:currentAd().getDegree()"></span>
+                </li>
+                <li>
+                   <span> Major </span><span class="qual-data"  data-bind="text:currentAd().getMajor()"></span>
+                </li>
+                <li>
+                   Experience <span  class="qual-data" data-bind="text:currentAd().getExperience()"></span>
+                </li>
+              </ul>
+
+            </div>
+         <div id="ad-text" data-bind="html:currentAd().getText()"></div>
+      </div>
+
+
+
+
+      <div id="ad-right-side" data-bind="click: dontPropagate">
+        <div id="lead-submition-space">
+          <div id="advertiser-name"> Contact
+            <span data-bind="text:currentAd().getFirstName()"></span>
+            <span data-bind="text:currentAd().getLastName()"></span>
+          </div>
+          <textarea id="submitter-text-area"
+                    data-bind="value:leadMessage">
+          </textarea>
+          <button id="submitter-message-button"
+                  data-bind="click:sendMessage">Send Message</button>
+        </div>
+
+      </div>
+
+    </div>
+
+
+
+  </div>
+ <!-- /ko -->
+
+
+</div>

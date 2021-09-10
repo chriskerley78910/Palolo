@@ -1,0 +1,28 @@
+  <div id='account-info'>
+
+    <table id='session-table-top'>
+        <tr>
+          <th>FULFILLED</th>
+        </tr>
+      <tr>
+        <td data-bind='text:timeFulfilled()'>10</td>
+      </tr>
+      <tr>
+        <th>REMAINING</th>
+      </tr>
+      <tr>
+        <td data-bind='text:timeRemaining()'>2</td>
+      </tr>
+      <tr>
+        <td colspan="2">
+          <button id='session-tracker-refresh-btn' data-bind='click:refreshAccountInfo'>
+            <span data-bind="visible:!isSpinnerVisible()">refresh</span>
+            <i data-bind='visible:isSpinnerVisible()'
+               class='micro-spinner'>
+            </i>
+          </button>
+        </td>
+      </tr>
+    </table>
+
+</div>

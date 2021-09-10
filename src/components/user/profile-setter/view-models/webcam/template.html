@@ -1,0 +1,9 @@
+
+<link rel="stylesheet"
+      href="./styles/components/profile-setter/web-capture.css?v=3.1">
+</link>
+<div data-bind="visible:isVisible()" id="web-capture-holder">
+  <video id="profile-photo-player" autoplay></video>
+  <button id="take-photo-button" class="metal radial" data-bind="click:drawToCanvas"></button>
+  <canvas id="profile-photo-canvas" width=640 height=480></canvas>
+</div>

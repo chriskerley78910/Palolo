@@ -1,0 +1,30 @@
+.system-message-frame{
+  width: fit-content;
+  display: inline-block;
+  background: #fff174;
+  border: 1px solid #968915;
+  padding: 3px 3px 3px 9px;
+  font-size: 14pt;
+  font-weight: bold;
+  margin-top: 0px;
+  box-shadow: 1px 2px 12px #000000;
+}
+
+.system-message-holder{
+  text-align: center;
+  position: absolute;
+  top: 0px;
+  width: 100vw;
+  z-index: 6;
+}
+
+.system-message-button{
+  background: none;
+  border:none;
+  text-decoration: underline;
+}
+
+.system-message-button:hover{
+  text-decoration: underline;
+  cursor:pointer;
+}

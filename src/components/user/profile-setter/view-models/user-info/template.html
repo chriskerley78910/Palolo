@@ -1,0 +1,172 @@
+<div id="profile-setter-info-holder">
+  <div class="student-subject"
+       id="profile-setter-name"
+       data-bind="text:fullName()">
+  </div>
+  <div class="student-subject" id='year-and-major'>
+    <span id="year"
+          data-bind="click:showYearOfStudyInput,
+                     visible:isYearOfStudyTextVisible(),
+                     text:yearOfStudy()">
+          1st
+    </span>
+    <input type='number'
+           value=1
+           min=1
+           max=4
+           class='year-of-study'
+           placeholder='Year'
+           data-bind="visible:isYearOfStudyInputVisible(),
+                      hasFocus: isYearOfStudyInputFocused,
+                      value: yearOfStudyInput"/>
+    <span data-bind="click:showYearOfStudyInput">year,</span>
+
+    <span id="major-holder">
+        <span data-bind="visible:isMajorTextVisible(),
+                         click: showMajorInput,
+                         text:majorText">
+          Student
+        </span>
+        <input type='text'
+               class='major'
+               placeholder='Type Your Major'
+               data-bind="visible:isMajorInputVisible(), hasFocus: isMajorInputFocused, textInput:partialMajor"/>
+
+        <ul class="major-search-results"
+            data-bind="foreach:suggestedMajors, complementClick:clearMajorResults, visible:suggestedMajors().length > 0">
+            <li class="major-search-result"
+                data-bind="text:major_name, click:$parent.selectSuggestedMajor">
+            </li>
+        </ul>
+      </span>
+      <div class="my-attr">
+        <label for="my-gender">Gender:</label>
+        <select class="my-attr-value"
+                data-bind="value:gender">
+                  <option value="0">female</option>
+                  <option value="1">male</option>
+                  <option value="2">other</option>
+        </select>
+      </div>
+      <div class="my-attr">
+
+        <div  data-bind="visible:isSpinnerVisible()"
+              class="screen-center-outer">
+         <div class="screen-center-inner">
+            <div class="small-spinner">
+            </div>
+         </div>
+
+       </div>
+        <label for="my-age">Birthday:</label>
+        <select id="birth-month"
+                data-bind="value:birthMonth"
+                class="my-attr-value" >
+          <option value="1">Jan</option>
+          <option value="2">Feb</option>
+          <option value="3">Mar</option>
+          <option value="4">Apr</option>
+          <option value="5">May</option>
+          <option value="6">Jun</option>
+          <option value="7">Jul</option>
+          <option value="8">Aug</option>
+          <option value="9">Sep</option>
+          <option value="10">Oct</option>
+          <option value="11">Nov</option>
+          <option value="12">Dec</option>
+        </select>
+
+      <input id="birth-day"
+             data-bind="value:birthDay"
+             class="my-attr-value"
+             type="number"
+             value="15"
+             min="1"
+             max="31">
+       </input>
+
+        <input
+           id="birth-year"
+           data-bind="value:birthYear"
+           class="my-attr-value"
+           type="number"
+           value="2004"
+           min="1900"
+           max="2015">
+       </input>
+
+       <div class="my-attr">
+         <label for="my-res">
+           Residence:
+         </label>
+
+        <select  id="my-res"
+                 class="my-attr-value"
+                 data-bind="options:residenceOptions,
+                            optionsText:'name',
+                            optionsValue:'res_id',
+                            value:selectedRes">
+        </select>
+       </div>
+
+       <div class="my-attr">
+         <label for="my-favourite-music">
+           Music:
+         </label>
+
+         <input type="text"
+                value="Favourite Musical Artist"
+                data-bind="textInput:favMusicArtist">
+          </input>
+       </div>
+
+      </div>
+
+
+  </div>
+
+  <textarea id="profile-about-me" data-bind="textInput:aboutMe">
+    About me.
+  </textarea>
+  <div id="profile-save-button-holder">
+    <button
+            class="profile-photo-button"
+            data-bind="click:saveMyInfo, visible:showSaveButton()">
+            save
+    </button>
+  </div>
+
+  <!-- <div id="detailed-profile-info">
+
+    <div class="profile-info-row">
+        <span class='profile-info-label'> hometown: </span>
+        <div class="profile-indented-input">
+          <input class="" type="text" placeholder="Country"></input>
+        </div>
+        <div class='profile-indented-input'>
+          <input type="text" placeholder="City"></input>
+        </div>
+    </div>
+
+    <div class="profile-info-row">
+      <span class='profile-info-label'> languages </span>
+      <div class='profile-indented-input'>
+        <input type="text" placeholder="First Language"> </input>
+      </div>
+      <div class='profile-indented-input'>
+        <input type="text" placeholder="Second Language"> </input>
+      </div>
+
+    </div>
+
+    <div class="profile-info-row">
+        <span class='profile-info-label'> memberships </span>
+        <ul>
+          <li class="profile-group">MATH1300 M W 2020</li>
+          <li class="profile-group">EECS2030 L W 2020</li>
+        </ul>
+    </div>
+
+
+  </div> -->
+</div>

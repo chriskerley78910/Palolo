@@ -1,0 +1,78 @@
+<link rel="stylesheet" href="./styles/components/payment/tutoring-plans.css?v=1.3">
+
+
+<div id="tutoring-plans"
+     class='background-dimmer'
+     data-bind="visible:isVisible()">
+
+     <div class="middelize"
+          data-bind=visible:showSpinner()>
+         <div class="big-loader"></div>
+     </div>
+
+  <div id='tutoring-plans-holder'>
+       <div class='x-close-holder'>
+         <span class='x-close-button' data-bind='click:closePaymentOptions'>x</span>
+       </div>
+       <div id='non-package-pricing'>
+         <div id='hours-query'>How many hours would you like?</div>
+         <div class='non-package-row'>
+           <input id='hour-selector'
+                  type='number'
+                  min='1'
+                  max='9'
+                  required
+                  value="1"
+                  data-bind='value:hours'>
+            </input>
+           <span class='non-package-hours'> Hours @ </span>
+          <span class='plan-price'>
+            $<span data-bind='text:hourlyRate'></span> <sup>/hr</sup>
+          </span>
+         </div>
+
+         <div id='total-price-holder'
+              class='non-package-row'>
+           Total: <span id=non-package-total>$<span data-bind='text:total'></span></span>
+           <button id='buy-button' data-bind='click:buy'>Buy</button>
+         </div>
+
+       </div>
+
+       <ul id='tutoring-packages' data-bind='foreach:plans()'>
+
+         <span class='payment-option'>
+           <div class='plan-duration' data-bind='text:getDescription()'></div>
+           <span class='ok-plan glyphicon glyphicon-ok'></span>
+           <div class='plan-price'>
+              <span data-bind='text:getHourlyRate()'> $39.95 </span>
+              <sup>/hr</sup>
+           </div>
+           <div class='plan-details'>
+             <span data-bind='text:getDiscountedHours()'>1</span> of the hours is <span class='green'>FREE</span>.
+           </div>
+           <div class='plan-details'>
+             <span data-bind='text:getHours()'> </span> hours of tutoring
+           </div>
+           <div class='plan-details'>You save
+              <span data-bind='text:($parent.hourlyRate() * getHours() - (getHourlyRate() * (getHours() - getDiscountedHours()))).toFixed(2)'>  </span>
+           </div>
+           <button class='plan-button'
+                   data-bind='click:$parent.choosePackage'>
+                   Choose <span data-bind='text:getHours()'></span> Hours
+           </button>
+         </span>
+
+       </ul>
+
+       <div id='tutoring-doc-details'>
+          Payment for online tutoring must be made
+          before tutoring sessions start.
+         </div>
+       <div id='tutoring-doc-details'>
+          Hours bought must be used within 6-months
+          from the date of purchase.
+         </div>
+  </div>
+
+</div>

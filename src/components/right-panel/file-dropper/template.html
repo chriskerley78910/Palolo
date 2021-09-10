@@ -1,0 +1,54 @@
+<link rel="stylesheet" href="./styles/components/right-panel/file-dropper.css?v=1.0">
+
+
+      <form id="file-dropper-form"
+              data-bind="visible:isVisible()">
+              <div id="upload-button-holder">
+                  <label for="upload-button"
+                         title="Upload File"
+                         data-toggle="tooltip">
+                    <span class="glyphicon glyphicon-open"
+                          id="upload-button-image"></span>
+                  </label>
+                  <input id="upload-button"
+                         type="file"
+                         data-bind="event: { change : uploadFile}"/>
+              </div>
+      </form>
+
+
+      <span id="file-upload-progress-holder"
+            data-bind="visible:uploadInProgress()">
+      <span id="file-upload-progress-percentage"
+            data-bind="text:percentageComplete"></span>
+            <div id="file-upload-progress-bar"></div>
+      </span>
+      <div id="shared-files-holder"
+           class="show-vert-scroll"
+           data-bind="visible:isVisible()">
+           <div id="no-files-shared-message"
+                class="disable-select"
+                data-bind="visible:files().length <= 0">
+              no files shared.
+           </div>
+          <ul id="file-list"
+              class="show-vert-scroll"
+              data-bind="foreach: files">
+              <li>
+                <div class ="shared-files-holder "
+                     data-bind="css:{'opened-file' : user_opened(), 'unopened-file' : !user_opened()},
+                                click:$parent.downloadFile">
+
+                  <div class="file-name-holder shared-files-text disable-select"
+                       data-bind="text:name">
+                  </div>
+                  <span class="trashbin glyphicon glyphicon-trash"
+                        data-toggle="tooltip"
+                        title="Delete"
+                        data-bind="click:$parent.deleteFile">
+                  </span>
+                </div>
+
+              </li>
+          </ul>
+        </div>

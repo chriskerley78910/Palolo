@@ -1,0 +1,357 @@
+
+.add-pal-btn-holder{
+  height: 100%;
+    position: absolute;
+    vertical-align: middle;
+    width: fit-content;
+    right: 0;
+    margin-right: 6vh;
+}
+
+.person-row:hover .person-card{
+  opacity: 1;
+  background: #4b5fcf;
+  color: white;
+}
+
+.already-friend{
+  display: inline-block;
+  right: 0;
+  position: absolute;
+  top: 50%;
+  transform: translate(0,-50%);
+  margin: 0pt 19pt;
+}
+
+.person-card{
+  position: absolute;
+      text-align: left;
+      bottom: -26pt;
+      left: 0;
+      z-index: 10;
+      display: inline-block;
+      padding: 5pt 10pt 5pt 10pt;
+      background: white;
+      width: 100%;
+      pointer-events: none;
+      opacity: 0;
+      transition: 0.1s;
+
+}
+
+.person-attr-icon{
+  display: inline-block;
+  width: fit-content;
+  margin-right: 4pt;
+  color: #d5d5d5;
+}
+
+.person-card  img{
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+}
+
+.person-card-name{
+  font-size: 13pt;
+    margin-top: 5pt;
+}
+
+.person-card-photo{
+  width: 28%;
+      display: inline-block;
+      text-align: center;
+}
+
+.person-card-photo > div{
+      padding: 5pt 0pt 0pt 0pt;
+}
+
+.person-card-info{
+font-size: 10pt;
+    justify-content: space-evenly;
+    display: flex;
+}
+
+.person-card-info > div{
+  align-items: center;
+  flex-grow: 1;
+  display: flex;
+  margin: 5pt;
+}
+
+.person-card > div{
+  text-align: left;
+}
+
+
+
+
+.add-pal{
+  display: inline-block;
+  top: 50%;
+  position: absolute;
+  transform: translate(0px, -50%);
+  width: fit-content;
+  right: 0px;
+    font-size: 11pt;
+}
+
+.add-pal-btn{
+  width: 68pt;
+  background: #02b502;
+  color: white;
+}
+
+.add-pal-pending{
+    width: 15vh;
+    background: #919191;
+    color: white;
+}
+
+
+
+
+#outgroup-holder{
+  position: relative;
+  height: 15vh;
+  bottom: 15vh;
+}
+
+#outgroup-list{
+  height: 100%;
+}
+
+
+.last-seen{
+  position: absolute;
+  top: 40%;
+  left: 0pt;
+  transform: translate(50%,0%);
+  font-style: inherit;
+  font-size: 8pt;
+}
+
+
+#course-title{
+  position: relative;
+  z-index: 4;
+  padding: 1.4vh 0px 1.4vh 0px;
+  margin: 0px 0px 0px 0px;
+  font-size: 1.9vh;
+  border-bottom: 1px solid #d4d4d4;
+  font-weight: 500;
+}
+
+.course-title-not-selected{
+    background: linear-gradient(to top,#c5c5c5, white, #f0f0f0);
+    color: #000000;
+}
+
+.course-title-selected{
+  background: linear-gradient(to top, #00447b,#357fdf, #0077d6) !important;
+      color: white;
+}
+
+#course-title:hover{
+  cursor: pointer;
+    background: linear-gradient(to top, #aecffd, #adcefd);
+}
+
+
+
+#no-members-yet{
+  height: 200px;
+  font-size: 17pt;
+  color: grey;
+  padding: 50px 0px;
+}
+
+
+.non-empty-group-join-selected{
+  color: white !important;
+}
+
+
+#non-empty-group-join:hover{
+  text-decoration: underline;
+}
+
+.name{
+  left: 70px;
+  position: absolute;
+
+}
+
+.person-name{
+  top: 33%;
+  left: 0px;
+  width: 100%;
+padding-left: 21%;
+  text-align: left;
+  font-size: 13pt;
+  font-family: "Arial", Verdana, serif;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
+.shared-classes{
+    top: 60%;
+  position: absolute;
+  left: 19%;;
+  color: grey;
+  font-size: 1.5vh;
+}
+
+
+.person-panel-dot-position{
+  position: absolute;
+  left: 3%;
+  top: 50%;
+  transform: translate(0%,-50%);
+}
+
+.new-msgs-dot{
+  background: red;
+  z-index: 3;
+  /* overtop of the presence dot. */
+}
+
+
+#people-holder{
+  text-align: center;
+}
+
+
+
+ul{
+  margin-top: 0;
+margin-bottom: 0px;
+}
+
+.person-list-wrapper{
+  margin-top: 41pt;
+  width: 100%;
+  z-index: 3;
+  display: inline-grid;
+  border-left: 0.1vh solid #e6e6e6;
+}
+
+
+.person-list{
+  height: 83vh;
+  width: 100%;
+  background-color: #f9f9f9;
+  padding: 0px;
+  list-style-type: none;
+  overflow-y: scroll;
+  position: relative;
+  margin-top: 28pt;
+}
+
+
+
+.person-row{
+  min-height: 10vh;
+  position: relative;
+  background: #ffffff;
+  margin-bottom: 3pt;
+  width: 396pt;
+  max-width: 100%;
+  display: inline-block;
+}
+
+.person-row:hover{
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+  background: #ffffff;
+  color: black;
+
+}
+
+.person-row-selected{
+
+  background: linear-gradient(to top, #ffffff, #ffffff) !important;
+  z-index: 2;
+  color: black;
+}
+
+.professor-selected{
+    background: linear-gradient(to top, #00682a, #00b84a) !important;
+}
+
+.professor-highlight{
+      background: #eafcee;
+
+
+}
+
+.professor-highlight:hover{
+  background: #13db005e;
+}
+
+
+.person-row-selected .shared-classes{
+    color: #717171;
+}
+
+/* .person-row-selected .dot{
+  width: 1vh;
+  height: 1vh;
+  left: 3%;
+  background: radial-gradient(#00ff00, #00b206);
+} */
+
+
+
+.notifications-list{
+  background: white;
+    position: relative;
+    z-index: 2;
+}
+
+
+
+
+.person-pic-holder{
+  width: fit-content;
+  height: 100%;
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+left: 7%;
+  index: 1;
+  text-align: center;
+  transform: translate(0px,-50%);
+}
+
+.person-pic-holder .person-pic{
+  width: 37pt;
+  height: 37pt;
+  border-radius: 50%;
+  top: 50%;
+  position: relative;
+  background: white;
+  transform: translate(0px, -50%);
+}
+
+.person-credential{
+  top: 41px;
+  color:#8a8987;
+}
+
+.person-school{
+  color:grey;
+  top:41px;
+}
+
+
+.focused-user-row{
+  background: white;
+
+}
+
+}

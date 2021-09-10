@@ -1,0 +1,118 @@
+<link rel="stylesheet" href="./styles/components/chat/style.css?v=2.6"></link>
+
+<div id="chat-holder"
+     data-bind="visible:isVisible()">
+
+     <!-- spinner -->
+     <div  class="screen-center-outer">
+      <div class="screen-center-inner">
+         <div class="loader"
+              data-bind="visible:isSpinnerVisible()">
+         </div>
+      </div>
+    </div>
+
+  <ul class="show-vert-scroll"
+      data-bind="foreach: messages"
+      id="chat">
+
+      <li class="chat-message"
+          draggable="false"
+          data-bind="css:{ 'chat-message-self': owner == true}">
+
+        <!-- ko if: typeof img_url == 'string' -->
+          <img data-bind="attr:{src:img_url}"
+               class="one-on-one-chat-img disable-select">
+          </img>
+        <!-- /ko -->
+
+        <span data-bind="html:getHTML()"
+              class="chat-text">
+        </span>
+
+        <!-- ko if: owner -->
+        <i data-toggle="tooltip" title="sending">
+          <i class="dot acknowledgement-dot empty-dot sent-dot"
+           data-bind="visible:!sent()">
+         </i>
+        </i>
+        <i data-toggle="tooltip" title="sent">
+          <i class="dot acknowledgement-dot filled-dot sent-dot"
+             data-bind="visible:sent()">
+          </i>
+        </i>
+        <i data-toggle="tooltip" title="seen">
+          <i class="dot acknowledgement-dot filled-dot seen-dot"
+             data-bind="visible:seen()">
+          </i>
+        </i>
+        <i class="dot acknowledgement-dot empty-dot seen-dot"
+           data-bind="visible:!seen()">
+        </i>
+        <!-- /ko -->
+
+        <span data-bind="text:timestamp, css: { 'chat-timestamp-other-person': owner != true }"
+              class="chat-timestamp disable-select">
+        </span>
+
+        <i class="sender-img-holder"
+          data-bind="visible: owner == true">
+          <img class="sender-img"
+              data-bind="attr:{src:getSenderImageURL()}">
+        </img>
+        </i>
+
+        <i class="sender-img-holder-other"
+          data-bind="visible: owner == false">
+          <img class="sender-img"
+              data-bind="attr:{src:getSenderImageURL()}">
+        </img>
+        </i>
+
+      </li>
+  </ul>
+
+
+
+
+  <div class="message-sender">
+
+    <div data-bind="visible:friendTyping()"
+          id="typing-message-pos">
+      <div class="horz-loader">Loading...</div>
+      <i id="typing-message">Typing..</i>
+    </div>
+
+<!-- New friend message prompt. -->
+    <div id="send-msg-prompt"
+         data-bind="visible:showSendMsgPrompt()">
+
+        <span id="send-message-prompt-text"
+              class="disable-select">
+
+            Say hello!
+                <i class="down"
+                   id="send-message-prompt-down-arrow">
+                </i>
+          </span>
+    </div>
+    <textarea
+               id="chat-text-area"
+               rows="1"
+               class="message-input-holder show-vert-scroll"
+               placeholder="What would you like to say to them?"
+               type="text"
+               data-bind="textInput:newMessage,
+                          event:{keydown: onKeyPress}
+                          attr: {placeholder:placeholder()},
+                          hasFocus: inputHasFocus(),
+                          click: inputClicked">
+    </textarea>
+
+    <button
+            class="disable-select send-message-btn"
+            data-bind="enable:isValidInput(), click:send, css:{}">
+            SEND
+    </button>
+  </div>
+</div>

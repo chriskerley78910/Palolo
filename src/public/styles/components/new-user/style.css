@@ -1,0 +1,16 @@
+#new-user{
+
+}
+
+.new-user-box{
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%);
+  background: white;
+}
+
+.new-user-box-spacing{
+  padding: 10pt;
+margin: 10pt;
+}

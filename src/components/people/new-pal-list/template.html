@@ -1,0 +1,33 @@
+<link rel="stylesheet" href="./styles/components/person-panel/new-pal-list.css?v=1">
+
+  <ul id="new-pal-list" data-bind="foreach:newPals">
+    <li class="pal-row"  data-bind="css:{'pal-row-selected':$parent.selectedPal() != null && $parent.selectedPal().getId() == getId() && $parent.selectedPal().getId() >=0}, click:$parent.palClicked">
+      <i
+           class="pal-list-notification"
+           data-bind="visible:isNew()">
+           <i class="arrow-left">
+           </i>
+           You have a new friend!
+       </i>
+
+       <span class="pal-presence">
+         <i class="pal-last-seen centerize"
+            data-bind="visible:isPresent() == false, text:getLastSeen()">
+         </i>
+         <i class="dot presence-dot centerize"
+            data-bind="visible:isPresent()">
+          </i>
+       </span>
+       <img class="pal-img"
+            data-bind="attr:{src: getSmallPhotoURL()}">
+       </img>
+       <span class="pal-name-holder">
+         <span class="pal-name"
+               data-bind="text:getFirst() + ' ' + getLast()">
+         </span>
+       </span>
+
+    </li>
+
+
+  </ul>

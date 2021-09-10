@@ -1,0 +1,54 @@
+killing the existing connections...
+\n **** Closing open node ports: 20601
+20598
+20600 **** \n
+starting servers in live mode...
+servers started!blackboard_server listening on port 1027!
+relationship_server listening on port 1026!
+(node:20669) [DEP0025] DeprecationWarning: sys is deprecated. Use util instead.
+chat_server listening on port 1028!
+2_way_voice_server listening on port 1024!
+new connection
+new connection
+new connection
+/var/www/relationship_server/node_modules/mysql/lib/protocol/Parser.js:80
+        throw err; // Rethrow non-MySQL errors
+        ^
+
+Error: ER_DUP_ENTRY: Duplicate entry '13-14' for key 'PRIMARY'
+    at Query.Sequence._packetToError (/var/www/relationship_server/node_modules/mysql/lib/protocol/sequences/Sequence.js:47:14)
+    at Query.ErrorPacket (/var/www/relationship_server/node_modules/mysql/lib/protocol/sequences/Query.js:77:18)
+    at Protocol._parsePacket (/var/www/relationship_server/node_modules/mysql/lib/protocol/Protocol.js:278:23)
+    at Parser.write (/var/www/relationship_server/node_modules/mysql/lib/protocol/Parser.js:76:12)
+    at Protocol.write (/var/www/relationship_server/node_modules/mysql/lib/protocol/Protocol.js:38:16)
+    at Socket.<anonymous> (/var/www/relationship_server/node_modules/mysql/lib/Connection.js:91:28)
+    at Socket.<anonymous> (/var/www/relationship_server/node_modules/mysql/lib/Connection.js:502:10)
+    at emitOne (events.js:116:13)
+    at Socket.emit (events.js:211:7)
+    at addChunk (_stream_readable.js:263:12)
+    at readableAddChunk (_stream_readable.js:250:11)
+    at Socket.Readable.push (_stream_readable.js:208:10)
+    at TCP.onread (net.js:601:20)
+    --------------------
+    at Protocol._enqueue (/var/www/relationship_server/node_modules/mysql/lib/protocol/Protocol.js:144:48)
+    at Connection.query (/var/www/relationship_server/node_modules/mysql/lib/Connection.js:200:25)
+    at Promise (/var/www/relationship_server/src/2_persistance_layer/DatabaseAccessor.js:134:14)
+    at new Promise (<anonymous>)
+    at DatabaseAccessor.makeRecommendedRelationships (/var/www/relationship_server/src/2_persistance_layer/DatabaseAccessor.js:132:19)
+    at GetPeopleHandler.handle (/var/www/relationship_server/src/0_service_layer/GetPeopleHandler.js:27:20)
+    at Layer.handle [as handle_request] (/var/www/relationship_server/node_modules/express/lib/router/layer.js:95:5)
+    at next (/var/www/relationship_server/node_modules/express/lib/router/route.js:137:13)
+    at authChecker (/var/www/relationship_server/src/index.js:27:7)
+    at Layer.handle [as handle_request] (/var/www/relationship_server/node_modules/express/lib/router/layer.js:95:5)
+    at next (/var/www/relationship_server/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/var/www/relationship_server/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/var/www/relationship_server/node_modules/express/lib/router/layer.js:95:5)
+    at /var/www/relationship_server/node_modules/express/lib/router/index.js:281:22
+    at Function.process_params (/var/www/relationship_server/node_modules/express/lib/router/index.js:335:12)
+    at next (/var/www/relationship_server/node_modules/express/lib/router/index.js:275:10)
+(node:20670) UnhandledPromiseRejectionWarning: TypeError: mapper.getAllFriendsOf(...).then(...).finally is not a function
+    at createMapper.then.mapper (/var/www/face_to_face_server/src/server/TwoWayVoiceServer.js:98:19)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:189:7)
+(node:20670) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 1)
+(node:20670) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.

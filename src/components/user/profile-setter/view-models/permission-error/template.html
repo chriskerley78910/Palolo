@@ -1,0 +1,16 @@
+<link rel="stylesheet"
+      href="./styles/components/profile-setter/permission-error.css?v=3.0">
+</link>
+
+<div id="permission-error-holder"
+    data-bind="visible:isVisible()">
+      <div>  We need your permission </div>
+      <div>  to turn on the camera </div>
+          <button data-bind="click:onOkay">
+            Okay I will change the settings
+          </button>
+          <button data-bind="click:onMaybeLater">
+                  Maybe later
+          </button>
+        <div>   </div>
+</div>

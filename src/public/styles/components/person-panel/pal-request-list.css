@@ -1,0 +1,66 @@
+#pal-request-list{
+padding: 0vh 0vh 1vh 0vh;
+}
+
+.pal-request-row{
+  text-align: left;
+  list-style: none;
+  padding: 1vh 0vh 0vh 0vh;
+  height: fit-content;
+  background: white;
+  color: black;
+}
+
+.pal-img-request-holder{
+  height: 7vh;
+  text-align: center;
+}
+
+.pal-request-img{
+  vertical-align: top;
+  border-radius: 50%;
+  height: 100%;
+}
+
+
+.pal-request-img:hover{
+  cursor: pointer;
+}
+
+.pal-request-name{
+  display: grid;
+  font-size: 2.5vh;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
+
+.pal-request-title{
+  margin: 1vh;
+  text-align: center;
+  font-size: 2.0vh;
+}
+
+.pal-request-button-holder{
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  font-size: 1.7vh;
+}
+
+.pal-request-button-holder button{
+  margin:1vh;
+}
+
+.pal-request-name-holder{
+  padding-left: 0.5vh;
+  position: relative;
+  vertical-align: top;
+  text-align: center;
+      font-size: 2vh;
+  height: 100%;
+  width: 100%;
+  display: inline-block;
+}

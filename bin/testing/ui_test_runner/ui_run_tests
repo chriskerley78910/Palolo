@@ -1,0 +1,27 @@
+#!/bin/bash
+
+
+./frontend_build
+
+./../run_servers
+
+LIB_PATH=/var/www/palolo/test/libs
+
+COMPILED_CLASSES_PATH=/var/www/palolo/test/ui/bin
+
+# java -cp junit-4.12.jar:hamcrest-all-1.3.jar:. org.junit.runner.JUnitCore ProtoTest
+
+# FILES=$(find ./.. -name "*Spec.java" |  cut -d'/' -f7-)
+
+# finds the compiles class files and
+# turn then into a form that is appropriate to run using java cmd line
+# i.e: auth/SomethingSpec.class  =>   auth.SomethingSpec
+
+
+FILES=$(find ${COMPILED_CLASSES_PATH} -name "*Spec*" | cut -d'/' -f8- | cut -d'.' -f1 | sed -r 's/\//\./')
+
+# move to the directory of the class files base path. (where there were compiled too)
+cd ${COMPILED_CLASSES_PATH}
+
+               # import jar files   run iwth Junit,        the package.className
+java -classpath ${LIB_PATH}/*: org.junit.runner.JUnitCore  ${FILES}

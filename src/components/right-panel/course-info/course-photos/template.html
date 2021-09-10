@@ -1,0 +1,24 @@
+<link rel="stylesheet"
+      href="./styles/components/right-panel/course-info/course-photos.css?v=1.1">
+
+<div id="location-image-holder">
+
+
+  <img id="forum-img"
+       class="disable-select"
+       src="#"
+       data-bind="attr:{src:currentImageUrl()}">
+
+   <input id="location-image-upload-button"
+          type="file"
+          data-bind="event:{change:uploadPhoto}">
+   </input>
+   <span class='course-prof-holder'>
+          <img class='prof-img'
+               data-bind='attr:{src:profsPhotoURL()}'>
+          </img>
+      <span class='groups-prof-name'
+            data-bind='text:profsName()'>
+      </span>
+  </span>
+</div>

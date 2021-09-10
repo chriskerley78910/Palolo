@@ -1,0 +1,23 @@
+<link rel="stylesheet"
+      href="./styles/components/video-chat/incoming-call.css?v=1.1">
+
+<div class='background-dimmer'
+     data-bind='visible:isVisible()'
+       id='incoming-call-holder'>
+
+       <div id='incoming-call-box'>
+         <img id='caller-photo'
+              data-bind='attr:{src:invitersPhoto()}'>
+         </img>
+         <div id='caller-message'>
+            <span id='inviters-name'
+                  data-bind="text:invitersName()">
+            </span>
+            has invited you to join a room.
+         </div>
+         <button id='call-answer-button'
+                 data-bind='click:join'>
+                 Join With Computer Audio
+          </button>
+       </div>
+</div>

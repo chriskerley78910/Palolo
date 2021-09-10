@@ -1,0 +1,128 @@
+forum-reply{
+  border-left: 1pt solid #cccccc;
+  padding: 5pt 15pt 15pt 0pt;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  left: 13pt;
+
+}
+
+.reply-response-row{
+  color: grey;
+  position: relative;
+  left: 17pt;
+  top: 9pt;
+}
+
+.reply-response-row > span {
+  padding: 6pt 6pt;
+  border-radius: 50pt;
+  height: 18pt;
+  transition: 0.05s;
+}
+
+.reply-response-row > span:hover{
+  cursor: pointer;
+  color: black;
+  background: rgb(229, 229, 229);
+}
+
+.reply-response-row > span:active{
+  background: rgb(191 191 191);
+}
+
+.reply-seperator{
+  background: white;
+      width: 10pt;
+      height: 30pt;
+      display: inline-block;
+      position: absolute;
+      left: -5pt;
+      top: 0pt;
+      border-radius: 50%;
+}
+
+.replier-info-row {
+      margin-left: 14pt;
+      margin-bottom: 6pt;
+}
+
+.reply-timestamp{
+  color: grey;
+      font-size: 9pt;
+      position: relative;
+      left: -20pt;
+}
+
+.post-comment{
+  text-align: right;
+  margin: 5pt;
+}
+
+.comment-as-header{
+  text-align: left;
+  margin: 15pt 0pt 0pt;
+}
+
+.post-comment-message{
+  margin: 0px;
+  width: 100%;
+  height: 111pt;
+  padding:10pt;
+  resize: none;
+  margin-bottom: 10pt;
+  font-size: 12pt;
+  margin-top: 5pt;
+  color: black;
+  margin-top: 10pt;
+}
+
+.post-comment-message:focus{
+  outline-width: 0;
+  outline: none;
+  border: 1px solid #2681db;
+  box-shadow: 0 0 5px #2681db;
+}
+
+.reply-author-img{
+  border-radius: 50%;
+  width: 19pt;
+  position: relative;
+  left: -23pt;
+}
+
+.root-reply{
+  border: none;
+  position: relative;
+  left: -19pt;
+  padding-bottom: 26pt;
+}
+
+.reply-box{
+margin-bottom: 10pt;
+}
+
+.reply-author{
+  position: relative;
+      left: -21pt;
+}
+
+.reply-message{
+      position: relative;
+      right: -12pt;
+      top: 2pt;
+      font-family: Noto Sans,Arial,sans-serif;
+      font-size: 11pt;
+      font-weight: 400;
+      line-height: 150%;
+      word-break: break-word;
+      overflow: auto;
+      padding-bottom: 1px;
+      margin-bottom: -1px;
+      padding: 5pt 8pt;
+      background: #f3f3f3;
+      border-radius: 7pt;
+      display: inline-block;
+      background: #f4f6ff;
+}

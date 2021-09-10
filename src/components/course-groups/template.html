@@ -1,0 +1,25 @@
+
+<link rel="stylesheet" href="./styles/components/course-groups/style.css?v=2.1"></link>
+
+  <div id="course-groups-holder">
+
+      <div id='school-group-title'
+          data-bind='click:openNews,
+                     css: {"selected-group" : newsSelected() }'>
+                     YorkU News
+      </div>
+      <!-- ko if:courses().length > 0 -->
+
+      <div id='course-groups-title'>Course Groups</div>
+      <ul id='course-groups-list' data-bind='foreach:courses'>
+        <li class='course-group-li'
+            data-bind="attr:{title:getCourseDescription()},
+                       text:getDept() + getCourseCode() + getSectionLetter(),
+                       click:$parent.selectCourseGroup,
+                       css: { 'selected-group': $parent.currentCourseGroup() != null && $parent.currentCourseGroup().getId() == getId() }">
+
+        </li>
+
+      </ul>
+      <!-- /ko -->
+  </div>

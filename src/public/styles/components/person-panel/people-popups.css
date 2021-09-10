@@ -1,0 +1,14 @@
+#pal-request-sent{
+  position: fixed;
+  z-index: 5;
+  width: fit-content;
+  font-size: 20pt;
+  font-style: normal;
+  top: 28vh;
+  padding: 4vh 7vh;
+  background: #3F51B5;
+  left: 50%;
+  color: white;
+  box-shadow: 0px 6px 1vh #e0dddd;
+  transform: translate(-50%);
+}

@@ -1,0 +1,52 @@
+
+    <table id='punch-clock-table' data-bind="visible:isVisible()">
+      <tbody>
+        <tr>
+          <th>SESSION DATE</th>
+        </tr>
+        <tr>
+          <td>
+            <input id='session-date'
+                   type='date'
+                   data-bind='value:sessionDate, attr:{max:maxDate()}'>
+            </input>
+          </td>
+        </tr>
+        <tr>
+          <th>DURATION</th>
+        </tr>
+        <tr>
+          <td>
+            <input type='number'
+                  step="0.5"
+                  min="1"
+                  data-bind="value:sessionDuration, attr:{max:maxDuration()}, disable:maxDuration() < 1">
+            </input> hrs
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <button id='record-session-button'
+                    class='purple-button'
+                    data-bind='click:saveTime, disable:!isDateValid() && !showSessionRecordSaved() || maxDuration() < 1'>
+                    <span data-bind='visible:!isSavingSession() && !showSessionRecordSaved()'>
+                      Save
+                    </span>
+                    <i data-bind='visible:isSavingSession() && !showSessionRecordSaved()'
+                       class='micro-spinner'>
+                    </i>
+                    <span
+                          data-bind='visible:showSessionRecordSaved()'>
+                      Record saved
+                      <i id='session-record-saved'
+                         class='glyphicon glyphicon-ok green'>
+                      </i>
+                    </span>
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+</div>

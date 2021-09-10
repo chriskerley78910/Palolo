@@ -1,0 +1,17 @@
+<link rel="stylesheet"
+      href="./styles/components/right-panel/ad-views/pre-view.css">
+  <div id='ad-views-holder'
+       data-bind="visible:isVisible(),click:openLead,  event: { mouseenter: onHover}">
+       <div id="inner-ad-holder">
+         <img id="ad-image"
+              data-bind="attr:{'src':currentAd().getImgURL()}">
+         </img>
+         <div id="preview-bottom-part">
+           <div id="preview-footer"
+                data-bind="text:currentAd().getHeadline()">
+           </div>
+         </div>
+       </div>
+
+
+  </div>

@@ -1,0 +1,16 @@
+
+  #tutor-courses{
+    display: inline-block;
+    height: 84%;
+    width: 100%;
+  }
+
+
+  #tutorable-courses-holder{
+    height: 50%;
+  }
+
+
+  #tutor-opted-courses-holder{
+    height: 50%;
+  }

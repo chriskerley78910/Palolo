@@ -1,0 +1,23 @@
+
+
+<link rel="stylesheet"
+      href="./styles/components/environment/style.css">
+
+<div  id="connection-lost-alert"
+      data-bind="visible:showConnectionLost()">
+  <div>Internet Disconnected</div>
+</div>
+
+
+<div id="no-mobile-holder"
+     data-bind="visible:showDeviceNotSupportedMessage()">
+  <div id="no-mobile-message">
+    <div>Sorry this website is not mobile friendly.</div>
+    <img  id="no-mobile-math-joke"
+          src="https://i.pinimg.com/originals/6f/a2/b3/6fa2b37c7165c9cdc061b6b1f599f543.jpg">
+    </img>
+    <div id="desktop-laptop-prompt">
+          Please try again on your laptop or desktop computer.
+    </div>
+  </div>
+</div>

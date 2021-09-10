@@ -1,0 +1,166 @@
+#course-docs-container{
+  height: 96vh;
+  overflow-y: scroll;
+  text-align: left;
+  background: white;
+  position: relative;
+}
+
+#join-to-access-prompt{
+  position: absolute;
+  top: 20%;
+  z-index: 5;
+  background: white;
+  font-size: 14pt;
+  text-align: right;
+  width: 100%;
+  top: 19%;
+  color: grey;
+  padding-right: 100pt;
+  padding-bottom: 15pt;
+}
+
+#join-to-access-arrow{
+  font-size: 35pt;
+position: relative;
+left: 10pt;
+top: 11pt;
+color: #bdbdbd;
+}
+
+#course-sort-options{
+  font-size: 14pt;
+}
+
+#test-uploader-form{
+    padding: 5vh;
+}
+
+.test-sort-label{
+  display: block;
+}
+
+.test-sort-checkbox{
+  margin: 5pt 5pt 5pt 0pt !important;
+  color: blue;
+}
+
+.test-sort-checkbox:hover{
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+#doc-upload-button{
+  background: #ffffff;
+      font-size: 19pt;
+      box-shadow: 0pt 3pt 3pt #00000021;
+      border-radius: 50%;
+      color: #3F51B5;
+      width: 13%;
+      position: -webkit-sticky;
+      position: sticky;
+      bottom: 9pt;
+      left: 82%;
+      width: 61pt;
+      height: 61pt;
+      z-index: 4;
+}
+
+#test-upload-button:hover{
+  cursor:pointer;
+}
+
+#no-practise-test-message{
+  width: 100%;
+  text-align: center;
+  height: 100%;
+  padding-top: 20%;
+  font-size: 3vh;
+  color: #bfbfbf;
+}
+
+
+
+
+#doc-unlocks-remaining{
+  font-size: 14pt;
+  color: #7c7c7c;
+  padding: 18pt 30pt 0pt;
+  width: 100%;
+  text-align: right;
+}
+
+.test-row{
+  display: flex;
+  flex-wrap: wrap;
+  background: #fcfcfc;
+  padding-bottom: 2vh;
+}
+
+.test-row:hover{
+    background: #fafafa;
+}
+
+.term{
+  font-size: 2vh;
+  padding-left: 48%;
+  margin-bottom: 1vh;
+  margin-top: 3vh;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+  font-family: Roboto,RobotoDraft,Helvetica,Arial,sans-serif;
+  font-size: 2.0vh;
+  letter-spacing: .2px;
+  color: #202124;
+  line-height: 20px;
+}
+
+.test-holder{
+  font-size: 2vh;
+  max-width: min-content;
+  padding-left: 2vh;
+  margin: 3vh;
+  margin-bottom: 0vh;
+  color: grey;
+  text-align: center;
+}
+
+.test-holder:hover{
+  cursor:pointer;
+}
+
+.test-uploader-row-holder{
+  text-align: center;
+  padding: 2vh 0vh;
+}
+
+.test-uploader-column{
+  margin: 0px 3vh;
+  display: inline-block;
+  text-align: center;
+}
+
+.test-uploader-click-input{
+  border: 0px;
+  width: 100%;
+  height: 2em;
+}
+.test-uploader-checkbox{
+
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+}
+
+.test-uploader-column > input{
+  display: block;
+}
+
+
+.test-holder-name{
+  font-size: 2vh;
+  color: black;
+  text-align: center;
+}

@@ -1,0 +1,78 @@
+#course-reviews-holder{
+  height: 900pt;
+    top: 67pt;
+  position: relative;
+}
+
+#review-list{
+  list-style: none;
+  padding: 0;
+  height: 48vh;
+  overflow-y: scroll;
+}
+
+.course-review{
+  background: white;
+  padding: 15pt;
+  border-bottom: 1pt solid #afafaf;
+  border-top: 1pt solid #afafaf;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.course-review:hover{
+  cursor: pointer;
+  border-bottom: 1pt solid black;
+  border-top: 1pt solid black;
+  background: #fbfbfb;
+
+}
+
+
+
+
+.review-votes-holder{
+  position: relative;
+  top: 32%;
+  font-size: 12pt;
+}
+
+
+.review-helpfulness-vote{
+      display: inline-block;
+}
+
+.reviewer{
+  display: inline-block;
+    margin: 0pt 0pt 0pt 13pt;
+}
+
+
+.reviewer-image-holder{
+    position: relative;
+    display: inline-block;
+    top: 39%;
+    transform: translate(0,-50%);
+}
+
+.reviewer-image{
+  border-radius: 50%;
+  width: 58pt;
+}
+
+.review-text{
+  display: inline-block;
+  margin: 0pt 13pt;
+}
+
+.review-text-title{
+  display: inline-block;
+  width: 100%;
+  font-size: 15pt;
+  font-weight: 600;
+}
+
+.review-text-body{
+  font-size: 12pt;
+padding: 5pt 0pt;
+}

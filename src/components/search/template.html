@@ -1,0 +1,90 @@
+<link rel="stylesheet"
+      href="./styles/components/search/style.css?v=2.3">
+</link>
+
+<div id="search-bar-holder"
+     data-bind="visible:isVisible()">
+
+     <div class="search-holder">
+
+
+         <input class="search-bar"
+                type="text"
+                autoComplete="off"
+                placeholder="Search people or courses"
+                data-bind="textInput:query">
+         </input>
+
+         <!-- spinner -->
+         <span  id="pal-list-spinner"
+                 data-bind="visible:isSpinnerVisible()">
+           <div  class="screen-center-outer">
+            <div class="screen-center-inner">
+               <div class="small-spinner">
+               </div>
+            </div>
+          </div>
+         </span>
+
+         <button type="button"
+                 id="search-button"
+                 class="btn search-button">
+            <span class="glyphicon glyphicon-search">
+            </span>
+          </button>
+
+          <div class='search-result-header' data-bind="visible:coursesFound().length > 0"> Courses </div>
+         <ul class="course-code-search-results"
+             data-bind="visible:coursesFound().length > 0,
+                        foreach:coursesFound">
+
+           <li class="course-code-search-result"
+               data-bind="click:$parent.selectCourse">
+               <span data-bind="text:course_code + ' Section ' + section_letter + ' - ' + description + ' - ' + first + ' ' + last"></span>
+           </li>
+         </ul>
+
+         <div class='search-result-header' data-bind="visible:peopleFound().length > 0"> People </div>
+         <ul class="course-code-search-results"
+             data-bind="visible:peopleFound().length > 0,
+                        foreach:peopleFound">
+
+           <li class="course-code-search-result"
+               data-bind="click:$parent.selectPerson">
+               <img class='person-result-img' data-bind='attr:{src:getSmallPhotoURL()}'></img>
+               <span data-bind="text:getFirst() + ' ' + getLast()"></span>
+               <span class='role' data-bind='text:getRole()'>
+           </li>
+         </ul>
+
+
+
+         <!-- <div id="recent-search-holder"
+              data-bind="visible:recentSearches().length > 0">
+           <div style="width:fit-content;">
+             <div id="recent-searches-title">
+               Recent Searches
+             </div>
+             <ul class="course-code-search-results"
+                 data-bind="foreach:recentSearches, complementClick:clearHistoryResults">
+               <li class="course-code-search-result"
+                   data-bind="click:$parent.selectCourse">
+                   <div data-bind="text:course_code + ' ' + section_letter + ' ' + description, "></div>
+               </li>
+             </ul>
+         </div> -->
+
+         </div>
+
+
+         <div  id="search-match-message"
+               data-bind="visible:peopleFound().length == 0 && coursesFound().length == 0 && query().length > 2">
+               No matches found.
+         </div>
+
+
+     </div>
+
+
+
+</div>

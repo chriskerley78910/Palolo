@@ -1,0 +1,54 @@
+
+
+
+#ad-views-holder{
+  display: inline-block;
+  margin-top: 14%;
+}
+
+#ad-views-holder:hover{
+  cursor: pointer;
+}
+
+#ad-views-holder:hover #preview-footer{
+  color: #1e72ca;
+  text-decoration: underline;
+}
+
+
+#inner-ad-holder{
+  text-align: center;
+}
+
+#ad-image{
+  display: inline-block;
+      width: 9vh;
+      border-radius: 2vh;
+      text-align: left;
+      padding: 1vh;
+      float: left;
+}
+
+#ad-image:hover{
+  cursor: pointer;
+  opacity: 1;
+}
+
+#preview-footer{
+  font-size: 12pt;
+  color: black;
+  font-weight: 550;
+
+}
+
+#preview-bottom-part{
+    padding: 2vh;
+}
+
+#preview-text{
+
+  max-height: 85px;
+  display: inline-block;
+  overflow: hidden;
+  overflow-wrap: break-word;
+}

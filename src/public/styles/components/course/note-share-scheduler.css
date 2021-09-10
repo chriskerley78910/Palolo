@@ -1,0 +1,64 @@
+
+
+#upcoming-term-message{
+  font-size: 3vh;
+  text-align: center;
+  margin: 20%;
+}
+
+#upcoming-term-message > div{
+  padding-bottom: 2vh;
+}
+
+#lecture-day-scheduler-title{
+font-size: 3vh;
+  margin: 2vh;
+  margin-top: 13vh;
+  margin-bottom: 7vh;
+  text-align: center;
+  color: #636363;
+}
+
+#lect-scheduler-checkbox-col{
+  display: inline-block;
+      width: 100%;
+      margin-right: 10%;
+      font-size: 2.4vh;
+      text-align: center;
+      vertical-align: bottom;
+}
+
+.checkbox-spacing{
+    margin-top: 1vh;
+    width: 50px;
+    margin: 20px;
+    display: inline-block;
+}
+
+.checkbox-spacing > span {
+  display: block;
+}
+
+#lect-scheduler-button-col{
+  width: 100%;
+  display: inline-block;
+  text-align: center;
+  padding: 8vh;
+}
+
+.lect-scheduler-checkbox{
+  width: 2.4vh;
+  height: 2.4vh;
+}
+
+
+.create-schedule-button{
+  background: #2473e8;
+  border-radius: 1vh;
+  color: white;
+  padding: 1.5vh;
+  color: white;
+  font-size: 2vh;
+  font-weight: bold;
+
+}

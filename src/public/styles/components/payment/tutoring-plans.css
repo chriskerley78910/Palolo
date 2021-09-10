@@ -1,0 +1,216 @@
+#non-package-pricing{
+  font-size: 22pt;
+  margin: 50pt 0pt -1pt;
+
+}
+
+#package-prompt{
+  text-align: center;
+    font-size: 18pt;
+    margin-bottom: 30pt;
+}
+
+#non-package-total{
+  font-size: 20pt;
+    padding: 9pt;
+    border-bottom: 1pt solid #d7d7d7;
+    margin: 0pt 10pt 15pt 10pt;
+}
+
+.non-package-hours{
+  font-size: 16pt;
+}
+
+.tutoring-details{
+padding-left: 35%;
+}
+
+.tutoring-detail{
+  text-align: left;
+  color: grey;
+  font-size: 12pt;
+  font-size: 16pt;
+}
+
+#hours-query{
+  margin-bottom: 30pt;
+font-size: 18pt;
+}
+
+#tutoring-doc-details{
+  font-size: 18pt;
+  color: grey;
+  text-align: left;
+  bottom: -61pt;
+  left: 17pt;
+}
+
+#total-price-holder{
+  text-align: right;
+  font-size: 17pt;
+
+  border-bottom: 1pt solid grey;
+  margin: 0;
+  padding: 15pt;
+}
+
+.non-package-row{
+  margin:15pt;
+}
+
+#tutoring-packages{
+  height: fit-content;
+  display: inline-block;
+  padding-bottom: 300pt;
+  padding-top: 50pt;
+}
+
+#tutoring-plans{
+
+  position: fixed;
+  width: 100%;
+  height: 100%;
+z-index: 4;
+  left: 0;
+  top: 0;
+}
+
+#tutoring-plans-holder{
+  background: white;
+  width: 900pt;
+  position: absolute;
+  left: 50%;
+  top: 5%;
+  padding: 10pt;
+  transform: translate(-50%);
+  border-radius: 3pt;
+  min-width: 620pt;
+  height: 95%;
+  overflow-y: scroll;
+}
+
+#hour-selector{
+  border: 1pt solid grey;
+  text-align: center;
+}
+
+.payment-option{
+  border: 1pt solid #949494;
+  display: inline-block;
+  padding-bottom: 13pt;
+  vertical-align: top;
+  float: left;
+  margin: 6pt;
+  height: 250pt;
+  position: relative;
+  transition: 0.1s;
+}
+
+.payment-option:hover{
+  border: 1pt solid grey;
+  box-shadow: 0pt 3pt 5pt #a6a6a6;
+}
+
+#buy-button{
+  background-color: #2c9dff;
+    color: white;
+    background: #009dff;
+    color: white;
+    border: none;
+    border-radius: 2pt;
+    font-size: 12pt;
+    padding: 8pt 39pt;
+    margin-top: 18pt;
+    margin-left: 25pt;
+    font-weight: 600;
+}
+
+#tutoring-plan-title{
+  font-size: 17pt;
+  margin: 6pt;
+  text-align: left;
+}
+
+.plan-button{
+  background: #009dff;
+  color: white;
+  border: none;
+  border-radius: 2pt;
+  font-size: 12pt;
+  padding: 8pt 39pt;
+  width: 81%;
+  margin-top: 18pt;
+  font-weight: 600;
+}
+
+#best-value{
+  position: absolute;
+  right: 20pt;
+  top: 16pt;
+  background: #20b600;
+  width: 50pt;
+  height: 50pt;
+  border-radius: 50%;
+  color: #141bb1;
+  font-size: 10pt;
+  font-weight: 600;
+  padding-top: 5pt;
+  border: 3pt solid white;
+}
+
+.plan-duration{
+  background: linear-gradient(to top,#3F51B5,#5f72e0);
+  color: white;
+  font-size: 12pt;
+  font-weight: 600;
+  width: 219pt;
+  padding: 12pt;
+}
+
+.plan-price{
+  color: deeppink;
+  font-size: 24pt;
+  font-weight: 700;
+  padding: 9pt;
+  border-bottom: 1pt solid #d7d7d7;
+  margin: 0pt 10pt 15pt 10pt;
+}
+
+.plan-details{
+  color: #131313;
+  font-size: 14pt;
+  margin: 4pt 0pt;
+}
+
+.green{
+  color: #00ab00;
+      font-weight: 600;
+}
+
+.best-value-color{
+  background: #00b600;
+}
+
+.bold{
+  color:black;
+  font-weight: 700;
+}
+
+
+.ok-plan{
+  opacity: 0;
+  transition: 0.1s;
+  background: #20b600;
+  border-radius: 50%;
+  color: #ffffff;
+  font-size: 5vh;
+  position: absolute;
+  left: 8pt;
+  font-size: 13pt;
+  padding: 5pt;
+  top: 8pt;
+}
+
+.payment-option:hover .ok-plan{
+  opacity: 1;
+}

@@ -1,0 +1,294 @@
+#video-chat-holder{
+  position: fixed;
+  z-index: 16;
+}
+
+#video-chat-control-center{
+  position: fixed;
+  width: 600pt;
+  height: 480pt;
+
+      background: #fbfbfb;
+  border-radius: 5pt;
+  box-shadow: 0px 2pt 5pt black;
+  border: 1pt solid #3F51B5;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+#video-chat-loader{
+  position: absolute;
+  left: 50%;
+  top: 30%;
+}
+
+#caller-hungup-message {
+  position: absolute;
+    left: 50%;
+    top: 22%;
+    z-index: 3;
+    font-size: 20pt;
+    transform: translate(-50%);
+    background: #3a00a1;
+    border-radius: 10pt;
+    padding: 40pt;
+    color: #ffffff;
+}
+
+.mic-state-message{
+  background: grey;
+  color: white;
+  width: fit-content;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%);
+  bottom: 29%;
+  padding: 5pt;
+}
+
+.resize-window-button{
+  border-radius: 50%;
+  background: #3957ff;
+  border: 2pt solid #3957ff;
+  width: 20pt;
+  height: 20pt;
+  position: absolute;
+  bottom: -15px;
+  right: -15px;
+  z-index: 1;
+}
+
+.resize-window-button:hover{
+  border: 2pt solid lime;
+  cursor: nwse-resize;
+}
+
+
+#camera-video-holder{
+  overflow: hidden;
+}
+#camera-video-holder > video {
+  height: 100%;
+  max-width: 100%;
+}
+
+#camera-preview{
+  position: absolute;
+    height: 20%;
+    display: inline-block;
+    right: 0%;
+}
+
+#camera-preview > video{
+  height: 100%;
+      position: inherit;
+      right: 0;
+}
+
+
+#video-chat-buttons{
+  position: absolute;
+  border: 0;
+  bottom: 0;
+  width: 100%;
+  min-height: 72pt;
+  background: #333333b5;
+  padding: 12pt;
+}
+
+
+.video-call-button{
+    color: white;
+    display: inline-block;
+    padding: 5pt;
+    background: grey;
+    font-size: 12pt;
+    margin: 10pt;
+    border-radius: 3pt;
+}
+
+
+
+.video-chat-screen-share-icon{
+  width: 42pt;
+  height: 30pt;
+  background: lime;
+  border-radius: 5pt;
+  display: inline-block;
+}
+
+#sharescreen-button-arrow{
+  font-size: 17pt;
+  margin: 7pt;
+}
+
+#mic-button{
+  position: absolute;
+  left: 0;
+}
+
+#session-timer-button{
+  float:right;
+}
+
+.video-chat-icon{
+  margin: 7pt;
+  font-size: 20pt;
+  color: white;
+}
+
+#stop-video-button{
+  position: absolute;
+left: -95pt;
+z-index: 1;
+bottom: -27px;
+width: 68pt;
+}
+
+.video-chat-button-text{
+  color: white;
+    margin: 5pt;
+}
+
+.video-chat-button{
+  display: inline-block;
+  padding: 4pt;
+  border-radius: 5pt;
+  min-width: 68pt;
+}
+
+.video-chat-button:hover{
+  background: #484848;
+  cursor: pointer;
+}
+
+
+.left-video-button{
+  margin-right:2pt
+}
+
+.left-video-button:hover{
+  margin: 8pt 0pt 8pt 8pt;
+}
+
+.right-video-button{
+  margin-left:2pt
+}
+
+.right-video-button:hover{
+ margin: 8pt 8pt 8pt 0pt;
+}
+
+
+
+.active-video-button:hover{
+    cursor: pointer;
+    border: 2pt solid #00d300;
+}
+
+.disabled-video-button{
+  background: #3d3d3d;
+  color: #626262;
+}
+
+
+
+
+.screen-video-track{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%);
+  width: 80%;
+  height: fit-content;
+  min-width: 250pt;
+  min-height: 189pt;
+  background: black;
+  border: 5pt solid #3F51B5;
+  border-radius: 6pt;
+}
+
+.screen-video-track > video{
+  width: 100%;
+}
+
+.toggle-fullscreen-share-button{
+  position: absolute;
+    bottom: 25pt;
+    left: 50%;
+    padding: 20pt;
+    transform: translate(-50%);
+    z-index: 5;
+}
+
+.toggle-fullscreen-share-button:hover{
+  cursor: pointer;
+}
+
+.video-chat-message{
+  color: black;
+  font-size: 16pt;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+#invite-pal-button{
+  background: #00b600;
+border: 2pt solid #1fa51f;
+border-radius: 3pt;
+margin: 15pt;
+    color: white;
+}
+
+.participants-message{
+  color: white;
+  font-size: 12pt;
+}
+
+#video-button-panel{
+  width: 100%;
+  position: absolute;
+  bottom: 0pt;
+  z-index: 0;
+  background: #000000ab;
+}
+
+#hangup-button{
+  top: -27pt;
+      right: -23pt;
+      color: white;
+      background: #00000080;
+      height: 24pt;
+      border-radius: 50%;
+      position: absolute;
+      font-size: 15pt;
+      z-index: 10;
+      width: 25pt;
+}
+
+#hangup-button:hover{
+  cursor: pointer;
+  background: #000000c2;
+}
+
+#call-button{
+  padding: 8pt;
+  color: #e6e6e6;
+  background: #000000;
+  border-radius: 50%;
+  font-size: 12pt;
+  margin: 4pt 0pt;
+}
+
+#call-button:hover{
+  background: #7d7d7dad;
+  color: white;
+  cursor: pointer;
+}
+
+#call-button:disabled{
+  pointer-events: none;
+  background: grey;
+}

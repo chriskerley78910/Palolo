@@ -1,0 +1,174 @@
+#banner-holder{
+  display: block;
+  position: relative;
+  z-index: 7;
+  background: linear-gradient(to top, #f7f7f7,#f7f7f7,white, #ffffff);
+  height: 31pt;
+  border-bottom: 0.1vh solid #d6d6d6;
+  text-align: center;
+}
+
+.mobile-banner-button{
+  position: absolute;
+  margin: 5pt 5pt 5pt 16pt;
+  font-size: 17pt;
+  color: darkgrey;
+  padding: 2pt;
+}
+
+.mobile-banner-button:hover{
+  background: #e3e3e3;
+  border-radius: 20pt;
+  color: black;
+  cursor: pointer;
+}
+
+.mobile-banner-button:active{
+      background: #9a9a9a;
+}
+
+
+#hamberger-button{
+  left: 0;
+}
+
+
+#mobile-menu{
+  background: white;
+  min-height: 100%;
+  display: inline-block;
+  left: 0;
+  position: fixed;
+  top: 31pt;
+  width: 165pt;
+  box-shadow: 2pt 0pt 2pt #000000c4;
+}
+
+
+#mobile-search-button{
+  left: 35pt;
+}
+
+#mobile-search-input-holder{
+  position: absolute;
+  top: 30pt;
+  padding-top: 36pt;
+  width: 100%;
+  left: 0;
+  height: 100vh;
+}
+
+#mobile-search-bar{
+  width: 272pt;
+}
+
+
+#banner-holder .caret{
+  display: inline-block;
+  width: 0;
+  height: 0;
+  margin-left: 1vh;
+  vertical-align: middle;
+  border-top: 0.6vh dashed;
+  border-top: 4px solid\9;
+  border-right: 0.6vh solid transparent;
+  border-left: 0.6vh solid transparent;
+}
+
+#you-button{
+  position: absolute;
+  width: 25%;
+  height: 100%;
+  left: 0px;
+  text-align: left;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+#you-button:hover{
+  cursor: pointer;
+}
+
+  #you-button #profile-photo{
+    width: 21pt;
+    height: 21pt;
+    position: relative;
+    margin-top: 16pt;
+    transform: translate(0px,-50%);
+    margin-left: 3vh;
+    border-radius: 50%;
+  }
+
+  #you-button #users-name{
+    position: relative;
+    bottom: 2pt;
+    color: grey;
+    font-size: 11pt;
+    left: 0.5vh;
+  }
+
+  #users-name:hover{
+    text-decoration: underline;
+    color:black !important;
+  }
+
+#banner-logo{
+  height: 100%;
+  padding: 0.8vh;
+  transform: translate(-50%,0%);
+  position: absolute;
+  left: 45%;
+}
+
+#banner_menu{
+  display: inline-block;
+  background: none;
+  border: none;
+  position: absolute;
+  right: 27%;
+  top: 41%;
+}
+
+.dropbtn{
+  background: none;
+  border:none;
+}
+
+#banner_menu_dropdown_content{
+
+  position: absolute;
+    padding: 10px 0px 15px 0px;
+  top: 24px;
+  width: 129px;
+  background: white;
+  z-index: 13;
+  list-style-type: none;
+  left: -35px;
+  box-shadow: 0px 2px 4px #5b5b5b;
+}
+
+
+.banner_list_item{
+    margin: 4px 0px 0px 0px;
+    color:black;
+}
+
+
+.banner_list_item:hover{
+
+    color:white;
+    background:grey;
+    cursor:pointer;
+}
+
+.banner_menu_button{
+  background: none;
+  border: none;
+  padding: 5px;
+}
+
+#banner_menu_button:hover{
+
+  text-decoration: underline;
+}

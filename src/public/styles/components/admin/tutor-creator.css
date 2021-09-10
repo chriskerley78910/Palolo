@@ -1,0 +1,51 @@
+
+.create-tutor-message{
+  position: fixed;
+  top: 0%;
+  left: 50%;
+  box-shadow: 0px 0px 5px black;
+  height: fit-content !important;
+  padding: 20px;
+  transform: translate(-50%,0%);
+}
+
+#success-message.create-tutor-message{
+  background: #ffffff;
+  border: 2px solid #009b44;
+  color: #006d00;
+}
+
+#error-message.create-tutor-message{
+  background: #ffffff;
+  border: 2px solid #e13600;
+  color: #e13600;
+}
+
+
+#tutor-creator-left-side{
+  width: 35%;
+  display: inline-block;
+  vertical-align: top;
+}
+
+#tutor-creator-right-side{
+  width: 64%;
+  display: inline-block;
+  vertical-align: top;
+}
+
+
+#tutor-creator-headshot{
+  width:250px;
+  height:250px;
+}
+
+
+#tutor-creator > input{
+      margin-bottom: 5%;
+}
+
+#save-tutor-button{
+  width: 53%;
+    margin-top: 5%;
+}

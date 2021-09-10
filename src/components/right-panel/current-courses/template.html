@@ -1,0 +1,35 @@
+
+<link rel="stylesheet" href="./styles/components/right-panel/current-courses.css">
+
+<div id="current-courses-holder"
+     data-bind="visible:isVisible()">
+
+  <div data-bind="visible:isConciseVisible()">
+    <span data-bind="visible:verboseCourses().length > 0">
+      Courses:
+      <span data-bind="foreach:conciseCourses()">
+        <span class="current-course"
+              data-bind="text:getDept() + getCourseCode() + getSectionLetter(), click:$parent.selectCourse">
+        </span>
+      </span>
+    </span>
+     <span data-bind="visible:verboseCourses().length > 3, click:showVerboseList"
+           class="current-course">more</span>
+  </div>
+
+
+  <div data-bind="visible:isVerboseVisible()">
+    <span data-bind="visible:verboseCourses().length > 0">
+      Courses:
+      <span data-bind="foreach:verboseCourses()">
+        <span class="current-course"
+              data-bind="text:getDept() + getCourseCode() + getSectionLetter(), click:$parent.selectCourse">
+        </span>
+      </span>
+    </span>
+    <span data-bind="visible:isVerboseVisible(), click:hideVerboseList"
+          class="current-course">less</span>
+  </div>
+
+
+</div> <!--end holder  -->

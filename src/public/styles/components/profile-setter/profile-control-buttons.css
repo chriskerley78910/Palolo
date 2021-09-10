@@ -1,0 +1,13 @@
+
+#profile-photo-buttons{
+  bottom: -11vh;
+  left: 0px;
+  position: relative;
+  width: 100%;
+  z-index: 1;
+  text-align: center;
+}
+
+.profile-photo-upload-button{
+  font-family: sans-serif;
+}

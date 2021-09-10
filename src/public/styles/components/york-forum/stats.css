@@ -1,0 +1,38 @@
+
+#forum-stats-holder{
+  font-size: 18pt;
+      background: white;
+      font-weight: bolder;
+      height: 200pt;
+
+      color: #4c4c4c;
+      position: relative;
+      height: fit-content;
+}
+
+#yorku-img{
+position: relative;
+  left: 0pt;
+  z-index: 0;
+
+  width: 100%;
+}
+
+#yorku-stats{
+  position: absolute;
+  background: white;
+  border-radius: 0pt;
+  padding: 10pt;
+  bottom: 0pt;
+  left: 50%;
+  width: 100%;
+  transform: translate(-50%);
+}
+
+#school-name-title{
+      font-size: 29pt;
+}
+
+#school-members{
+font-size: 16pt;
+}

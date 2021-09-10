@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="pom"/>
+	<classpathentry kind="src" path="test"/>
+	<classpathentry kind="src" path="mock"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="/var/www/palolo/test/libs/selenium-server-standalone-3.141.59.jar"/>
+	<classpathentry kind="lib" path="/var/www/palolo/test/libs/junit-4.12.jar"/>
+	<classpathentry kind="lib" path="/var/www/palolo/test/libs/hamcrest-all-1.3.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

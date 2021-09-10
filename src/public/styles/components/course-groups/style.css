@@ -1,0 +1,63 @@
+#course-groups-holder{
+  font-size: 12pt;
+  height: fit-content;
+  padding: 7pt 0pt;
+  text-align: center;
+  color: #959595;
+}
+
+#school-group-title{
+  font-size: 13pt;
+  padding: 2pt;
+  text-align: left;
+  padding-left: 3vh;
+}
+
+
+
+#school-group-title:hover{
+  cursor: pointer;
+  text-decoration: underline;
+  color:black;
+}
+
+#course-groups-title{
+  font-size: 13pt;
+  padding: 2pt;
+  font-weight: bold;
+  text-align: left;
+  padding-left: 3vh;
+}
+
+#course-groups-list{
+  list-style: none;
+  padding: 0;
+  left: 0;
+}
+
+.course-group-li{
+  padding: 2pt;
+  text-align: left;
+  padding-left: 7vh;
+}
+
+.course-group-li:hover{
+  color:black;
+  cursor:pointer;
+  text-decoration: underline;
+}
+
+.selected-group{
+  color: black;
+  font-weight: bold;
+}
+
+.selected-group:hover{
+  color:black;
+  text-decoration: underline;
+}
+
+
+#course-section-text{
+  font-weight: bold;
+}

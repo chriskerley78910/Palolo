@@ -1,0 +1,96 @@
+
+#background-forum-poster{
+
+
+}
+
+#forum-poster-title-holder{
+  width: 100%;
+  overflow-x: hidden;
+  overflow-wrap: break-word;
+      height: 40px;
+  background-color: transparent;
+  padding: 8px 68px 8px 16px;
+    font-size: 15pt;
+  font-weight: 400;
+  line-height: 21px;
+  font-family: inherit;
+  resize: none;
+  margin-bottom: 8pt;
+  border-radius: 5pt;
+  border: 1pt solid grey;
+  overflow: hidden;
+
+}
+#forum-poster-title-holder:focus{
+  border:1pt solid black;
+}
+
+
+#post-spinner{
+ position: absolute;
+ top: 20%;
+}
+
+#york-forum-poster{
+  position: absolute;
+  /* width: 500pt; */
+  min-width: 275pt;
+  max-width: 500pt;
+  width: 90%;
+  z-index: 5;
+  left: 50%;
+  transform: translate(-50%);
+  top: 10%;
+  background: #ffffff;
+  text-align: center;
+  padding: 16px;
+  border-radius: 7pt;
+}
+
+#york-forum-post-button{
+  background: #3F51B5;
+  color: white;
+  border: none;
+  padding: 5pt;
+  border-radius: 5pt;
+  right: 0pt;
+  display: inline-block;
+  position: relative;
+  margin: 5pt;
+  width: 98%;
+  text-align: center;
+  height: 28pt;
+}
+
+#york-forum-post-button:disabled{
+    background: grey;
+}
+
+
+.cleditorMain {border:1px solid #999; padding:0 1px 1px; background-color:white}
+.cleditorMain,
+.cleditorPopup,
+.cleditorMain * {-moz-box-sizing:content-box; -webkit-box-sizing:content-box; box-sizing:content-box}
+.cleditorMain iframe {border:none; margin:0; padding:0}
+.cleditorMain textarea {overflow-y:scroll; font:10pt Arial,Verdana; resize:none; outline:none}
+.cleditorToolbar {background: url('./toolbar.gif') repeat}
+.cleditorGroup {float:left; height:26px}
+.cleditorButton {float:left; width:24px; height:24px; margin:1px 0 1px 0; background: url('./buttons.gif')}
+.cleditorDisabled {opacity:0.3; filter:alpha(opacity=30)}
+.cleditorDivider {float:left; width:1px; height:23px; margin:1px 0 1px 0; background:#CCC}
+.cleditorPopup {border:solid 1px #999; background-color:white; color:#333333; position:absolute; font:10pt Arial,Verdana; cursor:default; z-index:10000}
+.cleditorList div {padding:2px 4px 2px 4px}
+.cleditorList p,
+.cleditorList h1,
+.cleditorList h2,
+.cleditorList h3,
+.cleditorList h4,
+.cleditorList h5,
+.cleditorList h6,
+.cleditorList font {padding:0; margin:0; background-color:Transparent}
+.cleditorColor {width:150px; padding:1px 0 0 1px}
+.cleditorColor div {float:left; width:14px; height:14px; margin:0 1px 1px 0}
+.cleditorPrompt {background-color:#F6F7F9; padding:8px; font-size:8.5pt}
+.cleditorPrompt label {padding-bottom:8px}
+.cleditorMsg {background-color:#FDFCEE; width:150px; padding:4px; font-size:8.5pt}
