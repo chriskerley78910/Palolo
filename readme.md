@@ -23,7 +23,6 @@ relies on several micro-services that must be running.
 
 
 # Main Features
-
 [Youtube Video Link](https://www.youtube.com/watch?v=s8KZ4JKGkbc)
 
 ## Custom OAuth Implenmentation
